@@ -1,0 +1,1 @@
+- just like `*` in logical notation, repeats program an arbitrart=y number of times

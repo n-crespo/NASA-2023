@@ -1,0 +1,3 @@
+- talk about [[real numbers]]
+- and other math related concepts
+- like how limits make up the world

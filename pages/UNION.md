@@ -1,0 +1,3 @@
+- logical operator just like ∧
+- similar to [[IFTE]]
+- used when writing a [[lemma]]

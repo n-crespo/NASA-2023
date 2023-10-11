@@ -1,4 +1,7 @@
-- # Resources
+Wiki
+====
+
+# Resources
   - intro video + what dL/HPs are used for: [here](https://www.youtube.com/watch?v=qtQIUJQRvug)
 	- (free)André Platzer  Lectures for each chapter of his book, pdf below:
 		- (https://www.youtube.com/watch?v=EZ20CLwG6m8&list=PLnQeVMgmt_JcconLGqs20_I_Z0-nRMOLU&index=1)

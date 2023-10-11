@@ -1,0 +1,4 @@
+- `^` only accepts nat numbers because they are easier for PVS to work with, much simpler definition
+- exponentiation to a real number #exponentiation
+- done with `^` for natural numbers, and `^^` for real numbers
+- can be expanded with `(expand)` #expand

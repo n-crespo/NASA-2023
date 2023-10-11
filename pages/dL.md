@@ -1,0 +1,3 @@
+- abbreviation for [[Differential Dynamic Logic]]
+- ddL ~ dL
+- credits to [[André Platzer]]

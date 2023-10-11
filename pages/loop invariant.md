@@ -1,0 +1,2 @@
+- this keYmaera annotation is often the same as the pre-condition
+- proves something is invariant when a loop (*)/ `STAR()` is in a proof

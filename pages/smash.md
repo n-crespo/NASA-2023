@@ -1,0 +1,2 @@
+- Repeatedly tries [[bddsimp]], [[assert]], and [[lift-if]]
+- mini [[grind]]

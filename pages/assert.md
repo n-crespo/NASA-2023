@@ -1,0 +1,1 @@
+- used for reaching final conclusions about an obviously true [[lemma]]
