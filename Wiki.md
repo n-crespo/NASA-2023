@@ -1,18 +1,17 @@
 - # Resources
-	- intro video + what dL/HPs are used for:   {{video(https://www.youtube.com/watch?v=qtQIUJQRvug)}}
+  - intro video + what dL/HPs are used for: [here](https://www.youtube.com/watch?v=qtQIUJQRvug)
 	- (free)André Platzer  Lectures for each chapter of his book, pdf below:
-		- {{video(https://www.youtube.com/watch?v=EZ20CLwG6m8&list=PLnQeVMgmt_JcconLGqs20_I_Z0-nRMOLU&index=1)}}
+		- (https://www.youtube.com/watch?v=EZ20CLwG6m8&list=PLnQeVMgmt_JcconLGqs20_I_Z0-nRMOLU&index=1)
 		- good for understanding certain dL concepts
 		- note: they are implemented in Plaidypvs with the same logic, but in a different looking format, not just logic statements
 	- ![Towards an Implementation of Differential Dynamic Logic in PVS.pdf](../../../assets/Towards_an_Implementation_of_Differential_Dynamic_Logic_in_PVS_1687887142394_0.pdf)
 		- ^^ Andre's book (he kinda coined the term Differential Dynamic Logic)
 	- ![logic_table_1687804288768_0.png](../assets/logic_table_1687804288768_0_1688662192043_0.png)
-		-
 		- ^^Table of logical operators often used in dL writing (such as Andre's book)
 	- ![LSFA_23_submit.pdf](../../../assets/LSFA_23_submit_1687887160224_0.pdf)
 		- Tanner's paper about dL, doesn't fully explain some basic topics, make sure you have some understanding before reading
 		- very good place to learn about Plaidypvs in general
-		- ![download_1687975279406_0.png](../assets/download_1687975279406_0_1688746434276_0.png){:height 600, :width 400}
+		- ![download_1687975279406_0.png](../assets/download_1687975279406_0_1688746434276_0.png)
 			- ^^Logical definitions of some proof rules in Plaidypvs
 				- proof commands like assert, grind, prop, all just automate repeated proof rules like the ones above
 				- these are the foundations of the commands you normally use
@@ -41,7 +40,7 @@
 		- it has its own mini turnstile and own Commands (`dl-command`)
 		- it is not the same as PVS
 		- think of it as a small piece
-	- pretty simple things I modeled and/or proved:
+	- pretty simple things I've modeled and/or proved:
 		- newton's law of cooling 
 		- example of a Bernoulli equation
 		- population growth differential equation
@@ -131,19 +130,12 @@
 			- `(hide)` 
 			- `(postpone)` 
 		- ### dL Commands
-			-
-			  > See `dynamic_logic.pvs` for definitions and `Glossary_Plaidypvs.pvs` for examples  
+			- See `dynamic_logic.pvs` for definitions and `Glossary_Plaidypvs.pvs` for examples  
 			- `(<command>b)` 
 			- `(<command>d)` 
 			- `(dl-loop)` 
 			- `(dl-solve)` 
-:logbook:
-			  			  CLOCK: [2023-07-12 Wed 17:45:48]
-:END:
 			- `(dl-subs)` 
-:logbook:
-			  			  CLOCK: [2023-07-12 Wed 17:45:53]
-:END:
 			- `(dl-composeb)` 
 			- `(dl-flatten)`: 
 			- `(dl-ghost)`: 
@@ -153,7 +145,7 @@
 			- `(dl-grind)` 
 			- `(dl-diffcase)`  
 			- `DLEXISTSRf`: 
-			-
+		
 	- ## Differential Equations, Ghosts and Invariants
 		- most differential equations are impossible to solve
 		- solving ODE's will often make them more complicated then necessary
@@ -180,7 +172,7 @@
 					- we know that you have to use `diffinv` right after you introduce the ghost, so do that and have an unkown j(x) as the ghost
 					- you should end up with an equation that = 0, so find the ghost expression that can satisfy it
 					- THATS IT
-				- how can you know for sure that $$xy^2=1$$ ?
+				- how can you know for sure that `xy^2=1` ?
 					- that is just a property of any positive number $$(x)$$ , use some reasoning to find small expressions like that that work for all numbers so you can build ghost variables around them
 				- the new function must exist for as long as or longer than the original function that you are reasoning about
 		- `(dl-diffinv)`: diffinv
