@@ -1,1 +1,3 @@
-- Some postcondition can be met after ALL runs of a differential equation
+Allruns
+=======
+- Some postcondition must be met after ALL runs of a differential equation
