@@ -1,3 +1,6 @@
+Differential Logic
+==================
+
 - abbreviation for [[Differential Dynamic Logic]]
-- ddL ~ dL
+- ddL means the same thing as dL
 - credits to [[André Platzer]]
