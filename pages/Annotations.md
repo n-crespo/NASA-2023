@@ -4,4 +4,4 @@ Annotations
   ex: ![image.png](~/.nb/nasa/assets/image_1689633497025_0.png)
   However, it seems this could be automated and made a lot better
 - KeYmaera example:
-	- ![loop annotations.png](~/.nb/nasa/assets/loop_annotations_1689697874391_0.png)
+  - ![loop annotations.png](assets/loop_annotations_1689697874391_0.png)
