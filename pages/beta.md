@@ -1,2 +1,2 @@
 - simplifies the `LET IN` expressions in the prover
-- used to decompose a [[LETIN]]
+- used to decompose a [LETIN]

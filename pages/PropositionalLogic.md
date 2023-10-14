@@ -1,3 +1,3 @@
 - logic with boolean values and operators
 - used in first example (`prop_basic`)
-- [[prop]] command automates all common propositional rules
+- [prop] command automates all common propositional rules

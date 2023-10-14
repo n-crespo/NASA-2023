@@ -1,11 +1,11 @@
-- ## KeYmaera/PVS [[Discrepancies]] #KeYmaera #PVS
+- ## KeYmaera/PVS [Discrepancies] #KeYmaera #PVS
 	- ~~annotations of invariants/ghosts (in the form @invariant "expression")~~
 		- see pages/Annotations.md
-	- [[auto]] command
+	- [auto] command
 	- command suggestions, list of possible commands/their functions
-	- "~~[[Tactic]]" section inside proof files that outlines how the proof is solved (i think there is a similar thing in PVS but it is not formatted as well)~~
+	- "~~[Tactic]" section inside proof files that outlines how the proof is solved (i think there is a similar thing in PVS but it is not formatted as well)~~
 		- see <M-x> step-proof, generate prooflite, etc
-	- when [[diffghost]] reaches an error there is no error message
+	- when [diffghost] reaches an error there is no error message
 		- test this
 	- reaching an error duplicates the last proof command on the proof explorer
 		- ![image.png](../assets/image_1689611943196_0.png)

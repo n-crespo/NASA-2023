@@ -1,5 +1,5 @@
 - for examples see `nasalib/examples/metit_example.pvs`
 - use #AND and #IMPLIES
-- short for [[MetiTarski]], another prover software/mathematical engine
-- used for semi-obvious reasoning in [[assert]], [[grind]], [[metit]]
+- short for [MetiTarski], another prover software/mathematical engine
+- used for semi-obvious reasoning in [assert], [grind], [metit]
 - #pvs

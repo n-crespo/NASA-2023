@@ -1,2 +1,2 @@
 - Propositional simplification plus decision procedures
-- mini [[smash]]
+- mini [smash]

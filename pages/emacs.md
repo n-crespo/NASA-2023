@@ -1,4 +1,4 @@
-- (installed to fix [[ghosts]] problem, doesn't seem to have fixed it)
+- (installed to fix [ghosts] problem, doesn't seem to have fixed it)
 - # Commands
 	- `<C-g>`: clear command (quit command)
 	- `<C-x>` window

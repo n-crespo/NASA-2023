@@ -1,1 +1,1 @@
-- see: Differential Equations, [[Ghosts]] and Invariants
+- see: Differential Equations, [Ghosts] and Invariants

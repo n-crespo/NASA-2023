@@ -1,1 +1,1 @@
-- see [[inst]]
+- see [inst]

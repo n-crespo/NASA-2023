@@ -1,3 +1,3 @@
-- splits stuff into 2 branches, visible with branch button ([[proof tree]])
+- splits stuff into 2 branches, visible with branch button ([proof tree])
 - when to use what: ![image.png](../assets/image_1688746674079_0.png){:height 307, :width 500}
 -

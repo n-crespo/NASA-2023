@@ -1,2 +1,2 @@
 - Propositional simplification with Binary Decision Diagrams (BDDs)
-- better than [[prop]], less than assert
+- better than [prop], less than assert

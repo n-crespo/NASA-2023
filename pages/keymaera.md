@@ -1,7 +1,11 @@
+KeYmaera
+========
 - browser-based JS frontend
 - prove by clicking 🤮
-	- ~~need to learn [[loop invariant]] because that is kinda common with Andre's proofs~~
-- # How to write stuff with [[KeYmaera]]
+	- ~~need to learn [loop invariant] because that is kinda common with Andre's proofs~~
+  - I learned how to use iterateD, which is very useful for dealing with loops
+
+- # How to write stuff with [KeYmaera]
 	- Example: 
 	  ```KeYmaera
 	  ArchiveEntry "<name of file>"
@@ -19,14 +23,14 @@
 	  End.
 	  
 	  Problem // in the form: <antecedent arguments> -> [{dynamics 1}{dynamics2}postcondition+annotations]                              
-	    v>=0 & A>0 & B>0                    
-	  ->                                    
-	  [                                     
-	    {                                   
+	    v>=0 & A>0 & B>0
+	  ->
+	  [
+	    {
 	      {?v<=5;a:=A; ++ a :=0; ++ a:=-B; }
-	      {x'=v , v'=a & v>=0}              
-	    }*@invariant(v>=0)                  
-	  ] v>=0                                
+	      {x'=v , v'=a & v>=0}
+	    }*@invariant(v>=0)
+	  ] v>=0
 	  End.
 	  
 	  Tactic "Tactic Description" // describe proof rules to solve lemma
@@ -35,13 +39,14 @@
 	  
 	  End. 
 	  ```
-	- Tags: #ProgramVariables, #Definitions, #ArchiveEntry, #Annotations, #keyMaera, #[[Propositional Logic]], #End.
 - ## `existsRmon`:
 	- I was getting $0 = 1$ because I never instantiated the term $g = 1/\sqrt t$
 	- solution:
 		- right click the $E$ term so you can put in a $\theta$ that is that term
 		- continue until you reach an obvious true statement (likely equals 1 and variables cancel out) and the engine fails to understand its truth...
-	- This problem was fixed with `existsrmon`, where an entire expression can be instantiated #existsRmon
+	- This problem was fixed with `existsrmon`, where an entire expression can be instantiated 
+    - see [existsRmon](pages/existsRmon.md)
+
 - ## Syntax:
 	- must end every section with `End.` #End
 	- constant and variables are separate  >> #ProgramVariables and #Definitions
@@ -85,8 +90,8 @@
 	- ![image.png](../assets/image_1689883975373_0.png)
 	- ![image.png](../assets/image_1689884624944_0.png)
 - ## Annotations
-	- To use a [[star]], which looks like this `*`, ensure that a set of curly braces surround ALL the differential equations in the program, as well as each individual differential equation. This might mean that one equation has two sets of curly braces around it. #loop #[[loop invariant]]
-	- To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. #Annotations #[[loop invariant]]
+	- To use a [star], which looks like this `*`, ensure that a set of curly braces surround ALL the differential equations in the program, as well as each individual differential equation. This might mean that one equation has two sets of curly braces around it. #loop #[loop invariant]
+	- To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. #Annotations #[loop invariant]
 - ## Proving Things
 	- see Tactic Library:
 		- https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html 

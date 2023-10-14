@@ -1,1 +1,1 @@
-- Nasa's implementation of [[Differential Dynamic Logic]]
+- Nasa's implementation of [Differential Dynamic Logic]
