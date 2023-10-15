@@ -1,1 +1,1 @@
-../n-crespo/NASA-2023/pages/Wiki.md
+.../nasa/pages/Wiki.md
