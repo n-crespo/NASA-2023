@@ -1,1 +1,1 @@
-../NASA-2023/pages/Wiki.md
+/root/.nb/nasa/pages/Wiki.md
