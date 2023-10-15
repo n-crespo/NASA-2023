@@ -1,3 +1,5 @@
+diamond
+=======
 - shown like this: $$<dyn>$$
 - opposite of [box], which is shown with $[dyn]$
 - Diamond is essentially the same as [SOMERUNS] or the backwards "E" logical notation meaning "there exists"

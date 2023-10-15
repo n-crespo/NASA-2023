@@ -2,7 +2,7 @@ KeYmaera
 ========
 - browser-based JS frontend
 - prove by clicking 🤮
-	- ~~need to learn [loop invariant] because that is kinda common with Andre's proofs~~
+  - ~~need to learn [loop invariant](https://github.com/n-crespo/NASA-2023/blob/master/pages/loopinvariant.md) because that is kinda common with Andre's proofs~~
   - I learned how to use iterateD, which is very useful for dealing with loops
 
 - # How to write stuff with [KeYmaera]
@@ -45,7 +45,7 @@ KeYmaera
 		- right click the $E$ term so you can put in a $\theta$ that is that term
 		- continue until you reach an obvious true statement (likely equals 1 and variables cancel out) and the engine fails to understand its truth...
 	- This problem was fixed with `existsrmon`, where an entire expression can be instantiated 
-    - see [existsRmon](pages/existsRmon.md)
+    - see [existsRmon](https://github.com/n-crespo/NASA-2023/blob/master/pages/existsRmon.md)
 
 - ## Syntax:
 	- must end every section with `End.` #End
@@ -84,18 +84,17 @@ KeYmaera
 	- `dG` differential ghosts: to add a fresh variable with a new differential equation into the dynamics.
 	- `odeInvC` Complete ODE invariants: attempt an exhaustive (slow) proof that P is invariant for the ODE x'=f(x)&Q.
 - ## More Syntax
-	- ![image.png](../assets/image_1689884169584_0.png)
-	- #ifthen, #test #assignment, #choice, #UNION
+  - ![image.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/image_1689884169584_0.png)
 - ## Predicate Symbols
-	- ![image.png](../assets/image_1689883975373_0.png)
-	- ![image.png](../assets/image_1689884624944_0.png)
+  - ![image.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/image_1689883975373_0.png)
+  - ![image.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/image_1689884624944_0.png)
 - ## Annotations
-	- To use a [star], which looks like this `*`, ensure that a set of curly braces surround ALL the differential equations in the program, as well as each individual differential equation. This might mean that one equation has two sets of curly braces around it. #loop #[loop invariant]
-	- To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. #Annotations #[loop invariant]
+  - To use a [star](https://github.com/n-crespo/NASA-2023/blob/master/pages/star.md), which looks like this `*`, ensure that a set of curly braces surround ALL the differential equations in the program, as well as each individual differential equation. This might mean that one equation has two sets of curly braces around it. [loop invariant](https://github.com/n-crespo/NASA-2023/blob/master/pages/loopinvariant.md)
+  - To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. [loop invariant](https://github.com/n-crespo/NASA-2023/blob/master/pages/loopinvariant.md)
 - ## Proving Things
 	- see Tactic Library:
-		- https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html 
-		  https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/HilbertCalculus.html   
+		- https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html
+		  https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/HilbertCalculus.html
 		  https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/SequentCalculus.html  
 	- see Tutorial Paper
 		- https://keymaerax.org/KeYmaeraX-tutorial.pdf
