@@ -7,7 +7,7 @@ Wiki
 		- (https://www.youtube.com/watch?v=EZ20CLwG6m8&list=PLnQeVMgmt_JcconLGqs20_I_Z0-nRMOLU&index=1)
 		- good for understanding certain dL concepts
 		- note: they are implemented in Plaidypvs with the same logic, but in a different looking format, not just logic statements
-	- ![Towards an Implementation of Differential Dynamic Logic in PVS.pdf](../../../assets/Towards_an_Implementation_of_Differential_Dynamic_Logic_in_PVS_1687887142394_0.pdf)
+- ![Towards an Implementation of Differential Dynamic Logic in PVS.pdf](https://github.com/n-crespo/NASA-2023/blob/master/assets/Towards_an_Implementation_of_Differential_Dynamic_Logic_in_PVS_1687887142394_0.pdf)
 		- ^^ Andre's book (he kinda coined the term Differential Dynamic Logic)
 	- ![logic_table_1687804288768_0.png](../assets/logic_table_1687804288768_0_1688662192043_0.png)
 		- ^^Table of logical operators often used in dL writing (such as Andre's book)

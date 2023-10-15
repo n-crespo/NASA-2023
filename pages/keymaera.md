@@ -48,8 +48,8 @@ KeYmaera
     - see [existsRmon](https://github.com/n-crespo/NASA-2023/blob/master/pages/existsRmon.md)
 
 - ## Syntax:
-	- must end every section with `End.` #End
-	- constant and variables are separate  >> #ProgramVariables and #Definitions
+	- must end every section with `End.`
+	- constant and variables are separate  >> ProgramVariables and Definitions
 	- note the use of square and squiggly brackets in the `Problem` section
 -
   ```keymaera
