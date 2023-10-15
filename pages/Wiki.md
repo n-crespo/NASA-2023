@@ -178,7 +178,7 @@ Wiki
       - you should end up with an equation that = 0, so find the ghost expression that can satisfy it
       - THATS IT
     - how can you know for sure that `xy^2=1` ?
-      - that is just a property of any positive number $$(x)$$ , use some reasoning to find small expressions like that that work for all numbers so you can build ghost variables around them
+      - that is just a property of any positive number $(x)$ , use some reasoning to find small expressions like that that work for all numbers so you can build ghost variables around them
     - the new function must exist for as long as or longer than the original function that you are reasoning about
 - `(dl-diffinv)`: diffinv
   - use it after `diffghost`
@@ -186,7 +186,7 @@ Wiki
   - you should get stuff that cancels out !!
   - (or rather an equation that equals 0)
 - useful graphic:
-  - Below: the differential ghost equation acts as a counterweight to f(x), ensuring that $$xy^2 = 1$$ will always be true, proving that x must always be positive
+  - Below: the differential ghost equation acts as a counterweight to f(x), ensuring that $xy^2 = 1$ will always be true, proving that x must always be positive
   - ![image_1687872581667_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/image_1687872581667_0_1688677124071_0.png)
     -
 ## Off-Topic Math
