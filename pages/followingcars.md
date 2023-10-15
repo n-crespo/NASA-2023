@@ -1,4 +1,3 @@
--
   ```keymaera
   ArchiveEntry "Following Cars"
   
@@ -24,4 +23,4 @@
   End.
   End.
   ```
-- Describes 2 cars, A in front, and B behind, which follow each other. The velocity of A is constant, while the velocity of B is constantly reassigned to half of the distance between A and B, gradually getting smaller. The distance between the two cars will become infinitely small, but they will never touch.
+- This Hybrid Program describes 2 cars, A in front, and B behind, which follow each other. The velocity of A is constant, while the velocity of B is constantly reassigned to half of the distance between A and B, gradually getting smaller. The distance between the two cars will become infinitely small, but they will never touch.

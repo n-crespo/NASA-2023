@@ -1,4 +1,6 @@
+prop
+====
 - PRACTICE: `prop_basic`, `pred_basic`
 	- prove all WITHOUT `(prop)` or `(grind)`
-- ez works every time command (not rly) (FOR [PROPOSITIONAL LOGIC])(meaning true and false)
-- repeated [flatten] and [split]
+- ez works every time command (not rly) (FOR PROPOSITIONAL LOGIC (meaning true and false))
+- repeated `flatten` and `split`
