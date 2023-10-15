@@ -180,15 +180,15 @@ Wiki
     - how can you know for sure that `xy^2=1` ?
       - that is just a property of any positive number $(x)$ , use some reasoning to find small expressions like that that work for all numbers so you can build ghost variables around them
     - the new function must exist for as long as or longer than the original function that you are reasoning about
-- `(dl-diffinv)`: diffinv
-  - use it after `diffghost`
+- `(dl-diffinv)`
+  - use this after `diffghost`
   - when you have a Hybrid Program and something you want to prove is true (the HP would define the movement of the variable in the equation), differentiate the equation (and make sure to use values like x', y', etc) and plug in the values that you know those primes are equal to (from the HP definition)
   - you should get stuff that cancels out !!
   - (or rather an equation that equals 0)
 - useful graphic:
   - Below: the differential ghost equation acts as a counterweight to f(x), ensuring that $xy^2 = 1$ will always be true, proving that x must always be positive
   - ![image_1687872581667_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/image_1687872581667_0_1688677124071_0.png)
-    -
+
 ## Off-Topic Math
 - Random slightly off-topic math:
   - you can define real numbers as the set of all lowest upper bounds of all nonempty, ___ sets
