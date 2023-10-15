@@ -87,9 +87,13 @@ Wiki
 - below the turnstile : one is true ALWAYS (OR) (consequent)
 ### Variables and Constants
 - Constants can be defined as PVS variables like so, and must be referenced with a `cnst( )` around them
+
 `x: VAR real`
+
 - Variables are defined as natural numbers with UNIQUE arbitrary values that correspond to their index, and must be referenced with a `val( )` around them
+
 `x: nat = 0`
+
 ## Writing things in PVS and dL
 - [`IMPORTING dL@top`](https://github.com/n-crespo/NASA-2023/blob/master/pages/IMPORTING.md)
 - [`DIFF()`](https://github.com/n-crespo/NASA-2023/blob/master/pages/DIFF.md): 
