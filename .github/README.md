@@ -1,1 +1,1 @@
-/root/.nb/nasa/pages/Wiki.md
+../nasa/pages/Wiki.md
