@@ -1,1 +1,1 @@
-.../pages/Wiki.md
+../pages/Wiki.md
