@@ -11,7 +11,7 @@ Wiki
 	- ^^ Andre's book (he kinda coined the term Differential Dynamic Logic)
 - ![logic_table_1687804288768_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/logic_table_1687804288768_0_1688662192043_0.png)
   - ^^Table of logical operators often used in dL writing (such as Andre's book)
-- ![LSFA_23_submit.pdf](https://github.com/n-crespo/NASA-2023/blob/master/assets/LSFA_23_submit_1687804328562_0.pdf)
+- ![Embedding Differential Dynamic Logic in PVS](https://github.com/n-crespo/NASA-2023/blob/master/assets/LSFA_23_submit_1687804328562_0.pdf)
   - Tanner's paper about dL, doesn't fully explain some basic topics, make sure you have some understanding before reading
   - very good place to learn about Plaidypvs in general
 - ![download_1687975279406_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/download_1687975279406_0_1688746434276_0.png)
@@ -73,7 +73,7 @@ Wiki
   ./cleanbin-all 
   # (inside nasalib)
   ```
-# Notes
+# Using dL in PVS
 ## First do this
 - go through the useful resources page
 - watch the intro video
@@ -85,13 +85,12 @@ Wiki
 - LEMMA: thing you need to prove
 - above the turnstile : ALL IS TRUE (AND) (antecedent)
 - below the turnstile : one is true ALWAYS (OR) (consequent)
-## Writing things in PVS and dL
 ### Variables and Constants
-- Constants can be defined as PVS variables like so, and must be referenced with a `cnst( )` around them  
-  - `x: VAR real`
-- Variables are defined as natural numbers with UNIQUE arbitrary values that correspond to their index, and must be referenced with a `val( )` around them  
-  - `x: nat = 0`
----
+- Constants can be defined as PVS variables like so, and must be referenced with a `cnst( )` around them
+`x: VAR real`
+- Variables are defined as natural numbers with UNIQUE arbitrary values that correspond to their index, and must be referenced with a `val( )` around them
+`x: nat = 0`
+## Writing things in PVS and dL
 - [`IMPORTING dL@top`](https://github.com/n-crespo/NASA-2023/blob/master/pages/IMPORTING.md)
 - [`DIFF()`](https://github.com/n-crespo/NASA-2023/blob/master/pages/DIFF.md): 
 - [`LEMMA`](https://github.com/n-crespo/NASA-2023/blob/master/pages/lemma.md) 
