@@ -8,30 +8,30 @@ Wiki
 		- good for understanding certain dL concepts
 		- note: they are implemented in Plaidypvs with the same logic, but in a different looking format, not just logic statements
 - ![Towards an Implementation of Differential Dynamic Logic in PVS.pdf](https://github.com/n-crespo/NASA-2023/blob/master/assets/Towards_an_Implementation_of_Differential_Dynamic_Logic_in_PVS_1687887142394_0.pdf)
-		- ^^ Andre's book (he kinda coined the term Differential Dynamic Logic)
-  - ![logic_table_1687804288768_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/logic_table_1687804288768_0_1688662192043_0.png)
-		- ^^Table of logical operators often used in dL writing (such as Andre's book)
-  - ![LSFA_23_submit.pdf](https://github.com/n-crespo/NASA-2023/blob/master/assets/LSFA_23_submit_1687804328562_0.pdf)
-		- Tanner's paper about dL, doesn't fully explain some basic topics, make sure you have some understanding before reading
-		- very good place to learn about Plaidypvs in general
-  - ![download_1687975279406_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/download_1687975279406_0_1688746434276_0.png)
-			- ^^Logical definitions of some proof rules in Plaidypvs
-				- proof commands like assert, grind, prop, all just automate repeated proof rules like the ones above
-				- these are the foundations of the commands you normally use
-			- uses logical notation and abbreviates some commands
-				- ex. Differential invariant (diffinv), differential cut, etc
-  - [Glossary_Plaidypvs.pvs](https://github.com/n-crespo/NASA-2023/blob/master/assets/Glossary_Plaidypvs_1687804520945_0.pvs)
-		- List of various Plaidypvs commands and some examples of Lemmas that can be proved with each command
-		- pretty good reference, doesn't really explain how some commands work
-		- Note: step through proofs to better understand proof commands
-		- Found in Examples folder inside `nasalib/dL` (can be found on github)
-		- In same folder: other examples of rotation, turns, etc
-  - [cade-prop-pred-pvs.pptx](https://github.com/n-crespo/NASA-2023/blob/master/assets/cade-prop-pred-pvs_1687804893459_0.pptx)
-		- good intro to PVS commands (not Plaidypvs)
-		- Full folder includes example questions to prove and their solutions (`prop_basic`, pred_basic + their solutions)
-	- cool paper
-		- [dTL2 : Differential Temporal Dynamic Logic with Nested Temporalities for Hybrid Systems](https://lfcps.org/pub/dTL2.pdf)
-			- Jean-Baptiste Jeannin and André Platzer
+	- ^^ Andre's book (he kinda coined the term Differential Dynamic Logic)
+- ![logic_table_1687804288768_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/logic_table_1687804288768_0_1688662192043_0.png)
+  - ^^Table of logical operators often used in dL writing (such as Andre's book)
+- ![LSFA_23_submit.pdf](https://github.com/n-crespo/NASA-2023/blob/master/assets/LSFA_23_submit_1687804328562_0.pdf)
+  - Tanner's paper about dL, doesn't fully explain some basic topics, make sure you have some understanding before reading
+  - very good place to learn about Plaidypvs in general
+- ![download_1687975279406_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/download_1687975279406_0_1688746434276_0.png)
+    - ^^Logical definitions of some proof rules in Plaidypvs
+      - proof commands like assert, grind, prop, all just automate repeated proof rules like the ones above
+      - these are the foundations of the commands you normally use
+    - uses logical notation and abbreviates some commands
+      - ex. Differential invariant (diffinv), differential cut, etc
+- [Glossary_Plaidypvs.pvs](https://github.com/n-crespo/NASA-2023/blob/master/assets/Glossary_Plaidypvs_1687804520945_0.pvs)
+  - List of various Plaidypvs commands and some examples of Lemmas that can be proved with each command
+  - pretty good reference, doesn't really explain how some commands work
+  - Note: step through proofs to better understand proof commands
+  - Found in Examples folder inside `nasalib/dL` (can be found on github)
+  - In same folder: other examples of rotation, turns, etc
+- [cade-prop-pred-pvs.pptx](https://github.com/n-crespo/NASA-2023/blob/master/assets/cade-prop-pred-pvs_1687804893459_0.pptx)
+  - good intro to PVS commands (not Plaidypvs)
+  - Full folder includes example questions to prove and their solutions (`prop_basic`, pred_basic + their solutions)
+- cool paper
+  - [dTL2 : Differential Temporal Dynamic Logic with Nested Temporalities for Hybrid Systems](https://lfcps.org/pub/dTL2.pdf)
+    - Jean-Baptiste Jeannin and André Platzer
 - # Intro
 	- theres not a lot of documentation on dL compared to PVS
 	- André Platzer basically made the whole concept and made a paywalled book about it
