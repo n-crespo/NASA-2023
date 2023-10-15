@@ -15,3 +15,4 @@ Discrepancies
 	- dIClose:
 		- "Differential Invariant Auto-Close"
 		- automatically closes all branches produced by a `dIRule` (regular invariant where you must manually close the branches
+    - see [dIClose](https://github.com/n-crespo/NASA-2023/blob/master/pages/dIClose.md)
