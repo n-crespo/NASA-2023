@@ -1,6 +1,17 @@
 Wiki
 ====
 
+1. [First do this](#first-do-this)
+2. [Intro to PVS](#intro-to-pvs)
+   * [Variables and Constants](#variables-and-constants)
+3. [Writing things in PVS and dL](#writing-things-in-pvs-and-dl)
+4. [Proving things in PVS and dL](#proving-things-in-pvs-and-dl)
+   * [Miscellaneous](#miscellaneous)
+   * [Simplification](#simplification)
+   * [Utilities](#utilities)
+   * [dL Commands](#dl-commands)
+5. [Differential Equations, Ghosts and Invariants](#differential-equations,-ghosts-and-invariants)
+6. [Off-Topic Math](#off-topic-math)
 # Resources
   - intro video + what dL/HPs are used for: [here](https://www.youtube.com/watch?v=qtQIUJQRvug)
 	- (free)André Platzer  Lectures for each chapter of his book, pdf below:
@@ -200,5 +211,6 @@ Wiki
   - also rational numbers (or reals i think? forgot) are like 0% of all numbers
     - if you took a random number theres a 0% chance it would be rational (or real) (i forgot)
     - they also have lots of holes in them, namely irrational numbers like $sqrt(2)$ and $pi$
+ 
 # KeYmaera
 - see [KeYmaera](https://github.com/n-crespo/NASA-2023/blob/master/pages/keymaera.md)
