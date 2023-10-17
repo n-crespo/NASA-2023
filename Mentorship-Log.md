@@ -1,5 +1,5 @@
-Table of Contents
-=================
+Mentorship-Log
+==============
 | Date | Hours | Topic |
 |---|---|---|
 | [Sep 6](journals/2023-09-06.md) | 3 | 
