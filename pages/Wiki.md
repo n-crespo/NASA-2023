@@ -18,7 +18,7 @@ Wiki
 # Using dL in PVS
 ## First do this
 - go through the useful resources page
-- [this is a test](quit.md)
+- [this is a test](pages/quit.md)
 - watch the intro video
 - read some documentation and papers about PVS and dL (See 
 - ask Tanner for his paper about dL, its super useful
@@ -38,61 +38,61 @@ Wiki
 `x: nat = 0`
 
 ## Writing things in PVS and dL
-- [`IMPORTING dL@top`](https://github.com/n-crespo/NASA-2023/blob/master/pages/IMPORTING.md)
-- [`DIFF()`](https://github.com/n-crespo/NASA-2023/blob/master/pages/DIFF.md): 
-- [`LEMMA`](https://github.com/n-crespo/NASA-2023/blob/master/pages/lemma.md) 
-- [`UNION()`](https://github.com/n-crespo/NASA-2023/blob/master/pages/UNION.md) 
-- [`IFTE()`](https://github.com/n-crespo/NASA-2023/blob/master/pages/IFTE.md) 
-- [`(BETA)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/BETA.md)
-- [`TEST()`](https://github.com/n-crespo/NASA-2023/blob/master/pages/test.md)
-- [`div_safe_re()`](https://github.com/n-crespo/NASA-2023/blob/master/pages/pages/div_safe_re.md) 
-- [`SEQ(P, HP)` ](https://github.com/n-crespo/NASA-2023/blob/master/pages/SEQ.md) 
-- [`STAR(ag)` ](https://github.com/n-crespo/NASA-2023/blob/master/pages/STAR.md) 
-- [`^^`](https://github.com/n-crespo/NASA-2023/blob/master/pages/exponentiation.md): 
-- [`ALLRUNS(DIFF(), postcondition)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/ALLRUNS.md)
-- [`SOMERUNS(DIFF(), postcondition)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/SOMERUNS.md)
+- [`IMPORTING dL@top`](pages/IMPORTING.md)
+- [`DIFF()`](pages/DIFF.md): 
+- [`LEMMA`](pages/lemma.md) 
+- [`UNION()`](pages/UNION.md) 
+- [`IFTE()`](pages/IFTE.md) 
+- [`(BETA)`](pages/beta.md)
+- [`TEST()`](pages/test.md)
+- [`div_safe_re()`](pages/div_safe_re.md) 
+- [`SEQ(P, HP)` ](pages/SEQ.md) 
+- [`STAR(ag)` ](pages/star.md) 
+- [`^^`](pages/exponentiation.md): 
+- [`ALLRUNS(DIFF(), postcondition)`](pages/ALLRUNS.md)
+- [`SOMERUNS(DIFF(), postcondition)`](pages/SOMERUNS.md)
 ## Proving things in PVS and dL
 ### Miscellaneous
-- [`(inst)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/inst.md)
-- [`(skolem)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/skolem.md)
-- [`(skeep)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/skeep.md)
-- [`(flatten)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/flatten.md)
-- [`(split)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/)
-- [`(expand)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/expand.md)
-- [`(iff)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/iff.md)
-- [`(replaces)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/replaces.md)
-- [`(skoletin)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/skoletin.md)
+- [`(inst)`](pages/inst.md)
+- [`(skolem)`](pages/skolem.md)
+- [`(skeep)`](pages/skeep.md)
+- [`(flatten)`](pages/flatten.md)
+- [`(split)`](pages/)
+- [`(expand)`](pages/expand.md)
+- [`(iff)`](pages/IFF.md)
+- [`(replaces)`](pages/replaces.md)
+- [`(skoletin)`](pages/skoletin.md)
 ### Simplification
-- [`(prop)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/prop.md)
-- [`(bddsimp)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/bddsimp.md)
-- [`(assert)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/assert.md)
-- [`(ground)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/ground.md)
-- [`(smash)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/smash.md)
-- [`(grind)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/grind.md)
-- [`(metit)`](https://github.com/n-crespo/NASA-2023/blob/master/metit.md)
+- [`(prop)`](pages/prop.md)
+- [`(bddsimp)`](pages/bddsimp.md)
+- [`(assert)`](pages/assert.md)
+- [`(ground)`](pages/ground.md)
+- [`(smash)`](pages/smash.md)
+- [`(grind)`](pages/grind.md)
+- [`(metit)`](metit.md)
 ### Utilities
-- [`(help)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/help.md)
-- [`(lemma)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/lemma.md)
-- [`(quit)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/quit.md)
-- [`(undo)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/undo.md)
-- [`(hide)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/hide.md)
-- [`(postpone)`](https://github.com/n-crespo/NASA-2023/blob/master/postpone.md)
+- [`(help)`](pages/help.md)
+- [`(lemma)`](pages/lemma.md)
+- [`(quit)`](pages/quit.md)
+- [`(undo)`](pages/undo.md)
+- [`(hide)`](pages/hide.md)
+- [`(postpone)`](postpone.md)
 ### dL Commands
 - See `dynamic_logic.pvs` for definitions and `Glossary_Plaidypvs.pvs` for examples  
-- [`(<command>b)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/box.md)
-- [`(<command>d)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/diamond.md)
-- [`(dl-loop)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/loop.md)
-- [`(dl-solve)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/solve.md)
-- [`(dl-subs)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/sub.md)
-- [`(dl-composeb)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/compose.md)
-- [`(dl-flatten)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/flatten.md)
-- [`(dl-ghost)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/ghosts.md)
-- [`(dl-diffghost)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/diffghost.md)
-- [`(dl-diffinv)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/diffinv.md)
-- [`(dl-inst)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/inst.md)
-- [`(dl-grind)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/dl-grind.md)
-- [`(dl-diffcase)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/diffcase.md)
-- [`DLEXISTSRf`](https://github.com/n-crespo/NASA-2023/blob/master/pages/DLEXISTSRf.md)
+- [`(<command>b)`](pages/box.md)
+- [`(<command>d)`](pages/diamond.md)
+- [`(dl-loop)`](pages/loop.md)
+- [`(dl-solve)`](pages/solve.md)
+- [`(dl-subs)`](pages/sub.md)
+- [`(dl-composeb)`](pages/compose.md)
+- [`(dl-flatten)`](pages/flatten.md)
+- [`(dl-ghost)`](pages/ghosts.md)
+- [`(dl-diffghost)`](pages/diffghost.md)
+- [`(dl-diffinv)`](pages/diffinv.md)
+- [`(dl-inst)`](pages/inst.md)
+- [`(dl-grind)`](pages/dl-grind.md)
+- [`(dl-diffcase)`](pages/diffcase.md)
+- [`DLEXISTSRf`](pages/DLEXISTSRf.md)
 
 ## Differential Ghosts and Invariants
 - most differential equations are impossible to solve
@@ -130,7 +130,7 @@ Wiki
   - (or rather an equation that equals 0)
 - useful graphic:
   - Below: the differential ghost equation acts as a counterweight to f(x), ensuring that $xy^2 = 1$ will always be true, proving that x must always be positive
-  - ![image_1687872581667_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/image_1687872581667_0_1688677124071_0.png)
+  - ![image_1687872581667_0.png](assets/image_1687872581667_0_1688677124071_0.png)
 
 ## Off-Topic Math
 - Random slightly off-topic math:
@@ -145,5 +145,5 @@ Wiki
     - they also have lots of holes in them, namely irrational numbers like $sqrt(2)$ and $pi$
 $x^2$
 # KeYmaera
-- see [KeYmaera](https://github.com/n-crespo/NASA-2023/blob/master/pages/keymaera.md)
+- see [KeYmaera](pages/keymaera.md)
 - see [KeYmaera](pages/keymaera.md)
