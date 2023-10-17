@@ -1,6 +1,7 @@
 Wiki
 ====
-# Table of Contents 
+
+# Table of Contents
 1. [First do this](#first-do-this)
 2. [Intro to PVS](#intro-to-pvs)
    * [Variables and Constants](#variables-and-constants)
@@ -10,53 +11,14 @@ Wiki
    * [Simplification](#simplification)
    * [Utilities](#utilities)
    * [dL Commands](#dl-commands)
-5. [Differential Equations, Ghosts and Invariants](#differential-equations,-ghosts-and-invariants)
+5. [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
 6. [Off-Topic Math](#off-topic-math)
+7. [KeYmaera](#KeYmaera)
 
-# Intro
-- theres not a lot of documentation on dL compared to PVS
-- André Platzer basically made the whole concept and made a paywalled book about it
-  - I have pdf version
-  - he also has recorded lectures on each chapter of his textbook for free on youtube
-  - "Logical Foundations of Cyber Physical Systems"
-- dL is an embedding inside PVS
-  - it has its own mini turnstile and own Commands (`dl-command`)
-  - it is not the same as PVS
-  - think of it as a small piece
-- pretty simple things I've modeled and/or proved:
-  - newton's law of cooling 
-  - example of a Bernoulli equation
-  - population growth differential equation
-  - bang bang controller 
-  - two cars following each other 
-- "step through" an already solved proof (in vscode-pvs) by clicking prove, then clicking the arrows in the small window in the bottom left
-- if image becomes unresponsive 
-  - click settings icon in the top left, ensure that cmd is mapped to the "meta" key, hit cmd, and click the window you want to focus
-  - alternatively, click the second icon from the left on the top of the image, which opens an app switcher
-  - note: if you don't want the meta key to be mistakenly activated whenever you cmd+tab away from the window, you can map it back to ctrl with the settings icon
-  - if a popup (for example asking you to confirm quitting a proof) is unresponsive, hit tab multiple times until the buttons are selected, then hit enter to select one of them
-- if emacs pvs inside the image is not recognizing any libraries, you need to update the path
-- use the command `source setpvs.sh` 
-  - the file should contain:
-    ```shell
-    export PVS_DIR=$HOME/pvs/pvs-7.1.0
-    export PVS_LIBRARY_PATH=$PVS_DIR/nasalib
-    ```
-  ```bash
-  rm .pvscontext
-  cd pvsbin/
-  rm *.bin
-  
-  
-  proveit -C
-  
-  
-  ./cleanbin-all 
-  # (inside nasalib)
-  ```
 # Using dL in PVS
 ## First do this
 - go through the useful resources page
+- [this is a test](quit.md)
 - watch the intro video
 - read some documentation and papers about PVS and dL (See 
 - ask Tanner for his paper about dL, its super useful
@@ -132,7 +94,7 @@ Wiki
 - [`(dl-diffcase)`](https://github.com/n-crespo/NASA-2023/blob/master/pages/diffcase.md)
 - [`DLEXISTSRf`](https://github.com/n-crespo/NASA-2023/blob/master/pages/DLEXISTSRf.md)
 
-## Differential Equations, Ghosts and Invariants
+## Differential Ghosts and Invariants
 - most differential equations are impossible to solve
 - solving ODE's will often make them more complicated then necessary
   - discrete ghost `(dl-ghost)` 
@@ -184,4 +146,4 @@ Wiki
 $x^2$
 # KeYmaera
 - see [KeYmaera](https://github.com/n-crespo/NASA-2023/blob/master/pages/keymaera.md)
-- see [KeYmaera](/pages/keymaera.md)
+- see [KeYmaera](pages/keymaera.md)
