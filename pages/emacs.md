@@ -1,6 +1,6 @@
 emacs
 =====
-- (installed to fix [ghosts](https://github.com/n-crespo/NASA-2023/blob/master/pages/ghosts.md) problem, doesn't seem to have fixed it)
+- (installed to fix [ghosts](pages/ghosts.md) problem, doesn't seem to have fixed it)
 # Commands
 - `<C-g>`: clear command (quit command)
 - `<C-x>` window

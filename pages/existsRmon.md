@@ -9,7 +9,7 @@ existsrMon
   G |- \exists x p(x), D
   ```
 - If there exists an x that maintains a post condition $p(x)$ , then you can say that it also suggests a postcondition $q(x)$ , but only if $q(x)$ itself makes $p(x)$ true
-- this is a Tactic in KeYmaera but does not exist as a proof rule (as far as i know) in [dL](https://github.com/n-crespo/NASA-2023/blob/master/pages/dL.md)
+- this is a Tactic in KeYmaera but does not exist as a proof rule (as far as i know) in [dL](pages/dL.md)
 - potential alternatives include:
 	- **`dl-mono`**
 		- `dl-MbL`

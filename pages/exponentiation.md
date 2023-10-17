@@ -4,4 +4,4 @@ Exponentiation
 - exponentiation to a real number
 - done with `^` for natural numbers, and `^^` for real numbers
 - can be expanded with `(expand)` 
-- see [expand](https://github.com/n-crespo/NASA-2023/blob/master/pages/expand.md)
+- see [expand](pages/expand.md)
