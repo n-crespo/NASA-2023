@@ -1,6 +1,5 @@
 Wiki
 ====
----
 # Table of Contents 
 1. [First do this](#first-do-this)
 2. [Intro to PVS](#intro-to-pvs)
@@ -14,38 +13,6 @@ Wiki
 5. [Differential Equations, Ghosts and Invariants](#differential-equations,-ghosts-and-invariants)
 6. [Off-Topic Math](#off-topic-math)
 
----
-# Resources
-- [intro](intro.md) video + what dL/HPs are used for: [here](https://www.youtube.com/watch?v=qtQIUJQRvug)
-- (free)André Platzer  Lectures for each chapter of his book, pdf below:
-- ![Towards an Implementation of Differential Dynamic Logic in PVS.pdf](https://github.com/n-crespo/NASA-2023/blob/master/assets/Towards_an_Implementation_of_Differential_Dynamic_Logic_in_PVS_1687887142394_0.pdf)
-- ^^ Andre's book (he kinda coined the term Differential Dynamic Logic)
-- (https://www.youtube.com/watch?v=EZ20CLwG6m8&list=PLnQeVMgmt_JcconLGqs20_I_Z0-nRMOLU&index=1)
-- good for understanding certain dL concepts
-- note: they are implemented in Plaidypvs with the same logic, but in a different looking format, not just logic statements
-- ![logic_table_1687804288768_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/logic_table_1687804288768_0_1688662192043_0.png)
-  - ^^Table of logical operators often used in dL writing (such as Andre's book)
-- ![Embedding Differential Dynamic Logic in PVS](https://github.com/n-crespo/NASA-2023/blob/master/assets/LSFA_23_submit_1687804328562_0.pdf)
-  - Tanner's paper about dL, doesn't fully explain some basic topics, make sure you have some understanding before reading
-  - very good place to learn about Plaidypvs in general
-- ![download_1687975279406_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/download_1687975279406_0_1688746434276_0.png)
-    - ^^Logical definitions of some proof rules in Plaidypvs
-      - proof commands like assert, grind, prop, all just automate repeated proof rules like the ones above
-      - these are the foundations of the commands you normally use
-    - uses logical notation and abbreviates some commands
-      - ex. Differential invariant (diffinv), differential cut, etc
-- [Glossary_Plaidypvs.pvs](https://github.com/n-crespo/NASA-2023/blob/master/assets/Glossary_Plaidypvs_1687804520945_0.pvs)
-  - List of various Plaidypvs commands and some examples of Lemmas that can be proved with each command
-  - pretty good reference, doesn't really explain how some commands work
-  - Note: step through proofs to better understand proof commands
-  - Found in Examples folder inside `nasalib/dL` (can be found on github)
-  - In same folder: other examples of rotation, turns, etc
-- [cade-prop-pred-pvs.pptx](https://github.com/n-crespo/NASA-2023/blob/master/assets/cade-prop-pred-pvs_1687804893459_0.pptx)
-  - good intro to PVS commands (not Plaidypvs)
-  - Full folder includes example questions to prove and their solutions (`prop_basic`, pred_basic + their solutions)
-- [dTL2 : Differential Temporal Dynamic Logic with Nested Temporalities for Hybrid Systems]: https://lfcps.org/pub/dTL2.pdf
-  - cool paper
-  - Jean-Baptiste Jeannin and André Platzer
 # Intro
 - theres not a lot of documentation on dL compared to PVS
 - André Platzer basically made the whole concept and made a paywalled book about it
@@ -211,9 +178,9 @@ Wiki
       - the $lub$ , or lowest upper bound, is $sqrt(2)$
   - also, like everything in math can be described using limits,
     - ex. the double ^^ is just the x^^a = limit of x^^q as q approaches A
-  - also rational numbers (or reals i think? forgot) are like 0% of all numbers
-    - if you took a random number theres a 0% chance it would be rational (or real) (i forgot)
+  - also rational numbers (or reals i think(?)) are like 0% of all numbers
+    - if you took a random number there's a 0% chance it would be rational (or real) (i forgot)
     - they also have lots of holes in them, namely irrational numbers like $sqrt(2)$ and $pi$
- 
+$x^2$
 # KeYmaera
 - see [KeYmaera](https://github.com/n-crespo/NASA-2023/blob/master/pages/keymaera.md)
