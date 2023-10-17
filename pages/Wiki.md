@@ -1,6 +1,7 @@
 Wiki
 ====
 ---
+# Table of Contents 
 1. [First do this](#first-do-this)
 2. [Intro to PVS](#intro-to-pvs)
    * [Variables and Constants](#variables-and-constants)
@@ -12,9 +13,10 @@ Wiki
    * [dL Commands](#dl-commands)
 5. [Differential Equations, Ghosts and Invariants](#differential-equations,-ghosts-and-invariants)
 6. [Off-Topic Math](#off-topic-math)
+
 ---
 # Resources
-- intro video + what dL/HPs are used for: [here](https://www.youtube.com/watch?v=qtQIUJQRvug)
+- [intro](intro.md) video + what dL/HPs are used for: [here](https://www.youtube.com/watch?v=qtQIUJQRvug)
 - (free)André Platzer  Lectures for each chapter of his book, pdf below:
 - ![Towards an Implementation of Differential Dynamic Logic in PVS.pdf](https://github.com/n-crespo/NASA-2023/blob/master/assets/Towards_an_Implementation_of_Differential_Dynamic_Logic_in_PVS_1687887142394_0.pdf)
 - ^^ Andre's book (he kinda coined the term Differential Dynamic Logic)
