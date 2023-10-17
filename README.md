@@ -157,4 +157,3 @@ easier.
 $x^2$
 # KeYmaera
 - see [KeYmaera](pages/keymaera.md)
-- see [KeYmaera](pages/keymaera.md)
