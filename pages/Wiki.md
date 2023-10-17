@@ -184,3 +184,4 @@ Wiki
 $x^2$
 # KeYmaera
 - see [KeYmaera](https://github.com/n-crespo/NASA-2023/blob/master/pages/keymaera.md)
+- see [KeYmaera](/pages/keymaera.md)
