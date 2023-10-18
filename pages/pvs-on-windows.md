@@ -72,5 +72,5 @@ name)(stolen from Teams group)
   7. VS Ccode will start. Download the PVS plugin and let it install PVS and nasalib as normal.
 
 # Resources 
-[Install Ubuntu on WSL2 on Windows 11](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
-[Installing Vscode on Ubuntu WSL](https://phoenixnap.com/kb/install-vscode-ubuntu)
+- [Install Ubuntu on WSL2 on Windows 11](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
+- [Installing Vscode on Ubuntu WSL](https://phoenixnap.com/kb/install-vscode-ubuntu)
