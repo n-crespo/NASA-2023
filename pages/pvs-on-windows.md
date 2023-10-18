@@ -73,3 +73,4 @@ name)(stolen from Teams group)
 
 # Resources 
 [Install Ubuntu on WSL2 on Windows 11](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview)
+[Installing Vscode on Ubuntu WSL](https://phoenixnap.com/kb/install-vscode-ubuntu)
