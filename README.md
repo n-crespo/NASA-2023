@@ -1,6 +1,6 @@
 README
 ======
-NOTE: 
+NOTE:
 
 This README is an overview of all the pages in this repo, which summarize my
 internship with the Formal Methods team at NASA from June 2023 - present. Notes
@@ -29,7 +29,6 @@ easier.
 # Using dL in PVS
 ## First do this
 - go through the useful resources page
-- [this is a test](pages/quit.md)
 - watch the intro video
 - read some documentation and papers about PVS and dL (See 
 - ask Tanner for his paper about dL, its super useful
