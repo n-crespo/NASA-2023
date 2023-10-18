@@ -32,6 +32,7 @@ easier.
 - watch the intro video
 - read some documentation and papers about PVS and dL (See 
 - ask Tanner for his paper about dL, its super useful
+- see [How to use PVS on Windows](pages/pvs-on-windows.md)
 ## Intro to PVS
 - turnstile: `|---------------------`
 - Propositional Logic: if, and, or, etc
