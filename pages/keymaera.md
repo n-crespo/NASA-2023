@@ -2,7 +2,7 @@ KeYmaera
 ========
 - browser-based JS frontend
 - prove by clicking 🤮
-  - ~~need to learn [loop invariant](pages/loopinvariant.md) because that is kinda common with Andre's proofs~~
+  - ~~need to learn [loop invariant](../pages/loopinvariant.md) because that is kinda common with Andre's proofs~~
   - I learned how to use iterateD, which is very useful for dealing with loops
 
 # How to write stuff with KeYmaera
@@ -86,7 +86,7 @@ End.
 - ![image.png](../assets/image_1689884169584_0.png)
 ## Predicate Symbols
 - ![image.png](../assets/image_1689883975373_0.png)
-- ![image.png](assets/image_1689884624944_0.png)
+- ![image.png](../assets/image_1689884624944_0.png)
 ## Annotations
 - To use a [star](star.md), which looks like this `*`, ensure that a set of curly braces surround ALL the differential equations in the program, as well as each individual differential equation. This might mean that one equation has two sets of curly braces around it. [loop invariant](loopinvariant.md)
 - To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. [loop invariant](loopinvariant.md)

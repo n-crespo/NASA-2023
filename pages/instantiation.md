@@ -1,3 +1,3 @@
 instantiation
 =============
-- see [inst](pages/inst.md)
+- see [inst](../pages/inst.md)

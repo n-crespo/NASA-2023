@@ -1,3 +1,3 @@
 diffcut
 =======
-- see [diffcase](pages/diffcase.md)
+- see [diffcase](../pages/diffcase.md)

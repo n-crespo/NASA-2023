@@ -1,6 +1,5 @@
 README
 ======
-NOTE:
 
 > This README is an overview of all the pages in this repo, which summarize my
 internship with the Formal Methods team at NASA from June 2023 - present. Notes
