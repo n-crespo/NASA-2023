@@ -3,7 +3,9 @@ pvs-on-windows
 
 > NOTE: The reason this is a bit janky is because VSCode has a feature that
 > lets you access WSL files while running VSCode as a Windows process, but PVS
-> will NOT work if you run VSCode as a windows process. 
+> will NOT work if you run VSCode as a windows process. So we have to force WSL
+> to run vscode inside Linux, which is why you may get an error message when
+> running `code .`
 
 > This also may not work if VSCode is already installed on Windows, but I
 > haven't had that problem.
@@ -33,7 +35,7 @@ pvs-on-windows
 11. Install PVS Extension, follow directions for installing PVS executables
 12. Contact me if this doesn't work
 
-
+---
 * The only part of this that may not work is that the installation for vscode
 using apt may be more complicated than I said above. If the above doesn't work,
 here is someone else's instructions for doing the same thing (i forgot their
