@@ -1,7 +1,7 @@
 PVS On Windows
 ==============
 
-> NOTE: The reason this is a bit janky is because Vscode has a feature that
+> Note: The reason this is a bit janky is because Vscode has a feature that
 > lets you access WSL files while running Vscode as a Windows process, but PVS
 > will NOT work if you run Vscode as a windows process. So we have to force WSL
 > to run vscode inside Linux, which is why you may get an error message when

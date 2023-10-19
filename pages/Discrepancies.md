@@ -11,7 +11,7 @@ Discrepancies
 		- test this
 	- reaching an error duplicates the last proof command on the proof explorer
     - ![image.png](../assets/image_1689611943196_0.png)
-  - NOTE: dl-solve cannot be used if a variable called 't' is in the pre-existing proof
+  - Note: dl-solve cannot be used if a variable called 't' is in the pre-existing proof
 	- dIClose:
 		- "Differential Invariant Auto-Close"
 		- automatically closes all branches produced by a `dIRule` (regular invariant where you must manually close the branches
