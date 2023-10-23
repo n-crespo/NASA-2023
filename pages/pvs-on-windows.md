@@ -26,7 +26,7 @@ PVS On Windows
   - in Powershell, use `wsl --list --online` to make sure ubuntu is installed and working (and using Version 2)
 3. In Powershell, type `ubuntu` to open Ubuntu terminal
 4. Follow the directions to make a UNIX account, you can leave the password blank (if it lets you) because it really doesn't matter much
-5. Use `su {username}` to [s]witch [u]ser
+5. Use `su {username}` to **s**witch **u**ser
 6. Use `exit` to exit back to root user
 7. In root, `sudo apt update`, `sudo apt full-upgrade`
 8. Install Vscode
