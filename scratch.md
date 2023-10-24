@@ -1,0 +1,10 @@
+- [ ] Get Mrs. Falk's recommendation again
+- [ ] Review Calc topics with instruction notes
+- [ ] Finish 14.5
+- [x] Music Resume
+- [x] Upload Piano Recordings
+- [x] Study for the mini quiz on Thursday
+- [x] Schedule Haircut Appointment
+- [x] Do 14.7 with Connor (Thursday)
+- [x] Tone Illumination project
+- [x] Mentorship
