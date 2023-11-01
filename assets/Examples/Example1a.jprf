@@ -1,0 +1,27 @@
+{
+ "Example1a.prop_1": [
+  {
+   "info": {
+    "theory": "Example1a",
+    "formula": "prop_1",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "1f19c6162aacda94f617a9a89acd76a09d2a51aa56b27c739359a5e805b30dae"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "prop_1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(dl-flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

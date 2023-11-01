@@ -1,0 +1,58 @@
+﻿Theorem "Example 1b"
+
+Definitions
+    Real bf;
+    Real E;
+
+End.
+
+ProgramVariables
+    Real v;
+    Real x;
+    Real a;
+End.
+
+Problem
+    (x<=bf)&
+    (bf<E)
+    ->
+    [{x'=v,v'=a &x<bf} ++
+     {{?x!=E; a:=-(v^2)/(2*(E-x));}; {x'=v, v'=a & v>=0}}* @invariant (x<=E & E>bf)
+    ](x<=E)
+    
+End.
+
+Tactic "Example 1: Proof"
+unfold; <(
+  "[{x'=v,v'=a&x < bf()}]x<=E()":
+    dW('R=="[{x'=v,v'=a&x < bf()}]x<=E()");
+    QE,
+  "[{{?x!=E();a:=-v^2/(2*(E()-x));}{x'=v,v'=a&v>=0}}*]x<=E()":
+    loop("x<=E()&bf() < E()", 'R=="[{{?x!=E();a:=-v^2/(2*(E()-x));}{x'=v,v'=a&v>=0}}*]x<=E()"); <(
+      "Init":
+        QE,
+      "Post":
+        QE,
+      "Step":
+        composeb('R=="[{?x!=E();a:=-v^2/(2*(E()-x));}{x'=v,v'=a&v>=0}](x<=E()&bf() < E())");
+        composeb('R=="[?x!=E();a:=-v^2/(2*(E()-x));][{x'=v,v'=a&v>=0}](x<=E()&bf() < E())");
+        assignb('R=="[?x!=E();]#[a:=-v^2/(2*(E()-x));][{x'=v,v'=a&v>=0}](x<=E()&bf() < E())#");
+        solve('R=="[?x!=E();]\forall a (a=-v^2/(2*(E()-x))->#[{x'=v,v'=a&v>=0}](x<=E()&bf() < E())#)");
+        testb('R=="[?x!=E();]\forall a (a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()))");
+        implyR('R=="x!=E()->\forall a (a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()))");
+        allR('R=="\forall a (a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()))");
+        implyR('R=="a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E())");
+        allR('R=="\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E())");
+        implyR('R=="t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()");
+        implyR('R=="\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()");
+        andR('R=="a*(t_^2/2)+v*t_+x<=E()&bf() < E()"); <(
+          "a*(t_^2/2)+v*t_+x<=E()":
+            QE,
+          "bf() < E()":
+            QE
+        )
+    )
+)
+End.
+
+End.

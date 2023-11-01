@@ -1,0 +1,34 @@
+Example1b  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  IMPORTING dL@top
+
+    % velocity
+    v: nat = 0
+
+    % position
+    x: nat = 1
+    
+    % acceleration
+    a: nat = 2
+
+    % buffer position
+    bf: posreal = 3
+
+    % end position
+    E: posreal = 4
+
+
+    prop_1 : LEMMA
+      DLIMPLIES(val(x)<=cnst(bf) AND cnst(bf)>cnst(E),
+      ALLRUNS(UNION(
+        DIFF((:(x, val(v)),(v, val(a)):),val(x)<cnst(bf)),
+        STAR(SEQ(
+          IFTE(val(x)/=cnst(E), 
+            ASSIGN((:     (a,((-(val(v)^cnst(2)))/(cnst(2)*(cnst(E)-val(x)))))   :))), 
+          DIFF((:(x, val(v), (v, val(a))):), v>=0))),
+      val(x)<=cnst(E))))
+
+END Example1b

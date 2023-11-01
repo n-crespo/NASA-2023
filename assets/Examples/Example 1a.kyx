@@ -1,0 +1,58 @@
+Theorem "Example 1a"
+
+Definitions
+    Real bf;
+    Real E;
+
+End.
+
+ProgramVariables
+    Real v;
+    Real x;
+    Real a;
+    Real vi;
+    Real xi;
+End.
+
+Problem
+    (x<=bf)&
+    (bf<E)
+    ->
+    [{x'=v,v'=a & x<=bf} ++
+     {{?x=bf; vi:=v;}; {x'=v, v'=-(vi^2)/(2*(E-bf)) & x>=bf}}* @invariant (x<=E & bf<E)
+    ](x<=E)
+    
+End.
+
+Tactic "Example 1a from tactic"
+unfold; <(
+  "[{x'=v,v'=a&x<=bf()}]x<=E()":
+    pending("\"[{x'=v,v'=a&x < bf()}]x<=E()\": dW('R==\"[{x'=v,v'=a&x < bf()}]x<=E()\") ; QE");
+    dW('R=="[{x'=v,v'=a&x<=bf()}]x<=E()");
+    QE,
+  "[{{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*]x<=E()":
+    pending("\"[{{?x!=E();a:=-v^2/(2*(E()-x));}{x'=v,v'=a&v>=0}}*]x<=E()\": loop(\"x<=E()&bf() < E()\", 'R==\"[{{?x!=E();a:=-v^2/(2*(E()-x));}{x'=v,v'=a&v>=0}}*]x<=E()\") ; <(
+    \"Init\": QE,
+    \"Post\": QE,
+    \"Step\": composeb('R==\"[{?x!=E();a:=-v^2/(2*(E()-x));}{x'=v,v'=a&v>=0}](x<=E()&bf() < E())\") ; composeb('R==\"[?x!=E();a:=-v^2/(2*(E()-x));][{x'=v,v'=a&v>=0}](x<=E()&bf() < E())\") ; assignb('R==\"[?x!=E();]#[a:=-v^2/(2*(E()-x));][{x'=v,v'=a&v>=0}](x<=E()&bf() < E())#\") ; solve('R==\"[?x!=E();]\forall a (a=-v^2/(2*(E()-x))->#[{x'=v,v'=a&v>=0}](x<=E()&bf() < E())#)\") ; testb('R==\"[?x!=E();]\forall a (a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()))\") ; implyR('R==\"x!=E()->\forall a (a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()))\") ; allR('R==\"\forall a (a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()))\") ; implyR('R==\"a=-v^2/(2*(E()-x))->\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E())\") ; allR('R==\"\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E())\") ; implyR('R==\"t_>=0->\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()\") ; implyR('R==\"\forall s_ (0<=s_&s_<=t_->a*s_+v>=0)->a*(t_^2/2)+v*t_+x<=E()&bf() < E()\") ; andR('R==\"a*(t_^2/2)+v*t_+x<=E()&bf() < E()\") ; <(
+        \"a*(t_^2/2)+v*t_+x<=E()\": QE,
+        \"bf() < E()\": QE
+      )
+  )");
+    loop("x<=E()&bf() < E()", 'R=="[{{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*]x<=E()"); <(
+      "Init":
+        QE,
+      "Post":
+        QE,
+      "Step":
+        composeb('R=="[{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}](x<=E()&bf() < E())");
+        composeb('R=="[?x=bf();vi:=v;][{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}](x<=E()&bf() < E())");
+        solve('R=="[?x=bf();][vi:=v;]#[{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}](x<=E()&bf() < E())#");
+        assignb('R=="[?x=bf();]#[vi:=v;]\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())->(-vi^2/(2*(E()-bf())))*(t_^2/2)+v*t_+x<=E()&bf() < E())#");
+        testb('R=="[?x=bf();]\forall t_ (t_>=0->\forall s_ (0<=s_&s_<=t_->(-v^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())->(-v^2/(2*(E()-bf())))*(t_^2/2)+v*t_+x<=E()&bf() < E())");
+        QE
+    )
+)
+End.
+
+End.

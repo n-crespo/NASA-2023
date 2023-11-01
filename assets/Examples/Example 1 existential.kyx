@@ -1,0 +1,28 @@
+/* this is likely unprovable */
+Theorem "Example 1e"
+
+Definitions
+    Real bf;
+    Real E;
+
+End.
+
+ProgramVariables
+    Real v;
+    Real x;
+    Real a;
+    Real vi;
+    Real xi;
+End.
+
+Problem
+    (x<=bf)&
+    (bf<E)
+    ->
+    <{x'=v,v'=a & x<=bf} ++
+     {{?x=bf; vi:=v;}; {x'=v, v'=-(vi^2)/(2*(E-bf)) & x>=bf}}* @invariant (x<=E & bf<E)
+    >(x=E & v=0)
+    
+End.
+
+End.

@@ -1,0 +1,46 @@
+/* Exported from KeYmaera X v5.0.2 */
+
+Theorem "Example 1 no star"
+
+Definitions
+    Real bf;
+    Real E;
+
+End.
+
+ProgramVariables
+    Real v;
+    Real x;
+    Real a;
+    Real vi;
+    Real xi;
+End.
+
+Problem
+    (x=bf)&
+    (bf<E) &
+    (v>0)
+    ->
+    <{{?x=bf; vi:=v;}; {x'=v, v'=-(vi^2)/(2*(E-bf)) & x>=bf}} 
+    >(x=E & v=0)
+    
+End.
+
+Tactic "Example 1 no star: Proof"
+unfold;
+solve('R=="<{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+existsR("2*(E()-bf())/vi", 'R=="\exists t_ (t_>=0&\forall s_ (0<=s_&s_<=t_->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*(t_^2/2)+v*t_+x=E()&(-vi^2/(2*(E()-bf())))*t_+v=0)");
+andR('R=="2*(E()-bf())/vi>=0&\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0"); <(
+  "2*(E()-bf())/vi>=0":
+    QE,
+  "\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0":
+    andR('R=="\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0"); <(
+      "\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())":
+        QE,
+      "(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0":
+        QE
+    )
+)
+End.
+
+End.
