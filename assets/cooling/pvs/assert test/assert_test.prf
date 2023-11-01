@@ -1,0 +1,41 @@
+(|assert_test|
+ (|test| 0
+  (|test-1| NIL 3898608298 ("" (GRIND) NIL NIL)
+   ((ALLRUNS CONST-DECL "bool" |bool_expr| |dL|)
+    (|v| CONST-DECL "nat" |assert_test| NIL)
+    (|a| CONST-DECL "nat" |assert_test| NIL)
+    (|\|-| CONST-DECL "bool" |dynamic_logic| |dL|)
+    (|iterate_left| CONST-DECL "T" |for_iterate| |structures|)
+    (|for| CONST-DECL "T" |for_iterate| |structures|)
+    (|for_it| DEF-DECL
+     "{t: T | t = for_def(i, upto, a, ext2int(upfrom, upto, f))}" |for_iterate|
+     |structures|)
+    (>= CONST-DECL "BoolExpr" |bool_expr| |dL|)
+    (|cnst| CONST-DECL "real" |hp_def| |dL|)
+    (|val| CONST-DECL "real" |hp_def| |dL|)
+    (|nth| DEF-DECL "T" |list_props| NIL)
+    (|length| DEF-DECL "nat" |list_props| NIL)
+    (|x| CONST-DECL "nat" |assert_test| NIL)
+    (|real_gt_is_strict_total_order| NAME-JUDGEMENT
+     "(strict_total_order?[real])" |real_props| NIL)
+    (|null_MapExprInj| NAME-JUDGEMENT "MapExprInj" |hp_def| |dL|)
+    (|number| NONEMPTY-TYPE-DECL NIL |numbers| NIL)
+    (|boolean| NONEMPTY-TYPE-DECL NIL |booleans| NIL)
+    (|number_field_pred| CONST-DECL "[number -> boolean]" |number_fields| NIL)
+    (|number_field| NONEMPTY-TYPE-FROM-DECL NIL |number_fields| NIL)
+    (|real_pred| CONST-DECL "[number_field -> boolean]" |reals| NIL)
+    (|real| NONEMPTY-TYPE-FROM-DECL NIL |reals| NIL)
+    (|rational_pred| CONST-DECL "[real -> boolean]" |rationals| NIL)
+    (|rational| NONEMPTY-TYPE-FROM-DECL NIL |rationals| NIL)
+    (|integer_pred| CONST-DECL "[rational -> boolean]" |integers| NIL)
+    (|int| NONEMPTY-TYPE-EQ-DECL NIL |integers| NIL)
+    (|bool| NONEMPTY-TYPE-EQ-DECL NIL |booleans| NIL)
+    (>= CONST-DECL "bool" |reals| NIL)
+    (|nat| NONEMPTY-TYPE-EQ-DECL NIL |naturalnumbers| NIL)
+    (|Environment| TYPE-EQ-DECL NIL |hp_def| |dL|)
+    (|real_ge_is_total_order| NAME-JUDGEMENT "(total_order?[real])"
+     |real_props| NIL)
+    (|real_plus_real_is_real| APPLICATION-JUDGEMENT "real" |reals| NIL)
+    (|minus_nzint_is_nzint| APPLICATION-JUDGEMENT "nzint" |integers| NIL))
+   SHOSTAK)))
+

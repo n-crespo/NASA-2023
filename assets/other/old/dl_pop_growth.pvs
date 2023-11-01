@@ -1,0 +1,25 @@
+%%
+% @theory: dl_pop_growth
+% @author: as2-streaming-user
+% @date: Fri, 23 Jun 2023 13:22:59 GMT
+%%
+dl_pop_growth: THEORY
+  BEGIN 
+
+  IMPORTING dL@top
+
+  p: nat = 100
+  % k is constant of proportionality
+  % c is carrying capacity of environment
+  % p is population
+  
+  dyn(k: real, c: posreal): HP = 
+    DIFF((:(p, cnst(k)*val(p)*(1-(val(p)/cnst(c)))):))
+
+    % P'=kP(1-P/c)
+  
+  capacity_prop: LEMMA
+  FORALL(k:real, c: posreal):
+    val(p) > 0 AND cnst(c) > 0 IMPLIES
+      ALLRUNS(dyn(k, c), val(p) <= c)
+  END dl_pop_growth

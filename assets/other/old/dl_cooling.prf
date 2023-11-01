@@ -1,0 +1,12 @@
+(|dl_cooling|
+ (|l_of_c_TCC1| 0
+  (|l_of_c_TCC1-1| NIL 3897404342 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|l_of_c| SUBTYPE
+    "(: (dl_cooling.temp, real_fun_ops[Environment].*((real_fun_ops[Environment].-)(hp_def.cnst(dl_cooling.k)), ((real_fun_ops[Environment].-)(hp_def.val(dl_cooling.temp), hp_def.cnst(dl_cooling.t_o))))) :)"
+    "ODEs")))
+ (|cool_prop_1| 0
+  (|cool_prop_1-1| NIL 3897574737 ("" (POSTPONE) NIL NIL) NIL SHOSTAK))
+ (|dl_diffghost_example| 0
+  (|dl_diffghost_example-1| NIL 3897404344 ("" (POSTPONE) NIL NIL) NIL
+   SHOSTAK)))
+

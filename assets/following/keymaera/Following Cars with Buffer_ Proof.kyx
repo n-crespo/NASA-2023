@@ -1,0 +1,48 @@
+/* Exported from KeYmaera X v5.0.2 */
+
+Theorem "Following Cars with Buffer"
+
+Definitions
+    Real va;
+End.
+
+ProgramVariables
+    Real xb;
+    Real xa;
+    Real b;
+    Real c;
+End.
+
+Problem
+    /*(xa > 0) &*/
+    (xa > xb + b) &
+    (va > 0) &
+    (xb > 0) & 
+    (c > 1)
+->
+    [{{xa' = va, xb' = (xa-xb-b)/c}}
+
+] (xa>xb+b)
+
+End.
+
+Tactic "Following Cars with Buffer: Proof"
+unfold;
+dG("y'=y/(2*c)", "y^2*(xa-xb-b)>=1", 'R=="[{xa'=va(),xb'=(xa-xb-b)/c}]xa>xb+b");
+existsRmon("y^2*(xa-xb-b)>=1", 'R=="\exists y [{xa'=va(),xb'=(xa-xb-b)/c,y'=1/(2*c)*y+0&true&2*c!=0}]y^2*(xa-xb-b)>=1"); <(
+  "Use":
+    QE,
+  "Show":
+    dIRule('R=="[{xa'=va(),xb'=(xa-xb-b)/c,y'=1/(2*c)*y+0&true&2*c!=0}]y^2*(xa-xb-b)>=1"); <(
+      "dI Init":
+        QE,
+      "dI Step":
+        Dassignb('R=="[y':=1/(2*c)*y+0;][xb':=(xa-xb-b())/c;][xa':=va();]2*y^(2-1)*y'*(xa-xb-b())+y^2*(xa'-xb'-0)>=0");
+        Dassignb('R=="[xb':=(xa-xb-b())/c;][xa':=va();]2*y^(2-1)*(1/(2*c)*y+0)*(xa-xb-b())+y^2*(xa'-xb'-0)>=0");
+        Dassignb('R=="[xa':=va();]2*y^(2-1)*(1/(2*c)*y+0)*(xa-xb-b())+y^2*(xa'-(xa-xb-b())/c-0)>=0");
+        QE
+    )
+)
+End.
+
+End.

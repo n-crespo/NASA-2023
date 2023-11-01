@@ -1,0 +1,32 @@
+%%
+% @theory: dl_rules
+% @author: Nicolas Crespo
+% @date: Wed, 21 Jun 2023 18:18:47 GMT
+%%
+dl_rules: THEORY
+  
+  BEGIN 
+
+  IMPORTING dL@top
+  
+  x: nat
+  y: nat
+  z: nat
+  p: bool
+  q: bool
+
+  % @QED dl_trueR_ex proved by as2-streaming-user on Wed, 21 Jun 2023 20:17:51 GMT
+  dl_trueR_ex: LEMMA
+     val(x)>3 |- (:val(x)>3, DLTRUE:)
+
+  % @QED dl_notR_ex proved on Thu, 22 Jun 2023 12:59:52 GMT
+  dl_notR_ex: LEMMA
+   (cons(val(x)>cnst(5),(: val(z)=cnst(0) :)) |- (: val(y)<20 :)) IMPLIES
+    ((: val(z)=cnst(0) :) |- cons(NOT val(x)>cnst(5),(: val(y)<20 :)))
+
+  dl_notL_ex: LEMMA
+    cons(val(x) = 0, (:NOT val(y)>20:)) |- (val(x)=0)
+
+  
+
+  END dl_rules

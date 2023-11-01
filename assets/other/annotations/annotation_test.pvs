@@ -1,0 +1,24 @@
+annotation_test  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  IMPORTING dL@top
+
+  x: nat = 0
+  y: nat = 0
+
+  annot_prop: LEMMA
+      LET inv = (val(x)>=val(y) AND val(y) >= cnst(0)) IN
+        ((::) |- (:
+        (val(x)>=cnst(8) AND  val(y)<= cnst(5) AND val(y) >= cnst(0)
+        IMPLIES
+        ALLRUNS(STAR(ASSIGN((:(x, val(x)+val(y)), (y, val(x)-cnst(2)*val(y)):))), val(x) >= cnst(0))) :))
+    
+
+  END annotation_test
+%% loop rule: (dl-loop "val(x)>=val(y) AND val(y) >= cnst(0)")

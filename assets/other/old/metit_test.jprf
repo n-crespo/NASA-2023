@@ -1,0 +1,39 @@
+{
+ "metit_test.metit_test": [
+  {
+   "info": {
+    "theory": "metit_test",
+    "formula": "metit_test",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "c9f807b670a714c964861087799e3359cb576c0f206ed98ea62a3c3436a18ff5"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "metit_test",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -3)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

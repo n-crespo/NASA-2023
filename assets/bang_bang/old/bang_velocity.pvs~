@@ -1,0 +1,62 @@
+%%
+% @theory: dl_bang
+% @author: as2-streaming-user
+% @date: Tue, 27 Jun 2023 15:23:24 GMT
+%%
+dl_bang: THEORY
+  BEGIN 
+    IMPORTING dL@top
+
+    % u can only check the position value every tau units of time
+
+
+    % [10:32 AM] Slagel, Tanner (LARC-D320)
+    % (t:= 0 ; (t' = 1 & t <= tau))* this is a program that lets time run, but resets time at least every tau amount of time
+    % try to make a hybrid program that tries to get the aircraft to a desired position 
+
+    % position
+    x: nat = 0
+
+    % current velocity
+    v: nat = 1
+
+    % value that accelaration my change to depending on controller
+    A: nat = 2
+
+    % time (?)
+    t: nat = 3
+
+    tau: posreal
+
+    tv: real
+
+
+    dyn: HP = DIFF((:(x, val(v)), (t, cnst(1)):), val(t) <= cnst(tau))
+    
+    controller: HP = IFTE(val(v) < cnst(tv), ASSIGN((:(v, cnst(A)):)), ASSIGN((:(v, -cnst(A)):)))
+
+%% this is resetting exactly at tau
+    bang_controller_eq: HP =
+      % if tau time has been reached
+      STAR(IFTE(val(t)=cnst(tau),
+	% reset the clock, activate controller
+        SEQ(ASSIGN((:(t, cnst(0)):)), SEQ(dyn, controller)),
+        % else 
+        SEQ(dyn, controller)))
+
+
+    %% So you want to put these together so they go over and over, and a way to set t back to zero
+    %%  hint : use SEQ for resetting time with dyn
+    %%% hint : use star to repeat HP 
+  END dl_bangbang_velocity  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  
+
+  END bang_velocity

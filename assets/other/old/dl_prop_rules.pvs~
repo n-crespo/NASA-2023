@@ -1,0 +1,19 @@
+dl_prop_rules  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  IMPORTING dL@top
+  
+  x: nat = 0
+  y: nat = 1
+  
+  dl_axiom: LEMMA
+  x = y IMPLIES
+  x = y
+
+  END dl_prop_rules

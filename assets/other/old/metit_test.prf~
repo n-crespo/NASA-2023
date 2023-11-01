@@ -1,0 +1,19 @@
+(|metit_test|
+ (|metit_test_TCC1| 0
+  (|metit_test_TCC1-1| NIL 3897726420 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|metit_test| SUBTYPE "(number_fields./(5, 10))"
+    "{i: integers.int | booleans.OR(metit_test.t /= 0, reals.>=(i, 0))}")))
+ (|metit_test_TCC2| 0
+  (|metit_test_TCC2-1| NIL 3897726420 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|metit_test| SUBTYPE
+    "(exponentiation.^(metit_test.t, (number_fields./(5, 10))))" "nznum")))
+ (|metit_test_TCC3| 0
+  (|metit_test_TCC3-1| NIL 3897726420 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|metit_test| SUBTYPE "2"
+    "{i: integers.int | booleans.OR(metit_test.y /= 0, reals.>=(i, 0))}")))
+ (|metit_test| 0
+  (|metit_test-1| NIL 3897726442
+   ("" (SKEEP)
+    (("" (ASSERT) (("" (REPLACES -3) (("" (POSTPONE) NIL NIL)) NIL)) NIL)) NIL)
+   NIL SHOSTAK)))
+

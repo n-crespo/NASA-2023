@@ -1,0 +1,49 @@
+
+%%%     Examples and exercises for basic prover commands
+%%%       (propositional formulas only)
+
+prop_basic: THEORY
+BEGIN
+
+p,q,r: bool           % Propositional constants
+
+
+%%%   Propositional Formulas   
+
+% Please use split and flatten, and their variants,
+% as appropriate.  You may also wish to try the 
+% utility commands like help, postpone, and undo.
+
+% @QED prop_0 proved on Thu, 08 Jun 2023 15:35:05 GMT
+prop_0: LEMMA  ((p => q) AND p) => q
+
+% @QED prop_1 proved on Thu, 08 Jun 2023 15:37:25 GMT
+prop_1: LEMMA  ((p AND q) AND r) => (p AND (q AND r))
+
+% @QED prop_2 proved on Thu, 08 Jun 2023 16:01:41 GMT
+prop_2: LEMMA  NOT (p OR q) IFF (NOT p AND NOT q)
+
+% @QED prop_3 proved on Mon, 12 Jun 2023 13:05:06 GMT
+prop_3: LEMMA  NOT (p AND q) IFF (NOT p OR NOT q)
+
+% @QED prop_4 proved on Mon, 12 Jun 2023 13:07:45 GMT
+prop_4: LEMMA  (p => (q => r)) IFF (p AND q => r)
+
+% @QED prop_5 proved on Mon, 12 Jun 2023 13:13:53 GMT
+prop_5: LEMMA  (p AND (q OR r)) IFF (p AND q) OR (p AND r)
+
+% @QED prop_6 proved on Mon, 12 Jun 2023 13:28:51 GMT
+prop_6: LEMMA  (p OR (q AND r)) IFF (p OR q) AND (p OR r)
+
+% @QED prop_7 proved on Mon, 12 Jun 2023 13:33:38 GMT
+prop_7: LEMMA  ((p => q) AND (p => r)) IFF (p => (q AND r))
+
+% @QED prop_8 proved on Mon, 12 Jun 2023 13:41:07 GMT
+prop_8: LEMMA  ((p => q) => (p AND q)) IFF ((NOT p => q) AND (q => p))
+
+% Not a theorem:
+
+fools_lemma: FORMULA  ((p OR q) AND r) => (p AND (q AND r))
+
+
+END prop_basic

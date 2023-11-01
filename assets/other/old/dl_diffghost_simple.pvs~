@@ -1,0 +1,22 @@
+dl_diffghost_simple  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  IMPORTING dL@top
+
+  x: nat
+  ≈≈≈≈e
+  dl_diffghost_simple: LEMMA
+    LET
+    dyn: HP = DIFF( (: (x, val(-x)) :) )
+    IN
+    (val(x)>cnst(0)) IMPLIES
+      ALLRUNS(dyn, val(x)>cnst(0))
+      
+
+  END dl_diffghost_simple

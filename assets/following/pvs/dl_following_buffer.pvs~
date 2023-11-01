@@ -1,0 +1,26 @@
+dl_following_buffer  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  IMPORTING dL@top
+
+    % position a
+    xa: nat = 0
+    % position b
+    xb: nat = 1
+    
+    % velocity a
+    va: VAR real
+    % velocity b
+    vb: nat = 3
+
+    % buffer value
+    b: VAR real
+
+    following_prop : LEMMA
+      DLIMPLIES(val(xa)>val(xb) AND cnst(b)>cnst(0),
+      ALLRUNS(DIFF((:(xa, cnst(va)), (xb, (val(xa)-val(xb)+cnst(b))/2):)),
+	         val(xa)>val(xb)))
+
+  END dl_following_buffer

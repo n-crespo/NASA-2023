@@ -1,0 +1,45 @@
+/* Exported from KeYmaera X v5.0.2 */
+
+Theorem "Following Cars"
+
+Definitions
+    Real va;
+End.
+
+ProgramVariables
+    Real xb;
+    Real xa;
+    Real d;
+End.
+
+Problem
+    (xa > 0) &
+    (xa > xb) &
+    (va > 0)
+->
+    [{xa' = va, xb' = (xa-xb)/2}
+
+] (xa>xb)
+
+End.
+
+Tactic "Following Cars: Proof"
+unfold;
+dG("y'=y/4", "y^2*(xa-xb)>=1", 'R=="[{xa'=va(),xb'=(xa-xb)/2}]xa>xb");
+existsRmon("y^2*(xa-xb)>=1", 'R=="\exists y [{xa'=va(),xb'=(xa-xb)/2,y'=1/4*y+0}]y^2*(xa-xb)>=1"); <(
+  "Use":
+    QE,
+  "Show":
+    dIRule('R=="[{xa'=va(),xb'=(xa-xb)/2,y'=1/4*y+0}]y^2*(xa-xb)>=1"); <(
+      "dI Init":
+        QE,
+      "dI Step":
+        Dassignb('R=="[y':=1/4*y+0;][xb':=(xa-xb)/2;][xa':=va();]2*y^(2-1)*y'*(xa-xb)+y^2*(xa'-xb')>=0");
+        Dassignb('R=="[xb':=(xa-xb)/2;]#[xa':=va();]2*y^(2-1)*(1/4*y+0)*(xa-xb)+y^2*(xa'-xb')>=0#");
+        Dassignb('R=="[xb':=(xa-xb)/2;]2*y^(2-1)*(1/4*y+0)*(xa-xb)+y^2*(va()-xb')>=0");
+        QE
+    )
+)
+End.
+
+End.

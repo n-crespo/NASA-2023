@@ -1,0 +1,25 @@
+% %%
+% % @theory: dl_easy
+% % @author: ...
+% % @date: Fri, 16 Jun 2023 13:29:58 GMT
+% %%
+% dl_easy: THEORY
+%   BEGIN 
+%     IMPORTING dL@top
+
+%     y: nat = 0
+%     x: nat = 1
+%     z: nat = 2
+
+%     gamma: real = 0.1
+%     alpha: real = 0.14
+
+%     simple_model: LEMMA
+%     LET
+%     Eq: HP = DIFF( (: (x, (val(y)*(val(z)-1+val(x)^2) + cnst(gamma)*val(x))),
+%                       (y, val(x)*(3*val(z)+1-val(x)^2)+cnst(gamma)*val(y)),
+%                       (z, -2*val(z)(cnst(alpha)+val(x)*val(y)))
+%                    :))
+
+%     Eq IMPLIES
+%   END dl_easy

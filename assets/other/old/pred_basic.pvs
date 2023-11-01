@@ -1,0 +1,96 @@
+
+%%%     Examples and exercises for basic pred commands
+
+pred_basic: THEORY
+BEGIN
+
+arb: TYPE+                        % Arbitrary nonempty type
+
+arb_pred: TYPE = [arb -> bool]    % Predicate type for arb
+
+a,b,c: arb                        % Constants of type arb
+
+x,y,z: VAR arb                    % Variables of type arb
+
+P,Q,R: arb_pred                   % Predicate names
+
+
+%%%   Quantified Formulas    
+
+% Please use split, flatten, inst, and skolem, and their 
+% variants, as appropriate.
+
+% @QED quant_0 proved on Mon, 12 Jun 2023 14:00:30 GMT
+quant_0: LEMMA  (FORALL x: P(x)) => P(a)
+
+% @QED quant_1 proved on Mon, 12 Jun 2023 14:02:12 GMT
+quant_1: LEMMA  ((FORALL x: P(x) => Q(x)) AND P(a)) => Q(a)
+
+% @QED quant_2 proved by as2-streaming-user on Mon, 12 Jun 2023 17:05:57 GMT
+quant_2: LEMMA  (FORALL x: P(x)) => (EXISTS y: P(y))
+
+% @QED quant_3 proved on Mon, 12 Jun 2023 14:11:12 GMT
+quant_3: LEMMA  (FORALL x: P(x)) OR (EXISTS y: NOT P(y))
+
+% @QED quant_4 proved on Mon, 12 Jun 2023 15:11:55 GMT
+quant_4: LEMMA  NOT (FORALL x: P(x)) IFF (EXISTS x: NOT P(x))
+
+% @QED quant_5 proved on Mon, 12 Jun 2023 15:15:05 GMT
+quant_5: LEMMA  NOT (EXISTS x: P(x)) IFF (FORALL x: NOT P(x))
+
+% @QED quant_6 proved by as2-streaming-user on Mon, 12 Jun 2023 17:09:44 GMT
+quant_6: LEMMA  (FORALL x: P(x)) AND (FORALL x: Q(x))
+                  IFF (FORALL x: P(x) AND Q(x))
+
+% @QED quant_7 proved by as2-streaming-user on Mon, 12 Jun 2023 17:10:49 GMT
+quant_7: LEMMA  (EXISTS x: P(x)) OR (EXISTS x: Q(x))
+                  IFF (EXISTS x: P(x) OR Q(x))
+
+
+l,m,n:  VAR int
+
+% Try a decision procedure here.
+
+% @QED distrib proved on Mon, 12 Jun 2023 15:20:25 GMT
+distrib: LEMMA  l * (m + n) = (l * m) + (l * n)
+
+% A defintition of factorial for some basic proving.
+% You'll learn more about recursion later.
+
+N: VAR nat
+
+factorial(N): RECURSIVE nat = 
+  IF N=0 THEN 1
+  ELSE N*factorial(N-1)
+  ENDIF
+  MEASURE N
+
+% Try expanding the definition here, or use a decision procedure
+
+% @QED fact_0 proved by as2-streaming-user on Mon, 12 Jun 2023 17:25:51 GMT
+fact_0: LEMMA factorial(0) = 1
+
+% @QED fact_3 proved by as2-streaming-user on Mon, 12 Jun 2023 17:26:46 GMT
+fact_3: LEMMA factorial(3) = 6
+
+% @QED fact_13 proved by as2-streaming-user on Mon, 12 Jun 2023 17:27:42 GMT
+fact_13: LEMMA factorial(13) = 6227020800
+
+% You'll need to expand factorial carefully.
+% Be careful, "grind" will run away...  
+
+% @QED fact_pos proved by as2-streaming-user on Mon, 12 Jun 2023 17:32:10 GMT
+fact_pos: LEMMA 
+N>=1 IMPLIES 
+factorial(N) = N*factorial(N-1)
+
+% Use the previous lemma to prove this. 
+
+% @QED fact_large proved by as2-streaming-user on Mon, 12 Jun 2023 17:39:19 GMT
+fact_large: LEMMA 
+N >= 3 IMPLIES
+factorial(N) = N*(N-1)*(N-2)*factorial(N-3)
+
+
+
+END pred_basic

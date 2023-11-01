@@ -1,0 +1,46 @@
+metit_test  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+   IMPORTING lnexp@ln_exp,
+	    interval_arith@interval
+
+
+% object temp
+ % t: VAR nat
+% ambient temp
+ % a: VAR nat
+% constant for cooling
+ % k: VAR nat
+% ghost
+ % y
+  
+  t, a, k, y: var real
+  
+
+
+  metit_test: LEMMA
+    FORALL(t:real,y:posreal):
+      a = 0 AND
+        k = -1 AND
+          y = 1/(t^0.5) AND
+	    t > 0
+      IMPLIES
+        t*(y^2) = 1
+      
+      
+      
+
+ % metit_test: LEMMA
+ %  ASSIGN((:
+ % (a, cnst(0)),
+ %   (k, cnst(-1)),
+ %   (y, cnst(1)/val(t)^0.5)
+ %   :))
+ %   AND
+ %   (val(t)>cnst(0))
+ %   IMPLIES
+ %   (val(t)*(y)^2 = cnst(1))
+
+  END metit_test

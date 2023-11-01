@@ -1,0 +1,9 @@
+(dl_testing
+ (dl_trueR 0
+  (dl_trueR-1 nil 3896364457 ("" (prop) (("" (assert) nil nil)) nil)
+   ((nnint_plus_posint_is_posint application-judgement "posint"
+     integers nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil))
+   shostak)))
+

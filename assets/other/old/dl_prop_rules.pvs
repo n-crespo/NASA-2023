@@ -1,0 +1,17 @@
+dl_prop_rules  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  IMPORTING dL@top
+  
+  x: bool
+  y: bool
+  
+dl_axiom: LEMMA
+  val(x) = 5  IMPLIES val(x) = 5
+  END dl_prop_rules

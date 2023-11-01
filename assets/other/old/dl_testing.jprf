@@ -1,0 +1,33 @@
+{
+ "dl_testing.dl_trueR": [
+  {
+   "info": {
+    "theory": "dl_testing",
+    "formula": "dl_trueR",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6c2f62f8f66dcb65777c4677ca9858534120bc862a05b28477f748af00afdecc"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "dl_trueR",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

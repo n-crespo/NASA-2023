@@ -1,0 +1,120 @@
+{
+ "dl_rules.dl_trueR_ex": [
+  {
+   "info": {
+    "theory": "dl_rules",
+    "formula": "dl_trueR_ex",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2a44a96467e2ce7398b095c9aa83784d5cbabb5cf4e85a0ccc42076c7e2e821c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "dl_trueR_ex",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(dl-trueR)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "dl_rules.dl_notR_example": [
+  {
+   "info": {
+    "theory": "dl_rules",
+    "formula": "dl_notR_example",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "b9267c1fefbd2e6abf3352cfe61bae830ec6abf21597b6e44b46a21e1b4e2f5c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "dl_notR_example",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(dl-notR)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "dl_rules.dl_notL_example": [
+  {
+   "info": {
+    "theory": "dl_rules",
+    "formula": "dl_notL_example",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "044fc2d66b36930fc5ac443194848ba56a8ea8e41c28bf76aa5a444465a4d788"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "dl_notL_example",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(dl-notL)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "dl_rules.dl_notL_ex": [
+  {
+   "info": {
+    "theory": "dl_rules",
+    "formula": "dl_notL_ex",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6e4120208f7258a900eca6479577608fe8616bd6562a9736c047e0c0304ec875"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "dl_notL_ex",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(dl-notL)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(dl-flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

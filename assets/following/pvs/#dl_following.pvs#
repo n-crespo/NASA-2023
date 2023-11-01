@@ -1,0 +1,47 @@
+dl_following  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  IMPORTING dL@top
+
+    % position a
+    xa: nat = 0
+    % position b
+    xb: nat = 1
+    
+    % velocity a
+    va: posreal = 2
+    % velocity b
+    vb: posreal = 3
+
+    following_prop : LEMMA
+      DLIMPLIES(val(xa)>val(xb),
+      ALLRUNS(DIFF((:(xa, cnst(va)), (xb, (val(xa)-val(xb))/2):)),
+	         val(xa)>val(xb)))
+    
+    %-------------------------------------------
+% @formula: following_prop 
+% @theory: dl_following
+% @pvsfile: dl_following.pvs
+% @status: ✅ proved
+%-------------------------------------------
+% following_prop : PROOF
+% (then (dl-flatten)
+%   (spread (dl-diffghost "cnst(1/4)" "cnst(0)" "G" "val(G)^2*(val(xa)-val(xb))>=cnst(1)")
+%    ((then (dl-inst "div_safe_re(cnst		(1), (val(xa)-val(xb))^^(1/2))")
+%      (spread (dl-diffinv)
+%       ((spread (grind :exclude "^^")
+%         ((then (grind))
+%          (then (lemma "sqrt_hathat")(grind))))
+%        (then (grind)))))
+%     (then (dl-assert))
+%     (then (dl-assert))
+%     (then (grind)))))
+% QED following_prop
+      
+  END dl_following

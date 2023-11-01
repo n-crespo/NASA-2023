@@ -1,0 +1,20 @@
+assert_test  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  IMPORTING dL@top
+
+  x: nat = 1
+  a: nat = 2
+  a: nat = 3
+
+  test: LEMMA
+  val(x) >= 0 AND a > 0 IMPLIES
+  ALLRUNS(SEQ(ASSIGN(v, val(a)), DIFF((:(x, val(v)):))),val(x) >= 0) 
+
+  END assert_test

@@ -1,0 +1,6 @@
+Proof summary for theory dl_cooling_edited
+
+	cool_prop_1.....................................................❗ unfinished          (68.537 s)
+	cool_prop_2.....................................................✅ proved              (46.799 s)
+
+Theory dl_cooling_edited totals: 2 formulas, 2 attempted, 1 succeeded (115.336 s)

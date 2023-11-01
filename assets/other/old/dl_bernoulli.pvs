@@ -1,0 +1,25 @@
+%%
+% @theory: dl_nicolas3
+% @author: ...
+% @date: Wed, 14 Jun 2023 20:08:18 GMT
+%%
+dl_nicolas3: THEORY
+  BEGIN 
+    
+    IMPORTING dL@top
+
+    x: nat = 1
+    y: nat = 1
+
+    bernoulli_prop : LEMMA
+    FORALL(c:real):
+    LET
+      Eq  : BoolExpr = (val(x)^2)/((1/5)*(val(x))^5 + cnst(c)) = val(y),
+      Some: HP       = DIFF((: (y, -val(x)^2 * val(y)^2 + -cnst(2)*val(y)/val(x)), 
+                                    (x, cnst(1)):))
+    IN 
+      Eq IMPLIES ALLRUNS(Some, Eq)
+
+
+
+  END dl_nicolas3

@@ -1,0 +1,46 @@
+%%
+% @theory: dl_bang
+% @date: Tue, 27 Jun 2023 15:23:24 GMT
+%%
+bang_velocity: THEORY
+  BEGIN 
+    IMPORTING dL@top
+
+    % ——————————————– %
+     Control: Velocity
+     Target: Position
+    % ——————————————– %
+
+    % curent position
+    x: nat = 0
+
+    % current velocity
+    v: nat = 1
+
+    % controller change value
+    A: nat = 2
+
+    % time (?)
+    t: nat = 3
+
+    % time increment
+    tau: posreal
+
+    % desired position
+    tx: real
+
+    dyn: HP = DIFF((:(x, val(v)), (t, cnst(1)):), val(t) <= cnst(tau))
+    
+    controller: HP = IFTE(val(x) < cnst(tx), ASSIGN((:(v, cnst(A)):)), ASSIGN((:(v, -cnst(A)):)))
+
+    %% this is resetting exactly at tau
+    bang_controller_eq: HP =
+    
+      % if tau time has been reached
+      STAR(IFTE(val(t)=cnst(tau),
+	% reset the clock, activate controller
+        SEQ(ASSIGN((:(t, cnst(0)):)), SEQ(dyn, controller)),
+        % else 
+        SEQ(dyn, controller)))
+
+  END bang_velocity

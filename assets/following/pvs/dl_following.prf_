@@ -1,0 +1,31 @@
+(|dl_following|
+ (|motionA_TCC1| 0
+  (|motionA_TCC1-1| NIL 3898081048 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|motionA| SUBTYPE "(: (dl_following.xa, hp_def.cnst(dl_following.va)) :)"
+    "ODEs")))
+ (|motionB_TCC1| 0
+  (|motionB_TCC1-1| NIL 3898081048 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|motionB| SUBTYPE "(: (dl_following.xb, hp_def.val(dl_following.d)) :)"
+    "ODEs")))
+ (|following_prop| 0
+  (|following_prop-1| NIL 3898081064
+   ("" (DL-FLATTEN)
+    (("" (DL-PP)
+      (("" (EXPAND "motionA")
+        (("" (EXPAND MOTIONB)
+          (("" (DL-FLATTEN)
+            (("" (ASSERT)
+              (("" (DL-ASSERT)
+                (("" (DL-GROUND)
+                  (("" (SMASH) (("" (DL-GRIND) (("" (POSTPONE) NIL NIL)) NIL))
+                    NIL))
+                  NIL))
+                NIL))
+              NIL))
+            NIL))
+          NIL))
+        NIL))
+      NIL))
+    NIL)
+   NIL SHOSTAK)))
+

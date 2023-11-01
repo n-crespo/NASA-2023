@@ -1,0 +1,35 @@
+%%
+% @theory: dl_nicolas
+% @author: ...
+% @date: Mon, 12 Jun 2023 18:32:58 GMT
+%%
+dl_nicolas: THEORY
+  BEGIN 
+  
+  IMPORTING  dL@top
+
+  % Insert meaningful comment here
+
+  p : nat = 0 % Position
+  v : nat = 1% Current Velocity
+  vs : VAR nat % Target Velocity
+  a : nat = 1% acceleration
+  A : VAR nat % arbitrary positive value
+  B : VAR nat % arbitrary negative value
+
+
+  move : HP = DIFF( (: (v, val(a)),(p, val(v)) :) )
+  
+
+  move_prop : LEMMA
+  LET
+  move: HP = IFTE(val(v) <= cnst(vs), ASSIGN((: (a, cnst(A)) :)), ASSIGN((: (a, cnst(-B)) :))), cnst(vs) > 0
+  IN
+  SOMERUNS(move, (val(v) <= val(vs)))
+
+%ASSIGN ( (: (a, cnst(A) :)))
+
+
+
+
+  END dl_nicolas

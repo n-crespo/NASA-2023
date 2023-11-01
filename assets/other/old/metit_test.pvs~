@@ -1,0 +1,22 @@
+metit_test  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  t: VAR nat 
+  a: VAR nat
+  k: VAR nat
+  y: nat
+  x: nat
+  
+
+  metit_test: LEMMA
+  ((cnst(t)>cnst(0)), cnst(a) = cnst(0), cnst(k)=cnst(-1), cnst(y)=1/(x^0.5))
+  IMPLIES
+  (val(t)*(y)^2 = cnst(1))
+
+  END metit_test

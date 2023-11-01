@@ -1,0 +1,61 @@
+dl_cooling  % [ parameters]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+  % assuming declarations
+  % ENDASSUMING
+
+  IMPORTING dL@top
+    
+    %Define variables
+    % temp is temperature of object
+    temp: nat = 0
+
+  
+    %Law of Cooling
+    % k is cooling coef
+    % t_o is ambient temp
+    l_of_c(k,t_o:real): HP =
+     DIFF((:(temp, -cnst(k)*(val(temp)-cnst(t_o))):))
+    
+    
+%%%% chang cnst(t0) to val(t0) for nasty dl-flatten bug
+
+    cool_prop_1: LEMMA
+    FORALL(k,to:real):
+    (val(temp) > cnst(to) AND cnst(to) = cnst(0)) IMPLIES
+      ALLRUNS(l_of_c(k,to), val(temp) > cnst(to))
+
+% (dl-diffghost "cnst(k)/cnst(2)" "cnst(0)" "G" "val(temp)*val(G)^2=cnst(1)")
+      
+      %((val(temp) - cnst(t_o))< cnst(eps))
+
+    cool_prop_2: LEMMA
+    FORALL(k, to:real,eps:posreal):
+    (val(temp) > cnst(to)) IMPLIES
+      SOMERUNS(l_of_c(k, to), val(temp)-val(to) < eps)
+
+
+    dl_diffghost_example: LEMMA
+    LET
+    dyn : HP = DIFF( (: (x,val(x)) :)) 
+    IN
+    val(x) > 0 IMPLIES
+      ALLRUNS(dyn, val(x) > 0)
+
+%|- dl_diffghost_example : PROOF
+%|- (then (beta) (dl-flatten)
+%|-  (spread
+%|-   (dl-diffghost "cnst(val(1/2)" "cnst(0)" "G" "val(x)*val(G)^2=cnst(1)")
+%|-   ((then (dl-inst "div_safe_re(cnst(1),val(x)^^(1/2))")
+%|-     (spread (dl-diffinv)
+%|-      ((spread (grind :exclude "^^")
+%|-        ((grind) (then (lemma "sqrt_hathat") (grind))))
+%|-       (dl-assert))))
+%|-    (dl-assert) (dl-assert))))
+%|- QED dl_diffghost_example
+
+  END dl_cooling
+

@@ -1,0 +1,6 @@
+(|dl_prop_rules|
+ (|dl_axiom| 0
+  (|no| "no" 3898253081
+   ("" (FLATTEN) (("" (GRIND) (("" (POSTPONE) NIL NIL)) NIL)) NIL) NIL SHOSTAK)
+  (|dl_axiom-1| NIL 3898252042 ("" (FLATTEN) NIL NIL) NIL SHOSTAK)))
+

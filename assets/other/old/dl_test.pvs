@@ -1,0 +1,27 @@
+%%
+% @theory: dl_test
+% @author: jslagel
+% @date: Mon, 12 Jun 2023 17:50:16 GMT
+%%
+dl_test: THEORY
+  BEGIN 
+
+  IMPORTING dL@top
+
+  %% Always comment!
+  %% Variables in Plaidypvs, are defined as natural numbers
+  p : nat = 0 
+  v : nat = 1
+
+  fly : HP = DIFF( (: (v, cnst(5)), (p, val(v)) :) )
+                      % v' = 5    ,  p' = v       <---> this is the same as p'' = 5
+
+  % @QED fly_prop proved by jslagel on Mon, 12 Jun 2023 18:16:40 GMT
+  fly_prop : LEMMA
+  (val(p) >= cnst(0) AND val(v) >= cnst(0))  IMPLIES ALLRUNS(fly, val(p) >= cnst(0))
+% If p and v start greater than or equal to zero, 
+%  then for all runs of the the HP fly, the position will always be greater than 0 
+% Note: there is also a SOMERUNS(alpha,P) for HP alpha and boolexpression P
+
+
+  END dl_test

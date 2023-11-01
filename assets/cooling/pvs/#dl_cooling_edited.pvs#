@@ -1,0 +1,86 @@
+%%
+% @theory: dl_cooling_law
+% @author: ...
+% @date: Thu, 22 Jun 2023 13:47:52 GMT
+%%
+dl_cooling_edited: THEORY
+  BEGIN 
+    IMPORTING dL@top
+    
+    % t is temperature of object
+    t: nat = 0
+    % cooling coefficient (negative)
+    k: VAR real
+    % ambient temperature
+    A: VAR real 
+   % arbitrary value
+    epsilon: VAR real
+    
+    % Newton's Law of Cooling   
+    % @QED cool_prop_1 proved on Fri, 28 Jul 2023 16:27:36 GMT
+    cool_prop_1: LEMMA
+        cnst(A) = cnst(0) AND cnst(k) < cnst(0) AND val(t) > 0
+        IMPLIES
+        ALLRUNS(
+          DIFF((:(t, cnst(k)*(val(t)-cnst(A))):)), 
+        val(t) > cnst(A))
+
+%|- cool_prop_1 : PROOF
+%|- (then (skeep)(dl-flatten)
+%|-   (spread (dl-diffghost "cnst(-k/2)" "cnst(0)" "G" "val(G)^2*(val(t)-cnst(A))=cnst(1)")
+%|-    ((then (dl-inst "div_safe_re(cnst(1), val(t)^^(1/2))")
+%|-      (spread (dl-diffcase "cnst(k) < cnst(0) AND cnst(A) = cnst(0)")
+%|-       ((then (dl-Vb)(dl-assert))
+%|-        (spread (dl-diffinv)
+%|-         ((spread (grind :exclude "^^")
+%|-           ((then (grind))
+%|-            (then (lemma "sqrt_hathat")(grind))))
+%|-          (then (dl-assert)))))))
+%|-     (then (dl-assert))
+%|-     (then (dl-assert)))))
+%|- QED cool_prop_1
+
+    % more general property
+    cool_prop_2: LEMMA
+        cnst(k) < cnst(0) AND val(t) > cnst(A)
+        IMPLIES
+        ALLRUNS(
+          DIFF((:(t, cnst(k)*(val(t)-cnst(A))):)), 
+        val(t) > cnst(A))
+
+%|- cool_prop_2 : PROOF
+%|- (then (skeep)(dl-flatten)
+%|-   (spread (dl-diffghost "cnst(-k/2)" "cnst(0)" "G" "val(G)^2*(val(t)-cnst(A))>=cnst(1)")
+%|-    ((then (dl-inst "div_safe_re(cnst(1), (val(t)-cnst(A))^^(1/2))")(hide -1)
+%|-      (spread (dl-diffinv)
+%|-       ((spread (grind :exclude "^^")
+%|-         ((then (grind))
+%|-          (then (lemma "sqrt_hathat")(grind))))
+%|-        (then (dl-assert)))))
+%|-     (then (dl-assert))
+%|-     (then (dl-axiom)))))
+%|- QED cool_prop_2
+
+
+    % for all positive values of epsilon, there is a run of the differential equation that
+    % ends with a distance that is greater than epsilon
+    forall_epsilon_prop: LEMMA
+      DLFORALL(LAMBDA(eps:posreal):
+      cnst(k) < cnst(0) AND cnst(A) < val(t)
+      IMPLIES
+      SOMERUNS(
+        DIFF((:(t, cnst(k)*(val(t)-cnst(A))):)),
+	  (val(t)-cnst(A) > cnst(eps))))
+
+    % if the distance starts less than epsilon, it will always be less than epsilon
+    allruns_epsilon_prop: LEMMA
+      (val(t)-cnst(A)) < cnst(epsilon) AND
+      val(t) > cnst(A) AND
+      cnst(k) < cnst(0)
+      IMPLIES
+      ALLRUNS(
+          DIFF((:(t, cnst(k)*(val(t)-cnst(A))):)),
+     (val(t)-cnst(A)) < cnst(epsilon))
+
+
+END dl_cooling_edited

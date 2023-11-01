@@ -1,0 +1,9 @@
+(test (foo 0
+       (foo-1 nil 3897144754 ("" (metit) nil nil)
+        ((boolean nonempty-type-decl nil booleans nil)
+         (bool nonempty-type-eq-decl nil booleans nil)
+         (bijective? const-decl "bool" functions nil)
+         (id const-decl "(bijective?[T, T])" identity nil)
+         (TRUE const-decl "bool" booleans nil))
+        shostak)))
+

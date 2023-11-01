@@ -1,0 +1,14 @@
+test2  % [ parameters ]
+		: THEORY
+
+  BEGIN
+
+  % ASSUMING
+   % assuming declarations
+  % ENDASSUMING
+
+  test: LEMMA
+  FORALL(x,y):
+  x^2 + y^2 = (x+0)^2 + (y+0)^2
+
+  END test2

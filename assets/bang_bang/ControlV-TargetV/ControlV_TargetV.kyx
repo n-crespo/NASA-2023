@@ -1,0 +1,83 @@
+﻿/* Exported from KeYmaera X v5.0.2 */
+
+Theorem "Velocity Controller"
+/*Change: Velocity
+  Target: Velocity*/
+Definitions
+    Real tau;
+    Real A;
+    Real tv;
+End.
+
+ProgramVariables
+    Real v;
+    Real t;
+    Real x;
+End.
+
+Problem
+  tau>0 & v!=tv & 
+  
+  A>0 & tv>0 & A>tv
+->
+[
+    {
+    {x'=v, t'=1 & t<= tau}
+    {?t=tau; {?v<tv; v:=A;} ++ {?v>tv; v:=-A;};}
+    }
+] v < ((tv)+A)
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+todo
+End.
+
+Tactic "Velocity Controller: Proof"
+auto
+End.
+
+End.

@@ -1,0 +1,55 @@
+%%
+% @theory: dl_bang
+% @date: Tue, 27 Jun 2023 15:23:24 GMT
+%%
+bang_velocity: THEORY
+  BEGIN 
+    IMPORTING dL@top
+
+    % ——————————————– %
+%    Control: Velocity
+%    Target: Position
+    % ——————————————– %
+
+    % curent position
+    x: nat = 0
+
+    % current velocity
+    v: nat = 1
+
+    % controller change value
+    A: nat = 2
+
+    % time (?)
+    t: nat = 3
+
+    % time increment
+    tau: posreal
+
+    % desired position
+    tx: real
+
+    dyn: HP = DIFF((:(x, val(v)), (t, cnst(1)):), val(t) <= cnst(tau))
+    
+    controller: HP = IFTE(val(x) < cnst(tx), ASSIGN((:(v, cnst(A)):)), ASSIGN((:(v, -cnst(A)):)))
+
+     bang_controller_eq2: LEMMA
+
+     cnst(tau)>cnst(0) AND
+     val(t)=cnst(0) AND
+     cnst(A)>cnst(0) AND
+     val(x)<cnst(tx)
+     IMPLIES
+      % if tau time has been reached
+      ALLRUNS(STAR(
+        SEQ(
+	  dyn,
+	  SEQ(
+	    TEST(val(t) = cnst(tau)),
+	    SEQ(
+	      ASSIGN((:(t, cnst(0)):)),
+              IFTE((val(x)<cnst(tx)), ASSIGN((:(v, cnst(A)):)), ASSIGN((:(v, cnst(-A)):))))))),
+      val(x)<cnst(tx)+cnst(A)*cnst(tau))
+
+
+  END bang_velocity
