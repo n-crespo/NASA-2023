@@ -9,5 +9,3 @@ Mentorship Hour Log
 | [Sep 27](journals/2023-09-27.md) | 3     | Tanner's Theoretical Physics Problem                  |
 | [Oct 12](journals/2023-10-12.md) | 4     | Rebuilding Example 1e in KeYmaera and Future Examples |
 | [Oct 18](journals/2023-10-18.md) | 3.5   | Specifying Example 2 + More Physics                   |
-
-
