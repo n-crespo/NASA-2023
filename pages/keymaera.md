@@ -92,8 +92,10 @@ End.
 - To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. [loop invariant](loopinvariant.md)
 ## Proving Things
 - see Tactic Library:
-  - [https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html]
-  - [https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/HilbertCalculus.html]
-  - [https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/SequentCalculus.html]
+  - [Link 1](https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html)
+  - [Link 2](https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/HilbertCalculus.html)
+  - [Link 3](https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/SequentCalculus.html)
 - see Tutorial Paper
-  - [https://keymaerax.org/KeYmaeraX-tutorial.pdf]
+  - [KeYmaeraX-tutorial](https://keymaerax.org/KeYmaeraX-tutorial.pdf)
+- see Cheat Sheet
+  - [KeYmaeraX-sheet](https://keymaerax.org/KeYmaeraX-sheet.pdf)
