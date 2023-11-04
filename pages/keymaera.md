@@ -6,6 +6,7 @@ KeYmaera
   - I learned how to use iterateD, which is very useful for dealing with loops
 
 # How to write stuff with KeYmaera
+
 ```KeYmaera
 ArchiveEntry "<name of file>"
   Description "<description>".
@@ -53,24 +54,23 @@ End.
 
   ```keymaera
   ArchiveEntry "cooling law"
-  
+
   Definitions
-      Real to;
-      Real k;
+    Real to;
+    Real k;
+  End.
+
+  ProgramVariables
+    Real temp;
   End.
   
-  ProgramVariables
-      Real temp;
-  End. 
-  
   Problem
-      ta = 0 & temp > to
-      ->
-      [{
-          {temp'= -k*(temp-to)
-          
-      }]temp > to
-   
+    ta = 0 & temp > to
+    ->
+    [{
+      {temp'= -k*(temp-to)
+    }]temp > to
+  
   End.
   End.
   ```
@@ -92,10 +92,10 @@ End.
 - To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. [loop invariant](loopinvariant.md)
 ## Proving Things
 - see Tactic Library:
-  - [Link 1](https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html)
-  - [Link 2](https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/HilbertCalculus.html)
-  - [Link 3](https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/SequentCalculus.html)
+  - <https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html>
+  - <https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/HilbertCalculus.html>
+  - <https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/SequentCalculus.html>
 - see Tutorial Paper
-  - [KeYmaeraX-tutorial](https://keymaerax.org/KeYmaeraX-tutorial.pdf)
+  - <https://keymaerax.org/KeYmaeraX-tutorial.pdf>
 - see Cheat Sheet
-  - [KeYmaeraX-sheet](https://keymaerax.org/KeYmaeraX-sheet.pdf)
+  - <https://keymaerax.org/KeYmaeraX-sheet.pdf>
