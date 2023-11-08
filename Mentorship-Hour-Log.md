@@ -11,4 +11,4 @@ Mentorship Hour Log
 | [Oct 18](journals/2023-10-18.md) | 3.5   | Specifying Example 2 + More Physics                   |
 | [Nov 1](journals/2023-11-01.md)  | 2     | Generating Counterexamples                            |
 | [Nov 2](journals/2023-11-02.md)  | 2     | Proved All Branches of Example 1e!                    |
-| [Nov 8](journals/2023-11-08.md)  | 2     | Translating to PVS                                    |
+| [Nov 8](journals/2023-11-08.md)  | 2.75     | Translating to PVS                                 |
