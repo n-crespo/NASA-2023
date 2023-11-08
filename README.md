@@ -29,7 +29,7 @@ technology easier.
 ### First do this
 - go through the useful resources page
 - watch the intro video
-- read some documentation and papers about PVS and dL (See 
+- read some documentation and papers about PVS and dL (See [Embedding Differential Logic in PVS](assets/LSFA_23_submit.pdf)
 - ask Tanner for his paper about dL, its super useful
 - either buy a mac or Linux machine or see [How to use PVS on Windows](pages/pvs-on-windows.md)
 ### Intro to PVS
