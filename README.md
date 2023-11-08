@@ -91,7 +91,7 @@ correspond to their index, and must be referenced with a `val( )` around them
 - [`(postpone)`](postpone.md)
 #### dL Commands
 - See `dynamic_logic.pvs` for definitions and
-[Glossary_Plaidypvs](assets/Glossary_Plaidypvs.pvs)for examples  
+[Glossary_Plaidypvs](/assets/Glossary_Plaidypvs.pvs) for examples  
 - [`(<command>b)`](pages/box.md)
 - [`(<command>d)`](pages/diamond.md)
 - [`(dl-loop)`](pages/loop.md)
