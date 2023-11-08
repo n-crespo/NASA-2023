@@ -64,6 +64,7 @@ correspond to their index, and must be referenced with a `val( )` around them
 - [`ALLRUNS(DIFF(), postcondition)`](pages/ALLRUNS.md)
 - [`SOMERUNS(DIFF(), postcondition)`](pages/SOMERUNS.md)
 ### Proving things in PVS and dL
+- see [this cheat sheet](assets/plaidypvs_cheatsheet.png)
 #### Miscellaneous
 - [`(inst)`](pages/inst.md)
 - [`(skolem)`](pages/skolem.md)
