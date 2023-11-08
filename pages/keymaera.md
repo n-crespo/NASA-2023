@@ -88,8 +88,13 @@ End.
 - ![image.png](../assets/image_1689883975373_0.png)
 - ![image.png](../assets/image_1689884624944_0.png)
 ## Annotations
-- To use a [star](star.md), which looks like this `*`, ensure that a set of curly braces surround ALL the differential equations in the program, as well as each individual differential equation. This might mean that one equation has two sets of curly braces around it. [loop invariant](loopinvariant.md)
-- To add an annotation, include the `@invariant` directly after the `*` in a hybrid program. This is before the square brackets but after the totally surrounding curly braces. [loop invariant](loopinvariant.md)
+- To use a [star](star.md), which looks like this `*`, ensure that a set of
+curly braces surround ALL the differential equations in the program, as well as
+each individual differential equation. This might mean that one equation has two
+sets of curly braces around it. [loop invariant](loopinvariant.md)
+- To add an annotation, include the `@invariant` directly after the `*` in a
+hybrid program. This is before the square brackets but after the totally
+surrounding curly braces. [loop invariant](loopinvariant.md)
 ## Proving Things
 - see Tactic Library:
   - <https://keymaerax.org/scaladoc/edu/cmu/cs/ls/keymaerax/btactics/TactixLibrary$.html>
