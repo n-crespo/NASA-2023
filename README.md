@@ -159,7 +159,7 @@ correspond to their index, and must be referenced with a `val( )` around them
   - Below: the differential ghost equation acts as a counterweight to f(x),
   ensuring that $xy^2 = 1$ will always be true, proving that x must always be
   positive
-  ![image_1687872581667_0.png](https://github.com/n-crespo/NASA-2023/blob/master/assets/image_1687872581667_0_1688677124071_0.png?raw=true)
+  ![counterweight](assets/counterweight.png)
 
 ### Off-Topic Math
 - Random slightly off-topic math:
