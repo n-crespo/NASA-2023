@@ -12,7 +12,6 @@ ProgramVariables
     Real x;
     Real a;
     Real vi;
-    Real xi;
 End.
 
 Problem
