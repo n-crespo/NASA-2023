@@ -8,4 +8,4 @@ ghosts
 ## Note:
 - ghosts are especially used when a function or property of a proof gets less and less true over time, like an object cooling down to its ambient temperature but never reaching it, or a function of exponential decay never reaching 0. It is proofs like these that are impossible to solve without ghosts.
 ## To find the value of a ghost:
-- ![image.png](../assets/finding_ghosts.png)
+- ![finding_ghosts](../assets/finding_ghosts.png)
