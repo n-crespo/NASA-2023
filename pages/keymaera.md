@@ -85,8 +85,8 @@ End.
 ## More Syntax
 - ![image.png](../assets/image_1689884169584_0.png)
 ## Predicate Symbols
-- ![image.png](../assets/image_1689883975373_0.png)
-- ![image.png](../assets/image_1689884624944_0.png)
+- ![image.png](../assets/predicate_symbols_1.png)
+- ![image.png](../assets/predicate_symbols_2.png)
 ## Annotations
 - To use a [star](star.md), which looks like this `*`, ensure that a set of
 curly braces surround ALL the differential equations in the program, as well as
