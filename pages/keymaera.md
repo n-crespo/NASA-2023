@@ -83,7 +83,7 @@ End.
 	- `dG` differential ghosts: to add a fresh variable with a new differential equation into the dynamics.
 	- `odeInvC` Complete ODE invariants: attempt an exhaustive (slow) proof that P is invariant for the ODE x'=f(x)&Q.
 ## More Syntax
-- ![image.png](../assets/image_1689884169584_0.png)
+- ![image.png](../assets/keymaera_syntax.png)
 ## Predicate Symbols
 - ![image.png](../assets/predicate_symbols_1.png)
 - ![image.png](../assets/predicate_symbols_2.png)
