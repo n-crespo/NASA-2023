@@ -4,4 +4,4 @@ Annotations
 - ex: ![image.png](../assets/annotation.png)
 - However, it seems this could be automated and made a lot better
 - KeYmaera example:
-  - ![loop annotations.png](../assets/loop_annotations_1689697874391_0.png)
+  - ![loop annotations.png](../assets/loop_annotations.png)
