@@ -16,11 +16,11 @@ End.
 
 Problem
     (x<=bf) &
-    (bf <E) &
-    (0 < a) &
-    (v > 0)
+    (bf<E) &
+    (0<a) &
+    (v>0)
     ->
-    <{{x'=v, v'=a & x <= bf} ++
+    <{{x'=v, v'=a & x<=bf} ++
     {{?x=bf; vi:=v;}; {x'=v, v'=-(vi^2)/(2*(E-bf)) & x>=bf}}}* @invariant (x<=E & bf<E)
     >(x=E & v=0)
 End.
