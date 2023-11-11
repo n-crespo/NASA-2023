@@ -9,7 +9,7 @@ incompatibility), and creating things and proving them with dL. Furthermore,
 these notes were transferred from Logseq --> pure Markdown (manually), to there
 may be some formatting errors. The end goal of these notes is to document my
 research and allow a future intern/user of dL PVS to get acquainted with the
-technology easier. 
+technology easier.
 
 ## Table of Contents
 1. [First do this](#first-do-this)
