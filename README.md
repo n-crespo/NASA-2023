@@ -1,5 +1,21 @@
-README
-======
+# README
+
+<!--toc:start-->
+- [README](#readme)
+  - [Using dL in PVS](#using-dl-in-pvs)
+    - [First do this](#first-do-this)
+    - [Intro to PVS](#intro-to-pvs)
+      - [Variables and Constants](#variables-and-constants)
+    - [Writing things in PVS and dL](#writing-things-in-pvs-and-dl)
+    - [Proving things in PVS and dL](#proving-things-in-pvs-and-dl)
+      - [Miscellaneous](#miscellaneous)
+      - [Simplification](#simplification)
+      - [Utilities](#utilities)
+      - [dL Commands](#dl-commands)
+    - [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
+    - [Off-Topic Math](#off-topic-math)
+  - [KeYmaera](#keymaera)
+<!--toc:end-->
 
 > This README is an overview of all the pages in this repo, which summarize my
 internship with the Formal Methods team at NASA from June 2023 - present. Notes
@@ -11,34 +27,27 @@ may be some formatting errors. The end goal of these notes is to document my
 research and allow a future intern/user of dL PVS to get acquainted with the
 technology easier.
 
-## Table of Contents
-1. [First do this](#first-do-this)
-2. [Intro to PVS](#intro-to-pvs)
-   * [Variables and Constants](#variables-and-constants)
-3. [Writing things in PVS and dL](#writing-things-in-pvs-and-dl)
-4. [Proving things in PVS and dL](#proving-things-in-pvs-and-dl)
-   * [Miscellaneous](#miscellaneous)
-   * [Simplification](#simplification)
-   * [Utilities](#utilities)
-   * [dL Commands](#dl-commands)
-5. [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
-6. [Off-Topic Math](#off-topic-math)
-7. [KeYmaera](#KeYmaera)
-
 ## Using dL in PVS
+
 ### First do this
+
 - go through the useful resources page
 - watch the intro video
-- read some documentation and papers about PVS and dL (See [Embedding Differential Logic in PVS](assets/LSFA_23_submit.pdf)
+- read some documentation and papers about PVS and dL
+  - See [Embedding Differential Logic in PVS](assets/LSFA_23_submit.pdf)
 - ask Tanner for his paper about dL, its super useful
 - either buy a mac or Linux machine or see [How to use PVS on Windows](pages/pvs-on-windows.md)
+
 ### Intro to PVS
+
 - turnstile: `|---------------------`
 - Propositional Logic: if, and, or, etc
 - LEMMA: thing you need to prove
 - above the turnstile : ALL IS TRUE (AND) (antecedent)
 - below the turnstile : one is true ALWAYS (OR) (consequent)
+
 #### Variables and Constants
+
 - Constants can be defined as PVS variables like so, and must be referenced with
 a `cnst( )` around them
 
@@ -50,22 +59,27 @@ correspond to their index, and must be referenced with a `val( )` around them
 `x: nat = 0`
 
 ### Writing things in PVS and dL
+
 - [`IMPORTING dL@top`](pages/IMPORTING.md)
-- [`DIFF()`](pages/DIFF.md): 
-- [`LEMMA`](pages/lemma.md) 
-- [`UNION()`](pages/UNION.md) 
-- [`IFTE()`](pages/IFTE.md) 
+- [`DIFF()`](pages/DIFF.md)
+- [`LEMMA`](pages/lemma.md)
+- [`UNION()`](pages/UNION.md)
+- [`IFTE()`](pages/IFTE.md)
 - [`(BETA)`](pages/beta.md)
 - [`TEST()`](pages/test.md)
-- [`div_safe_re()`](pages/div_safe_re.md) 
-- [`SEQ(P, HP)` ](pages/SEQ.md) 
-- [`STAR(ag)` ](pages/star.md) 
-- [`^^`](pages/exponentiation.md): 
-- [`ALLRUNS(DIFF(), postcondition)`](pages/ALLRUNS.md)
-- [`SOMERUNS(DIFF(), postcondition)`](pages/SOMERUNS.md)
+- [`div_safe_re()`](pages/div_safe_re.md)
+- [`SEQ()`](pages/SEQ.md)
+- [`STAR(ag)`](pages/star.md)
+- [`^^`](pages/exponentiation.md)
+- [`ALLRUNS(DIFF())`](pages/ALLRUNS.md)
+- [`SOMERUNS(DIFF())`](pages/SOMERUNS.md)
+
 ### Proving things in PVS and dL
+
 - see [this cheat sheet](assets/plaidypvs_cheatsheet.png)
+
 #### Miscellaneous
+
 - [`(inst)`](pages/inst.md)
 - [`(skolem)`](pages/skolem.md)
 - [`(skeep)`](pages/skeep.md)
@@ -75,7 +89,9 @@ correspond to their index, and must be referenced with a `val( )` around them
 - [`(iff)`](pages/IFF.md)
 - [`(replaces)`](pages/replaces.md)
 - [`(skoletin)`](pages/skoletin.md)
+
 #### Simplification
+
 - [`(prop)`](pages/prop.md)
 - [`(bddsimp)`](pages/bddsimp.md)
 - [`(assert)`](pages/assert.md)
@@ -83,14 +99,18 @@ correspond to their index, and must be referenced with a `val( )` around them
 - [`(smash)`](pages/smash.md)
 - [`(grind)`](pages/grind.md)
 - [`(metit)`](metit.md)
+
 #### Utilities
+
 - [`(help)`](pages/help.md)
 - [`(lemma)`](pages/lemma.md)
 - [`(quit)`](pages/quit.md)
 - [`(undo)`](pages/undo.md)
 - [`(hide)`](pages/hide.md)
 - [`(postpone)`](postpone.md)
+
 #### dL Commands
+
 - See `dynamic_logic.pvs` for definitions and
 [Glossary_Plaidypvs](/assets/Glossary_Plaidypvs.pvs) for examples  
 - [`(<command>b)`](pages/box.md)
@@ -109,9 +129,10 @@ correspond to their index, and must be referenced with a `val( )` around them
 - [`DLEXISTSRf`](pages/DLEXISTSRf.md)
 
 ### Differential Ghosts and Invariants
+
 - most differential equations are impossible to solve
 - solving ODE's will often make them more complicated then necessary
-  - discrete ghost `(dl-ghost)` 
+  - discrete ghost `(dl-ghost)`
     - extra variable introduced to a proof to analyze the model
     - remember the value of a new variable in an old state for analyzing the
     change of an expression
@@ -125,7 +146,7 @@ correspond to their index, and must be referenced with a `val( )` around them
   - change the differential equation itself
   - (auxiliary variables) added to make the proof more conclusive, don't really
   exist
-- `diff-ghost`: 
+- `diff-ghost`:
   - you are trying to prove x is always positive (it approaches 0 as it reaches
   infinity)
   - you introduce a new equation: $y' = y/2$
@@ -162,6 +183,7 @@ correspond to their index, and must be referenced with a `val( )` around them
   ![counterweight](assets/counterweight.png)
 
 ### Off-Topic Math
+
 - Random slightly off-topic math:
   - you can define real numbers as the set of all lowest upper bounds of all
   nonempty, ___ sets
@@ -175,6 +197,7 @@ correspond to their index, and must be referenced with a `val( )` around them
     real) (i forgot)
     - they also have lots of holes in them, namely irrational numbers like
     $sqrt(2)$ and $pi$
-$x^2$
+
 ## KeYmaera
+
 - see [KeYmaera](pages/keymaera.md)
