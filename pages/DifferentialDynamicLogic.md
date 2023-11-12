@@ -1,5 +1,4 @@
-Differential Dynamic Logic
-==========================
+# Differential Dynamic Logic
 
 - a concept that has been embedded into PVS in the [dL](../pages/dL.md) part of nasalib
 - dL is a PVS embedding, meaning it has its own turnstile and unique commands
