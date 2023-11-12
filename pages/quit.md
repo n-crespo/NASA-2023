@@ -1,3 +1,3 @@
-quit
-====
-- quits
+# quit
+
+- quits the theorem prover

@@ -1,7 +1,10 @@
-emacs
-=====
-- (installed to fix [ghosts](../pages/ghosts.md) problem, doesn't seem to have fixed it)
-# Commands
+# emacs
+
+- (installed to fix [ghosts](../pages/ghosts.md) problem, doesn't seem to have
+  fixed it)
+
+## Commands
+
 - `<C-g>`: clear command (quit command)
 - `<C-x>` window
   - `1`: 1 window
