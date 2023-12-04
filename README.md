@@ -1,6 +1,7 @@
 # README
 
 <!--toc:start-->
+
 - [README](#readme)
   - [Using dL in PVS](#using-dl-in-pvs)
     - [First do this](#first-do-this)
@@ -15,17 +16,17 @@
     - [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
     - [Off-Topic Math](#off-topic-math)
   - [KeYmaera](#keymaera)
-<!--toc:end-->
+  <!--toc:end-->
 
 > This README is an overview of all the pages in this repo, which summarize my
-internship with the Formal Methods team at NASA from June 2023 - present. Notes
-have been taken that include my learning process for using PVS, using the
-Virtual Machine (I had to use an Amazon Linux image because of M2 chip
-incompatibility), and creating things and proving them with dL. Furthermore,
-these notes were transferred from Logseq --> pure Markdown (manually), to there
-may be some formatting errors. The end goal of these notes is to document my
-research and allow a future intern/user of dL PVS to get acquainted with the
-technology easier.
+> internship with the Formal Methods team at NASA from June 2023 - present. Notes
+> have been taken that include my learning process for using PVS, using the
+> Virtual Machine (I had to use an Amazon Linux image because of M2 chip
+> incompatibility), and creating things and proving them with dL. Furthermore,
+> these notes were transferred from Logseq --> pure Markdown (manually), to there
+> may be some formatting errors. The end goal of these notes is to document my
+> research and allow a future intern/user of dL PVS to get acquainted with the
+> technology easier.
 
 ## Using dL in PVS
 
@@ -49,12 +50,12 @@ technology easier.
 #### Variables and Constants
 
 - Constants can be defined as PVS variables like so, and must be referenced with
-a `cnst( )` around them
+  a `cnst( )` around them
 
 `x: VAR real`
 
 - Variables are defined as natural numbers with UNIQUE arbitrary values that
-correspond to their index, and must be referenced with a `val( )` around them
+  correspond to their index, and must be referenced with a `val( )` around them
 
 `x: nat = 0`
 
@@ -112,7 +113,7 @@ correspond to their index, and must be referenced with a `val( )` around them
 #### dL Commands
 
 - See `dynamic_logic.pvs` for definitions and
-[Glossary_Plaidypvs](/assets/Glossary_Plaidypvs.pvs) for examples  
+  [Glossary_Plaidypvs](/assets/Glossary_Plaidypvs.pvs) for examples
 - [`(<command>b)`](pages/box.md)
 - [`(<command>d)`](pages/diamond.md)
 - [`(dl-loop)`](pages/loop.md)
@@ -135,68 +136,68 @@ correspond to their index, and must be referenced with a `val( )` around them
   - discrete ghost `(dl-ghost)`
     - extra variable introduced to a proof to analyze the model
     - remember the value of a new variable in an old state for analyzing the
-    change of an expression
+      change of an expression
     - discrete variable y which remembers the value of e (fresh)
     - Fresh Variables = new variable that doesn't affect main function
 - differential ghosts:
   - evolve over time
   - extra variable added with a made up differential equation to analyze the
-  system
+    system
   - increase complexity of the system
   - change the differential equation itself
   - (auxiliary variables) added to make the proof more conclusive, don't really
-  exist
+    exist
 - `diff-ghost`:
   - you are trying to prove x is always positive (it approaches 0 as it reaches
-  infinity)
+    infinity)
   - you introduce a new equation: $y' = y/2$
   - then you can say that `x*y^2=1`
   - why? because $y^2$ is always positive, so anything that x is must also be
-  positive
+    positive
   - y acts as a counterweight, always lifting x just enough to remain positive
   - my questions:
     - how do you figure out what y should equal?
       - GO BACKWARDS
       - we know that you have to use `diffinv` right after you introduce the
-      ghost, so do that and have an unkown j(x) as the ghost
+        ghost, so do that and have an unkown j(x) as the ghost
       - you should end up with an equation that = 0, so find the ghost
-      expression that can satisfy it
+        expression that can satisfy it
       - THATS IT
     - how can you know for sure that `xy^2=1` ?
       - that is just a property of any positive number $(x)$ , use some
-      reasoning to find small expressions like that that work for all numbers so
-      you can build ghost variables around them
+        reasoning to find small expressions like that that work for all numbers so
+        you can build ghost variables around them
     - the new function must exist for as long as or longer than the original
-    function that you are reasoning about
+      function that you are reasoning about
 - `(dl-diffinv)`
   - use this after `diffghost`
   - when you have a Hybrid Program and something you want to prove is true (the
-  HP would define the movement of the variable in the equation), differentiate
-  the equation (and make sure to use values like x', y', etc) and plug in the
-  values that you know those primes are equal to (from the HP definition)
+    HP would define the movement of the variable in the equation), differentiate
+    the equation (and make sure to use values like x', y', etc) and plug in the
+    values that you know those primes are equal to (from the HP definition)
   - you should get stuff that cancels out !!
   - (or rather an equation that equals 0)
 - useful graphic:
   - Below: the differential ghost equation acts as a counterweight to f(x),
-  ensuring that $xy^2 = 1$ will always be true, proving that x must always be
-  positive
-  ![counterweight](assets/counterweight.png)
+    ensuring that $xy^2 = 1$ will always be true, proving that x must always be
+    positive
+    ![counterweight](assets/counterweight.png)
 
 ### Off-Topic Math
 
 - Random slightly off-topic math:
   - you can define real numbers as the set of all lowest upper bounds of all
-  nonempty, ___ sets
+    nonempty, \_\_\_ sets
     - for example, take the set:
-      - $x^2 <= 2$  and assume x is a rational number
+      - $x^2 <= 2$ and assume x is a rational number
       - the $lub$ , or lowest upper bound, is $sqrt(2)$
   - also, like everything in math can be described using limits,
     - ex. the double ^^ is just the x^^a = limit of x^^q as q approaches A
   - also rational numbers (or reals i think(?)) are like 0% of all numbers
     - if you took a random number there's a 0% chance it would be rational (or
-    real) (i forgot)
+      real) (i forgot)
     - they also have lots of holes in them, namely irrational numbers like
-    $sqrt(2)$ and $pi$
+      $sqrt(2)$ and $pi$
 
 ## KeYmaera
 
