@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Mentorship Hour Log
 
 | Date                             | Hours   | Topic                                                                 |
@@ -14,5 +13,4 @@
 | [Nov 8](journals/2023-11-08.md)  | 2.75    | Translating to PVS                                                    |
 | [Nov 16](journals/2023-11-16.md) | 3       | Naming in PVS, talk about RTA, and Starting the Example 1e PVS Proof  |
 | [Nov 29](journals/2023-11-29.md) | 3       | Math Olympiad Problems and Development in Plaidypvs                   |
-=======
->>>>>>> 1b69ea7 ([nb] Commit)
+| [Dev 6](journals/2023-12-06.md)  | 3       | Proving in PVS and Modeling Example 2                                 |
