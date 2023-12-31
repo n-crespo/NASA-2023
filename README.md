@@ -203,7 +203,3 @@
 ## KeYmaera
 
 - see [KeYmaera](pages/keymaera.md)
-
-**bold**
-*italic*
-***bold and italic***
