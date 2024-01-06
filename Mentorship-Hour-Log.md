@@ -14,3 +14,5 @@
 | [Nov 16](journals/2023-11-16.md) | 3       | Naming in PVS, talk about RTA, and Starting the Example 1e PVS Proof  |
 | [Nov 29](journals/2023-11-29.md) | 3       | Math Olympiad Problems and Development in Plaidypvs                   |
 | [Dev 6](journals/2023-12-06.md)  | 3       | Proving in PVS and Modeling Example 2                                 |
+| [Jan 4](journals/2024-01-04.md)  | 3       | Mentor on Break, Modeling in PVS                                      |
+
