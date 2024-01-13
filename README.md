@@ -153,7 +153,7 @@
     infinity)
   - you introduce a new equation: $y' = y/2$
   - then you can say that `x*y^2=1`
-  - why? because $y^2$ is always positive, so anything that x is must also be
+  - why? Because $y^2$ is always positive, so anything that x is must also be
     positive
   - y acts as a counterweight, always lifting x just enough to remain positive
   - my questions:
@@ -163,7 +163,7 @@
         ghost, so do that and have an unkown j(x) as the ghost
       - you should end up with an equation that = 0, so find the ghost
         expression that can satisfy it
-      - THATS IT
+      - THAT'S IT
     - how can you know for sure that `xy^2=1` ?
       - that is just a property of any positive number $(x)$ , use some
         reasoning to find small expressions like that that work for all numbers so
