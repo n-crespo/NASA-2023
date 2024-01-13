@@ -193,7 +193,7 @@
       - $x^2 <= 2$ and assume x is a rational number
       - the $lub$ , or lowest upper bound, is $sqrt(2)$
   - also, like everything in math can be described using limits,
-    - ex. the double ^^ is just the x^^a = limit of x^^q as q approaches A
+    - ex: the double ^^ is just the x^^a = limit of x^^q as q approaches A
   - also rational numbers (or reals i think(?)) are like 0% of all numbers
     - if you took a random number there's a 0% chance it would be rational (or
       real) (i forgot)
