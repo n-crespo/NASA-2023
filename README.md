@@ -24,7 +24,7 @@
 > have been taken that include my learning process for using PVS, using the
 > Virtual Machine (I had to use an Amazon Linux image because of M2 chip
 > incompatibility), and creating things and proving them with dL. Furthermore,
-> these notes were transferred from Logseq --> pure Markdown (manually), to there
+> these notes were transferred from Logseq --> pure Markdown (manually), so there
 > may be some formatting errors. The end goal of these notes is to document my
 > research and allow a future intern/user of dL PVS to get acquainted with the
 > technology easier.
@@ -114,7 +114,7 @@
 #### dL Commands
 
 - See `dynamic_logic.pvs` for definitions and
-  [Glossary_Plaidypvs](/assets/Glossary_Plaidypvs.pvs) for examples
+  [Glossary_Plaidypvs](./assets/Glossary_Plaidypvs.pvs) for examples
 - [`(<command>b)`](pages/box.md)
 - [`(<command>d)`](pages/diamond.md)
 - [`(dl-loop)`](pages/loop.md)
