@@ -1,0 +1,57 @@
+{
+ "Example1e.prop_1": [
+  {
+   "info": {
+    "theory": "Example1e",
+    "formula": "prop_1",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "9649bb445a3a0a2a5c45e12d4ebeefb24608f02944c4680880364674ac8509d2"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "prop_1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(dl-flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(name \"A\" \"UNION(DIFF((: (x, val(v)), (v, val(a)) :), val(x) <= cnst(bf)), SEQ(SEQ(TEST(val(x) = cnst(bf)), ASSIGN((: (vi, val(v)) :))), DIFF((: (x, val(v)), (v, div_safe_re ((cnst(-1) * LAMBDA (s: Environment): val(vi)(s) ^ cnst(2)(s)), (cnst(2) * (cnst(E) - cnst(bf))))) :), val(x) >= cnst(bf))))\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(dl-iterated)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -1 1 rl)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -1)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}
