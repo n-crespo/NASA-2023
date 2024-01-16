@@ -1,0 +1,130 @@
+/* Exported from KeYmaera X v5.0.2 */
+Theorem "Example 1e"
+
+Definitions
+    Real bf;
+    Real E;
+End.
+
+ProgramVariables
+    Real v;
+    Real x;
+    Real a;
+    Real vi;
+End.
+
+Problem
+    (x<=bf) &
+    (bf<E) &
+    (0<a) &
+    (v>0)
+    ->
+    <{{x'=v, v'=a & x<=bf} ++
+    {{?x=bf; vi:=v;}; {x'=v, v'=-(vi^2)/(2*(E-bf)) & x>=bf}}}* @invariant (x<=E & bf<E)
+    >(x=E & v=0)
+End.
+
+```
+
+```
+/* This first Tactic paragraph is our proof progress up to the point where
+  Wolfram was needed for quantifier elimination, and it found counterexamples.
+  We basically hit a wall until we realized our mistake. */
+
+Tactic "Example 1e: STUCK AT SOLVE"
+unfold;
+iterated('R=="<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)");
+iterated('R=="x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)#");
+orR('R=="x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))");
+iterated('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)#)");
+diamondOr('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)))");
+diamondOr('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))#");
+orR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))");
+diamondOr('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))");
+hideR('R=="x=E()&v=0");
+hideR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+orR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)");
+hideR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)");
+choiced('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+choiced('R=="<{x'=v,v'=a&x<=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)#");
+orR('R=="<{x'=v,v'=a&x<=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))");
+composed('R=="<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|#<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)#)");
+hideR('R=="<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<?x=bf();vi:=v;><{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))");
+choiced('R=="<{x'=v,v'=a&x<=bf()}>#<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)#");
+solve('R=="<{x'=v,v'=a&x<=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))")
+End. 
+
+/* This Tactic paragraph is the fully completed and corrected proof. */
+
+Tactic "Example 1e Final"
+unfold;
+iterated('R=="<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)");
+iterated('R=="x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)#");
+orR('R=="x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))");
+iterated('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)#)");
+diamondOr('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)))");
+diamondOr('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))#");
+orR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))");
+diamondOr('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))");
+hideR('R=="x=E()&v=0");
+hideR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+orR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)");
+hideR('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)");
+choiced('R=="<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+choiced('R=="<{x'=v,v'=a&x<=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)#");
+orR('R=="<{x'=v,v'=a&x<=bf()}><{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))");
+composed('R=="<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|#<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)#)");
+hideR('R=="<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<?x=bf();vi:=v;><{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))");
+choiced('R=="<{x'=v,v'=a&x<=bf()}>#<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)#");
+solve('R=="<{x'=v,v'=a&x<=bf()}>(<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))");
+existsR("((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a", 'R=="\exists t_ (t_>=0&\forall s_ (0<=s_&s_<=t_->a*(s_^2/2)+v_1*s_+x_1<=bf())&\forall v (v=a*t_+v_1->\forall x (x=a*(t_^2/2)+v_1*t_+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))))");
+andR('R=="((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a>=0&\forall s_ (0<=s_&s_<=((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a->a*(s_^2/2)+v_1*s_+x_1<=bf())&\forall v (v=a*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+v_1->\forall x (x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)))"); <(
+  "((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a>=0":
+    QE,
+  "\forall s_ (0<=s_&s_<=((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a->a*(s_^2/2)+v_1*s_+x_1<=bf())&\forall v (v=a*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+v_1->\forall x (x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)))":
+    andR('R=="\forall s_ (0<=s_&s_<=((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a->a*(s_^2/2)+v_1*s_+x_1<=bf())&\forall v (v=a*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+v_1->\forall x (x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)))"); <(
+      "\forall s_ (0<=s_&s_<=((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a->a*(s_^2/2)+v_1*s_+x_1<=bf())":
+        allR('R=="\forall s_ (0<=s_&s_<=((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a->a*(s_^2/2)+v_1*s_+x_1<=bf())");
+        implyR('R=="0<=s_&s_<=((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a->a*(s_^2/2)+v_1*s_+x_1<=bf()");
+        QE,
+      "\forall v (v=a*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+v_1->\forall x (x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)))":
+        allR('R=="\forall v (v=a*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+v_1->\forall x (x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)))");
+        implyR('R=="v=a*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+v_1->\forall x (x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))");
+        allR('R=="\forall x (x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0))");
+        implyR('R=="x=a*((((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)^2/2)+v_1*(((2*a*bf()-2*a*x_1+v_1^2)^0.5-v_1)/a)+x_1-><{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+        orR('R=="<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)|<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+        hideR('R=="<{x'=v,v'=a&x<=bf()}>(x=E()&v=0)");
+        composed('R=="<{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+        composed('R=="<?x=bf();vi:=v;><{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+        testd('R=="<?x=bf();><vi:=v;><{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+        andR('R=="x=bf()&<vi:=v;><{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)"); <(
+          "x=bf()":
+            QE,
+          "<vi:=v;><{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)":
+            assignd('R=="<vi:=v;><{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+            solve('R=="<{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0)");
+            existsR("2*(E()-bf())/vi", 'R=="\exists t_ (t_>=0&\forall s_ (0<=s_&s_<=t_->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*(t_^2/2)+v*t_+x=E()&(-vi^2/(2*(E()-bf())))*t_+v=0)");
+            andR('R=="2*(E()-bf())/vi>=0&\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0"); <(
+              "2*(E()-bf())/vi>=0":
+                QE,
+              "\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0":
+                andR('R=="\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())&(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0"); <(
+                  "\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())":
+                    allR('R=="\forall s_ (0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf())");
+                    implyR('R=="0<=s_&s_<=2*(E()-bf())/vi->(-vi^2/(2*(E()-bf())))*(s_^2/2)+v*s_+x>=bf()");
+                    QE,
+                  "(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0":
+                    andR('R=="(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()&(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0"); <(
+                      "(-vi^2/(2*(E()-bf())))*((2*(E()-bf())/vi)^2/2)+v*(2*(E()-bf())/vi)+x=E()":
+                        QE,
+                      "(-vi^2/(2*(E()-bf())))*(2*(E()-bf())/vi)+v=0":
+                        QE
+                    )
+                )
+            )
+        )
+    )
+)
+End.
+
+End.
