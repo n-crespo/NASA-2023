@@ -15,4 +15,6 @@
 | [Nov 29](journals/2023-11-29.md) | 3       | Math Olympiad Problems and Development in Plaidypvs                   |
 | [Dev 6](journals/2023-12-06.md)  | 3       | Proving in PVS and Modeling Example 2                                 |
 | [Jan 4](journals/2024-01-04.md)  | 3       | Mentor on Break, Modeling in PVS                                      |
+| [Jan 17](journals/2024-01-17.md) | 3       | PVS Version 8, Starting Second Example                                |
+
 
