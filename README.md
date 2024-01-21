@@ -17,7 +17,8 @@
     - [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
     - [Off-Topic Math](#off-topic-math)
   - [KeYmaera](#keymaera)
-  <!--toc:end-->
+
+<!--toc:end-->
 
 > This README is an overview of all the pages in this repo, which summarize my
 > internship with the Formal Methods team at NASA from June 2023 - present. Notes
@@ -113,8 +114,7 @@
 
 #### dL Commands
 
-- See `dynamic_logic.pvs` for definitions and
-  [Glossary_Plaidypvs](./assets/Glossary_Plaidypvs.pvs) for examples
+- See `dynamic_logic.pvs` in nasalib for definitions and [Glossary_Plaidypvs](./assets/Glossary_Plaidypvs.pvs) for examples
 - [`(<command>b)`](pages/box.md)
 - [`(<command>d)`](pages/diamond.md)
 - [`(dl-loop)`](pages/loop.md)
