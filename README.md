@@ -49,7 +49,7 @@
 - above the turnstile : ALL IS TRUE (AND) (antecedent)
 - below the turnstile : one is true ALWAYS (OR) (consequent)
 
-#### Variables and Constants
+### Variables and Constants
 
 - Constants can be defined as PVS variables like so, and must be referenced with
   a `cnst( )` around them
@@ -202,4 +202,4 @@
 
 ## KeYmaera
 
-[-](-.md) see [KeYmaera](pages/keymaera.md)
+- see [KeYmaera](pages/keymaera.md)
