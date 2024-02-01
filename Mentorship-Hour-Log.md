@@ -16,4 +16,6 @@
 | [Dev 6](journals/2023-12-06.md)  | 3     | Proving in PVS and Modeling Example 2                                |
 | [Jan 4](journals/2024-01-04.md)  | 3     | Mentor on Break, Modeling in PVS                                     |
 | [Jan 17](journals/2024-01-17.md) | 3     | PVS Version 8, Starting Second Example                               |
+| [Jan 31](journals/2024-01-31.md) | 3     | Learning New dL Syntax                                               |
+| [Feb 1](journals/2024-02-01.md)  | 3     | Learning New dL Syntax                                               |
 
