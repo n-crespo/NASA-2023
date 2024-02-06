@@ -1,6 +1,6 @@
 # Following Cars
 
-  ```keymaera
+  ```python
   ArchiveEntry "Following Cars"
   
   Definitions
