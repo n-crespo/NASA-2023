@@ -1,8 +1,6 @@
 
 # README
 
-<!--toc:start-->
-
 - [README](#readme)
   - [Using dL in PVS](#using-dl-in-pvs)
     - [First do this](#first-do-this)
@@ -17,8 +15,6 @@
     - [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
     - [Off-Topic Math](#off-topic-math)
   - [KeYmaera](#keymaera)
-
-<!--toc:end-->
 
 > This README is an overview of all the pages in this repo, which summarize my
 > internship with the Formal Methods team at NASA from June 2023 - present. Notes
