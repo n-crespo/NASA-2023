@@ -1,0 +1,30 @@
+/* Exported from KeYmaera X v5.0.2 */
+
+Theorem "Example 2"
+
+Definitions
+    Real bf;
+    Real E;
+End.
+
+ProgramVariables
+    Real vy;
+    Real vx;
+    Real xx;
+    Real xy;
+    Real a;
+    Real vi;
+    Real xi;
+End.
+
+Problem
+// something here (preconditions)
+    ->
+    [{xy'=v}]
+    <{{x'=v, v'=a & x <= bf} ++
+    {{?x=bf; vi:=v;}; {x'=v, v'=-(vi^2)/(2*(E-bf)) & x>=bf}}}* @invariant (x<=E & bf<E)
+    >(x=E & v=0)
+End.
+
+
+End.
