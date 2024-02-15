@@ -1,0 +1,43 @@
+%%
+% @theory: Example2
+% @author: nicolas
+% @date: Wed, 14 Feb 2024 18:28:22
+%%
+Example2: THEORY
+  BEGIN 
+    
+  IMPORTING dL@top
+
+  % velocity
+  v: dlVar = dlvar(1)
+
+  % position
+  x: dlVar = dlvar(2)
+
+  % acceleration
+  a: dlVar = dlvar(3)
+
+  % buffer position (constant)
+  bf: dlVar = dlvar(4)
+
+  % end position (constant)
+  E: dlVar = dlvar(5)
+
+  % initial velocity (temp value, not constant)
+  vi: dlVar = dlvar(6)
+
+  prop_1 : LEMMA
+    DLIMPLIES(val(x)<=cnst(bf) AND cnst(bf)>cnst(E) AND val(a)>cnst(0) AND val(v)>cnst(0),
+      SOMERUNS(
+        STAR(
+          UNION(
+            DIFF((: (x, val(v)), (v, val(a)) :), val(x)<=cnst(bf)),
+            SEQ(
+              SEQ(
+                TEST(val(x)=cnst(bf)), 
+                ASSIGN((:(vi, val(v)):))), 
+              DIFF((: (x, val(v)), (v, (cnst(-1)*(val(vi)^cnst(2)))/(cnst(2)*(cnst(E)-cnst(bf)))) :), 
+            val(x)>=cnst(bf))))),
+    DLAND(val(x)=cnst(E), val(v)=cnst(0))))
+
+END Example2
