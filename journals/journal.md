@@ -27,8 +27,25 @@ Conclusion: The above does not work.
 
 Consider this other equation
 
-$$ a = A * \frac {|x-b|}{x-b|} $$
+$$ a = A * \frac {|x-b|}{x-b} $$
 
 
 This should work. Whenever x is above b, a will be A, when it is below b it will
-be -A. When x is at b, A will be 0 / 0... Which isn't great. Depending on
+be -A. When x is at b, A will be 0 / 0... Which isn't great. Depending on how
+PVS will handle that, it may be awful. 
+
+# The Reversionary Controller
+
+What is the closest point between a parabola and line?
+
+The parabola will be going down, the drone will be approaching it, how can we
+ensure that drone b is always a certain epsilon away from drone a?
+
+On the contrary, I am still not convinced the worst possible scenario isn't
+where drone a and b are closest at the very bottom. 
+
+**VERY IMPORTANT:**  I can now assume that the position and velocity of drone A are
+always known by drone b. Furthermore, the max velocity is always less than $A$
+
+I believe the worst possible case is that both drones curve down towards point B
+and narrowly avoid collision.
