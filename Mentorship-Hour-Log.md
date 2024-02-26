@@ -19,4 +19,5 @@
 | [Jan 31](journals/2024-01-31.md) | 3     | Learning New dL Syntax                                               |
 | [Feb 1](journals/2024-02-01.md)  | 3     | Learning New dL Syntax and Starting Example 2                        |
 | [Feb 8](journals/2024-02-08.md)  | 3     | Meeting with Tanner and Writing Example 2                            |
+| [Feb 15](journals/2024-02-15.md) | 3     | Meeting with Tanner and Writing Example 2                            |
 
