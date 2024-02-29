@@ -1,4 +1,4 @@
- # README
+# README
 
 - [README](#readme)
 	- [Using dL in PVS](#using-dl-in-pvs)
@@ -24,21 +24,28 @@
 	  > may be some formatting errors. The end goal of these notes is to document my
 	  > research and allow a future intern/user of dL PVS to get acquainted with the
 	  > technology easier.
-- ## Using dL in PVS
-- ### First do this
+
+## Using dL in PVS
+
+### First do this
+
 - go through the useful resources page
 - watch the intro video
 - read some documentation and papers about PVS and dL
 	- See [Embedding Differential Logic in PVS](assets/LSFA_23_submit.pdf)
 - ask Tanner for his paper about dL, its super useful
 - either buy a mac or Linux machine or see [How to use PVS on Windows](pages/pvs-on-windows.md)
-- ### Intro to PVS
+
+### Intro to PVS
+
 - turnstile: `|---------------------`
 - Propositional Logic: if, and, or, etc
 - LEMMA: thing you need to prove
 - above the turnstile : ALL IS TRUE (AND) (antecedent)
 - below the turnstile : one is true ALWAYS (OR) (consequent)
-- ### Variables and Constants
+
+### Variables and Constants
+
 - Constants can be defined as PVS variables like so, and must be referenced with
   a `cnst( )` around them
   
@@ -51,7 +58,9 @@
   <!--TODO: Update new dL variables syntax-->
   > [!NOTE]
   > As of the new PVS version 8, variables are defined differently.
-- ### Writing things in PVS and dL
+
+### Writing things in PVS and dL
+
 - [`IMPORTING dL@top`](pages/IMPORTING.md)
 - [`DIFF()`](pages/DIFF.md)
 - [`LEMMA`](pages/lemma.md)
