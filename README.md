@@ -74,9 +74,12 @@
 - [`^^`](pages/exponentiation.md)
 - [`ALLRUNS(DIFF())`](pages/ALLRUNS.md)
 - [`SOMERUNS(DIFF())`](pages/SOMERUNS.md)
-- ### Proving things in PVS and dL
+
+### Proving things in PVS and dL
 - see [this cheat sheet](assets/plaidypvs_cheatsheet.png)
-- #### Miscellaneous
+
+#### Miscellaneous
+
 - [`(inst)`](pages/inst.md)
 - [`(skolem)`](pages/skolem.md)
 - [`(skeep)`](pages/skeep.md)
@@ -86,7 +89,9 @@
 - [`(iff)`](pages/IFF.md)
 - [`(replaces)`](pages/replaces.md)
 - [`(skoletin)`](pages/skoletin.md)
-- #### Simplification
+
+#### Simplification
+
 - [`(prop)`](pages/prop.md)
 - [`(bddsimp)`](pages/bddsimp.md)
 - [`(assert)`](pages/assert.md)
@@ -94,14 +99,18 @@
 - [`(smash)`](pages/smash.md)
 - [`(grind)`](pages/grind.md)
 - [`(metit)`](metit.md)
-- #### Utilities
+
+#### Utilities
+
 - [`(help)`](pages/help.md)
 - [`(lemma)`](pages/lemma.md)
 - [`(quit)`](pages/quit.md)
 - [`(undo)`](pages/undo.md)
 - [`(hide)`](pages/hide.md)
 - [`(postpone)`](postpone.md)
-- #### dL Commands
+
+#### dL Commands
+
 - See `dynamic_logic.pvs` in nasalib for definitions and [Glossary_Plaidypvs](./assets/Glossary_Plaidypvs.pvs) for examples
 - [`(<command>b)`](pages/box.md)
 - [`(<command>d)`](pages/diamond.md)
@@ -117,7 +126,9 @@
 - [`(dl-grind)`](pages/dl-grind.md)
 - [`(dl-diffcase)`](pages/diffcase.md)
 - [`DLEXISTSRf`](pages/DLEXISTSRf.md)
-- ### Differential Ghosts and Invariants
+
+### Differential Ghosts and Invariants
+
 - most differential equations are impossible to solve
 - solving ODE's will often make them more complicated then necessary
 	- discrete ghost `(dl-ghost)`
@@ -169,7 +180,7 @@
 	  ensuring that $xy^2 = 1$ will always be true, proving that x must always be
 	  positive
 	  ![counterweight](assets/counterweight.png)
-- ### Off-Topic Math
+### Off-Topic Math
 - Random slightly off-topic math:
 	- you can define real numbers as the set of all lowest upper bounds of all
 	  nonempty, \_\_\_ sets
@@ -183,5 +194,5 @@
 		  real) (i forgot)
 		- they also have lots of holes in them, namely irrational numbers like
 		  $sqrt(2)$ and $pi$
-- ## KeYmaera
+## KeYmaera
 - see [KeYmaera](pages/keymaera.md)
