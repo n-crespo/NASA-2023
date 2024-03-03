@@ -162,7 +162,7 @@
 			  ghost, so do that and have an unkown j(x) as the ghost
 			- you should end up with an equation that = 0, so find the ghost
 			  expression that can satisfy it
-			- THAT'S IT
+			- that's it!
 		- how can you know for sure that `xy^2=1` ?
 			- that is just a property of any positive number $(x)$ , use some
 			  reasoning to find small expressions like that that work for all numbers so
