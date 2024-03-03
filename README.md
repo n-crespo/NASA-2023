@@ -56,6 +56,7 @@
   `x: nat = 0`
   
   <!--TODO: Update new dL variables syntax-->
+
   > [!NOTE]
   > As of the new PVS version 8, variables are defined differently.
 
@@ -76,6 +77,7 @@
 - [`SOMERUNS(DIFF())`](pages/SOMERUNS.md)
 
 ### Proving things in PVS and dL
+
 - see [this cheat sheet](assets/plaidypvs_cheatsheet.png)
 
 #### Miscellaneous
@@ -179,8 +181,11 @@
 	- Below: the differential ghost equation acts as a counterweight to f(x),
 	  ensuring that $xy^2 = 1$ will always be true, proving that x must always be
 	  positive
-	  ![counterweight](assets/counterweight.png)
+
+	  ![counterweight image](assets/counterweight.png)
+
 ### Off-Topic Math
+
 - Random slightly off-topic math:
 	- you can define real numbers as the set of all lowest upper bounds of all
 	  nonempty, \_\_\_ sets
