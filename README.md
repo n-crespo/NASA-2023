@@ -164,9 +164,9 @@
 			  expression that can satisfy it
 			- that's it!
 		- how can you know for sure that `xy^2=1` ?
-			- that is just a property of any positive number $(x)$ , use some
-			  reasoning to find small expressions like that that work for all numbers so
-			  you can build ghost variables around them
+      - that is just a property of any positive number $(x)$, use some reasoning
+      to find small expressions like that that work for all numbers so you can
+      build ghost variables around them
 		- the new function must exist for as long as or longer than the original
 		  function that you are reasoning about
 - `(dl-diffinv)`
