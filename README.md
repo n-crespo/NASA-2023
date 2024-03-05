@@ -14,7 +14,7 @@
 		- [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
 		- [Off-Topic Math](#off-topic-math)
 	- [KeYmaera](#keymaera)
-	  
+
 	  > This README is an overview of all the pages in this repo, which summarize my
 	  > internship with the Formal Methods team at NASA from June 2023 - present. Notes
 	  > have been taken that include my learning process for using PVS, using the
@@ -48,13 +48,13 @@
 
 - Constants can be defined as PVS variables like so, and must be referenced with
   a `cnst( )` around them
-  
+
   `x: VAR real`
 - Variables are defined as natural numbers with UNIQUE arbitrary values that
   correspond to their index, and must be referenced with a `val( )` around them
-  
+
   `x: nat = 0`
-  
+
   <!--TODO: Update new dL variables syntax-->
 
   > [!NOTE]
