@@ -15,15 +15,15 @@
 		- [Off-Topic Math](#off-topic-math)
 	- [KeYmaera](#keymaera)
 
-	  > This README is an overview of all the pages in this repo, which summarize my
-	  > internship with the Formal Methods team at NASA from June 2023 - present. Notes
-	  > have been taken that include my learning process for using PVS, using the
-	  > Virtual Machine (I had to use an Amazon Linux image because of M2 chip
-	  > incompatibility), and creating things and proving them with dL. Furthermore,
-	  > these notes were transferred from Logseq --> pure Markdown (manually), so there
-	  > may be some formatting errors. The end goal of these notes is to document my
-	  > research and allow a future intern/user of dL PVS to get acquainted with the
-	  > technology easier.
+> This README is an overview of all the pages in this repo, which summarize my
+> internship with the Formal Methods team at NASA from June 2023 - present. Notes
+> have been taken that include my learning process for using PVS, using the
+> Virtual Machine (I had to use an Amazon Linux image because of M2 chip
+> incompatibility), and creating things and proving them with dL. Furthermore,
+> these notes were transferred from Logseq --> pure Markdown (manually), so there
+> may be some formatting errors. The end goal of these notes is to document my
+> research and allow a future intern/user of dL PVS to get acquainted with the
+> technology easier.
 
 ## Using dL in PVS
 
@@ -201,5 +201,3 @@
 		  $sqrt(2)$ and $pi$
 ## KeYmaera
 - see [KeYmaera](pages/keymaera.md)
-
-missplle
