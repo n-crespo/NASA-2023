@@ -159,7 +159,7 @@
 		- how do you figure out what y should equal?
 			- GO BACKWARDS
 			- we know that you have to use `diffinv` right after you introduce the
-			  ghost, so do that and have an unkown j(x) as the ghost
+			  ghost, so do that and have an unknown $j(x)$ as the ghost
 			- you should end up with an equation that = 0, so find the ghost
 			  expression that can satisfy it
 			- that's it!
@@ -201,3 +201,5 @@
 		  $sqrt(2)$ and $pi$
 ## KeYmaera
 - see [KeYmaera](pages/keymaera.md)
+
+missplle
