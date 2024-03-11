@@ -163,7 +163,7 @@
 			- you should end up with an equation that = 0, so find the ghost
 			  expression that can satisfy it
 			- that's it!
-		- how can you know for sure that `xy^2=1` ?
+		- how can you know for sure that `xy^2=1`?
       - that is just a property of any positive number $(x)$, use some reasoning
       to find small expressions like that that work for all numbers so you can
       build ghost variables around them
@@ -188,7 +188,7 @@
 
 - Random slightly off-topic math:
 	- you can define real numbers as the set of all lowest upper bounds of all
-	  nonempty, \_\_\_ sets
+	  nonempty sets
 		- for example, take the set:
 			- $x^2 <= 2$ and assume x is a rational number
 			- the $lub$ , or lowest upper bound, is $sqrt(2)$
@@ -198,6 +198,7 @@
 		- if you took a random number there's a 0% chance it would be rational (or
 		  real) (i forgot)
 		- they also have lots of holes in them, namely irrational numbers like
-		  $sqrt(2)$ and $pi$
+		  $\sqrt(2)$ and $pi$
+
 ## KeYmaera
 - see [KeYmaera](pages/keymaera.md)
