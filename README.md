@@ -149,13 +149,14 @@
   - (auxiliary variables) added to make the proof more conclusive, don't really
     exist
 - `diff-ghost`:
+
   - you are trying to prove x is always positive (it approaches 0 as it reaches
     infinity)
   - you introduce a new equation: $y' = y/2$
   - then you can say that `x-y^2=1`
-  - why? Because $y^2$ is always positive, so anything that x is must also be
+  - why? Because $y^2$ is always positive, so anything that $x$ is must also be
     positive
-  - y acts as a counterweight, always lifting x just enough to remain positive
+  - $y$ acts as a counterweight, always lifting x just enough to remain positive
   - my questions:
     - how do you figure out what y should equal?
       - GO BACKWARDS
@@ -163,13 +164,13 @@
         ghost, so do that and have an unknown $j(x)$ as the ghost
       - you should end up with an equation that = 0, so find the ghost
         expression that can satisfy it
-      - that's it!
     - how can you know for sure that `xy^2=1`?
       - that is just a property of any positive number $(x)$, use some reasoning
         to find small expressions like that that work for all numbers so you can
         build ghost variables around them
     - the new function must exist for as long as or longer than the original
       function that you are reasoning about
+
 - `(dl-diffinv)`
   - use this after `diffghost`
   - when you have a Hybrid Program and something you want to prove is true (the
