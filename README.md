@@ -201,7 +201,7 @@
     - if you took a random number there's a 0% chance it would be rational (or
       real) (i forgot)
     - they also have lots of holes in them, namely irrational numbers like
-      $\sqrt(2)$ and $pi$
+      $\sqrt(2)$ and $\pi$
 
 ## KeYmaera
 
