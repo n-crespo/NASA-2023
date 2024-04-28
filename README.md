@@ -114,7 +114,7 @@
 
 #### dL Commands
 
-- See `dynamic_logic.pvs` in nasalib for definitions and [Glossary_Plaidypvs](./assets/Glossary_Plaidypvs.pvs) for examples
+- See `dynamic_logic.pvs` in nasalib for definitions and [Glossary Plaidypvs](./assets/Glossary_Plaidypvs.pvs) for examples
 - [`(<command>b)`](pages/box.md)
 - [`(<command>d)`](pages/diamond.md)
 - [`(dl-loop)`](pages/loop.md)
@@ -186,22 +186,6 @@
     positive
 
     ![counterweight image](assets/counterweight.png)
-
-### Off-Topic Math
-
-- Random slightly off-topic math:
-  - you can define real numbers as the set of all lowest upper bounds of all
-    nonempty sets
-    - for example, take the set:
-      - $x^2 <= 2$ and assume x is a rational number
-      - the $lub$ , or lowest upper bound, is $sqrt(2)$
-  - also, like everything in math can be described using limits,
-    - ex: the double ^^ is just the x^^a = limit of x^^q as q approaches A
-  - also rational numbers (or reals i think(?)) are like 0% of all numbers
-    - if you took a random number there's a 0% chance it would be rational (or
-      real) (i forgot)
-    - they also have lots of holes in them, namely irrational numbers like
-      $\sqrt(2)$ and $\pi$
 
 ## KeYmaera
 
