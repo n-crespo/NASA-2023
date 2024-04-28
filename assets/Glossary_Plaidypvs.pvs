@@ -1,7 +1,7 @@
 Glossary_Plaidypvs : THEORY
 % Hello There
 
-%-------------------------------------------------------------------------% 
+%-------------------------------------------------------------------------%
 %-------------------------------------------------------------------------%
 %| Glossary_Plaidypvs: This is a nice glossary of Plaidypvs prover       |%
 %|   commands. Each prover command has a minimal example of use with it. |%
@@ -87,7 +87,7 @@ dl_andR_example : LEMMA
 dl_anyb_example : LEMMA
   ALLRUNS(ANY(x, LAMBDA(r:real): cnst(r) >= cnst(10)),
     val(x) >= cnst(0))
-    
+
 %|- dl_anyb_example : PROOF
 %|- (then (dl-anyb) (dl-skolem "X") (dl-flatten) (dl-subs) (dl-assert))
 %|- QED dl_anyb_example
@@ -226,7 +226,7 @@ dl_composed_example : LEMMA
 %% dl-cut - split sequent according to cut
 %%--------------------------------------------
 
-dl_case_example : LEMMA 
+dl_case_example : LEMMA
   ALLRUNS(IFTE(cnst(c)>=0,
             ASSIGN((:(x,cnst(c)):)),
 	    ASSIGN((:(x,cnst(-c)):))),
@@ -236,15 +236,15 @@ dl_case_example : LEMMA
 %|- (spread (dl-case "cnst(c)>=0")
 %|-  ((then (dl-choiceb) (spread (dl-andR) ((dl-assert) (dl-assert))))
 %|-   (dl-assert)))
-%|- QED dl_case_example		
+%|- QED dl_case_example
 
 %%--------------------------------------------
 %% dl-diffcase - adds cut to diff? HP
 %%--------------------------------------------
 
 dl_diffcase_example: LEMMA
-  ALLRUNS(DIFF((: (x,cnst(2)) :),val(x)>cnst(0)), val(x)^2>cnst(5)) AND 
-  ALLRUNS(DIFF((: (x,cnst(2)) :),val(x)>cnst(0) AND val(x)^2>cnst(5)), DLTRUE) 
+  ALLRUNS(DIFF((: (x,cnst(2)) :),val(x)>cnst(0)), val(x)^2>cnst(5)) AND
+  ALLRUNS(DIFF((: (x,cnst(2)) :),val(x)>cnst(0) AND val(x)^2>cnst(5)), DLTRUE)
   IMPLIES ALLRUNS(DIFF((: (x,cnst(2)) :),val(x)>cnst(0)),DLTRUE)
 
 %|- dl_diffcase_example : PROOF
@@ -283,7 +283,7 @@ IN
 
 dl_diffinit_example: LEMMA
   ((: val(x)>cnst(0) :) |- ALLRUNS(DIFF((: (x,cnst(2)) :),val(x)>cnst(0)),DLTRUE))
-  IMPLIES 
+  IMPLIES
     ALLRUNS(DIFF((: (x,cnst(2)) :),val(x)>cnst(0)),DLTRUE)
 
 %|- dl_diffinit_example : PROOF
@@ -291,7 +291,7 @@ dl_diffinit_example: LEMMA
 %|- QED dl_diffinit_example
 
 %%--------------------------------------------
-%% dl-diffinv - differnital invariant 
+%% dl-diffinv - differnital invariant
 %%--------------------------------------------
 
 dl_diffinv_example : LEMMA
@@ -308,7 +308,7 @@ dl_diffinv_example : LEMMA
 %|- QED dl_diffinv_example
 
 %%--------------------------------------------
-%% dl-falseL - discharge sequent with FALSE in antecendent 
+%% dl-falseL - discharge sequent with FALSE in antecendent
 %%--------------------------------------------
 
 dl_falseL_example: LEMMA
@@ -334,7 +334,7 @@ dl_flatten_example : LEMMA
 %|- QED dl_flatten_example
 
 %%--------------------------------------------
-%% dl-g - Godel's theorem 
+%% dl-g - Godel's theorem
 %%--------------------------------------------
 
  dl_g_example: LEMMA
@@ -450,7 +450,7 @@ l
 %%--------------------------------------------
 
 dl_impliesR_example: LEMMA
-    (cons(val(x)>cnst(5),(: val(z)=cnst(0) :)) |- cons(val(y)<cnst(-7), (: val(x)<cnst(0) :))) 
+    (cons(val(x)>cnst(5),(: val(z)=cnst(0) :)) |- cons(val(y)<cnst(-7), (: val(x)<cnst(0) :)))
     IMPLIES
     ((: val(z)=cnst(0) :) |- (cons((val(x)>cnst(5) IMPLIES val(y)<cnst(-7)), (: val(x)<cnst(0) :))))
 
@@ -464,7 +464,7 @@ dl_impliesR_example: LEMMA
 
  dl_iterated_example: LEMMA
   val(x) >=cnst(5) IMPLIES
-  SOMERUNS(STAR(ASSIGN(((:(x,val(x)-1):)))),val(x)>=5) 
+  SOMERUNS(STAR(ASSIGN(((:(x,val(x)-1):)))),val(x)>=5)
 
 %%--------------------------------------------
 %% dl-K - weakens HP
@@ -511,7 +511,7 @@ dl_Mb_example: LEMMA
 
 
 %%--------------------------------------------
-%% dl-move - move dl-formula 
+%% dl-move - move dl-formula
 %%--------------------------------------------
 
 dl_move_example : LEMMA
@@ -551,8 +551,8 @@ dl_notR_example: LEMMA
 %%--------------------------------------------
 
 dl_orL_example: LEMMA
-  (cons(val(y)<=5,null) |- (: val(y)^2+val(x)^2 <= 25 :)) AND 
-  (cons(val(x)<=5,null) |- (: val(y)^2+val(x)^2 <= 25 :)) 
+  (cons(val(y)<=5,null) |- (: val(y)^2+val(x)^2 <= 25 :)) AND
+  (cons(val(x)<=5,null) |- (: val(y)^2+val(x)^2 <= 25 :))
   IMPLIES
   (cons(val(y)<=5 OR val(x)<=5,null) |- (: val(y)^2+val(x)^2 <= 25 :))
 
@@ -565,7 +565,7 @@ dl_orL_example: LEMMA
 %%--------------------------------------------
 
 dl_orR_example: LEMMA
-  ((:val(x)<cnst(-10):) |- cons(val(z)=cnst(0),cons(val(y)>cnst(0),(:val(x)>=cnst(10):)))) 
+  ((:val(x)<cnst(-10):) |- cons(val(z)=cnst(0),cons(val(y)>cnst(0),(:val(x)>=cnst(10):))))
   IMPLIES
       ((:val(x)<cnst(-10):) |- cons(val(z)=cnst(0) OR val(y)>cnst(0),(:val(x)>=cnst(10):)))
 
@@ -606,7 +606,7 @@ dl_skolem_example: LEMMA
  dl_solve_example1: LEMMA
  val(x) <= val(y) IMPLIES
  ALLRUNS(DIFF((: (x,cnst(2)), (y,cnst(3)) :)),val(x)<=val(y))
- 
+
  dl_solve_example2: LEMMA
  ALLRUNS(DIFF((: (x,cnst(3)),
                  (y,val(x)),
@@ -643,7 +643,7 @@ dl_testb_example: LEMMA
 %%--------------------------------------------
 
 dl_testd_example: LEMMA
-  SOMERUNS(TEST(val(z)=cnst(0)),val(x)^2>cnst(0)) 
+  SOMERUNS(TEST(val(z)=cnst(0)),val(x)^2>cnst(0))
   IMPLIES
   (val(z)=cnst(0) AND val(x)^2>cnst(0))
 
@@ -679,5 +679,5 @@ val(x) = cnst(3) IMPLIES ALLRUNS(DIFF((:(y,val(y)*val(z)):)),val(x)^2=cnst(9))
   3*val(y) - cnst(5) = cnst(70))
 
 
-    
+
   END Glossary_Plaidypvs
