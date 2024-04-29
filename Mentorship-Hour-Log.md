@@ -1,5 +1,7 @@
 # Mentorship Hour Log
 
+[Home Page](README.md)
+
 | Date                             | Hours | Topic                                                                |
 | -------------------------------- | ----- | -------------------------------------------------------------------- |
 | [Sep 6](journals/2023-09-06.md)  | 3     | Creating Example 1b with Buffer and Controller                       |

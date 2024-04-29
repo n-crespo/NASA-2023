@@ -1,5 +1,7 @@
 # README
 
+See [Hour Log](Mentorship-Hour-Log.md)
+
 - [README](#readme)
   - [Using dL in PVS](#using-dl-in-pvs)
     - [First do this](#first-do-this)
@@ -153,7 +155,7 @@
   - you are trying to prove x is always positive (it approaches 0 as it reaches
     infinity)
   - you introduce a new equation: $y' = y/2$
-  - then you can say that `x-y^2=1`
+  - then you can say that $x-y^2 = 1$
   - why? Because $y^2$ is always positive, so anything that $x$ is must also be
     positive
   - $y$ acts as a counterweight, always lifting x just enough to remain positive
@@ -164,7 +166,7 @@
         ghost, so do that and have an unknown $j(x)$ as the ghost
       - you should end up with an equation that = 0, so find the ghost
         expression that can satisfy it
-    - how can you know for sure that `xy^2=1`?
+    - how can you know for sure that $xy^2=1$?
       - that is just a property of any positive number $(x)$, use some reasoning
         to find small expressions like that that work for all numbers so you can
         build ghost variables around them
