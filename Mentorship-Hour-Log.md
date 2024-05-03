@@ -27,3 +27,4 @@
 | [Apr 10](journals/2024-04-10.md) | 4.5   | Writing Abstract and Catching Back Up                                |
 | [Apr 24](journals/2024-04-24.md) | 4.5   | Preparing for Symposium Presentation                                 |
 | [May 1](journals/2024-05-01.md)  | 3     | Meeting + Continuing Drone Collision Avoidance Proof Preparation     |
+| [May 2](journals/2024-05-02.md)  | 3     | Writing Methods and Materials Section of Research Manuscript         |
