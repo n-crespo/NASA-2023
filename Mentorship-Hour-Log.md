@@ -28,3 +28,4 @@
 | [Apr 24](journals/2024-04-24.md) | 4.5   | Preparing for Symposium Presentation                                 |
 | [May 1](journals/2024-05-01.md)  | 3     | Meeting + Continuing Drone Collision Avoidance Proof Preparation     |
 | [May 2](journals/2024-05-02.md)  | 3     | Writing Methods and Materials Section of Research Manuscript         |
+| [May 6](journals/2024-05-06.md)  | 3     | Expanding on Required Buffer Distance                                |
