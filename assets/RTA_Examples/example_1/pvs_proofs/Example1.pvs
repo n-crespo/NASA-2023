@@ -1,11 +1,12 @@
 %%
-% @theory: Example1e
+% @theory: Example1
 % @author: nicolas
 % @date: Wed, 08 Nov 2023 20:19:37 GMT
 %%
-Example1e: THEORY
-  BEGIN 
-    
+
+Example1: THEORY
+  BEGIN
+
   IMPORTING dL@top
 
   % velocity
@@ -34,10 +35,10 @@ Example1e: THEORY
             DIFF((: (x, val(v)), (v, val(a)) :), val(x)<=cnst(bf)),
             SEQ(
               SEQ(
-                TEST(val(x)=cnst(bf)), 
-                ASSIGN((:(vi, val(v)):))), 
-              DIFF((: (x, val(v)), (v, (cnst(-1)*(val(vi)^cnst(2)))/(cnst(2)*(cnst(E)-cnst(bf)))) :), 
+                TEST(val(x)=cnst(bf)),
+                ASSIGN((:(vi, val(v)):))),
+              DIFF((: (x, val(v)), (v, (cnst(-1)*(val(vi)^cnst(2)))/(cnst(2)*(cnst(E)-cnst(bf)))) :),
             val(x)>=cnst(bf))))),
     DLAND(val(x)=cnst(E), val(v)=cnst(0))))
 
-END Example1e
+END Example1
