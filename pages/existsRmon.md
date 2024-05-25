@@ -1,10 +1,9 @@
 # existsrMon
 
--
-  > Existential monotonicity in succedent: replace `p(x)` with a characteristic
-   > property `q(x)`.
+- > Existential monotonicity in succedent: replace `p(x)` with a characteristic
+  > property `q(x)`.
 
-  ``` text
+  ```text
   Use:                      Show:
   G |- \exists x q(x), D    G, q(x) |- p(x), D
   -------------------------------------------- M∃R
@@ -12,11 +11,12 @@
   ```
 
 - If there exists an x that maintains a post condition $p(x)$ , then you can say
-that it also suggests a postcondition $q(x)$ , but only if $q(x)$ itself makes
-$p(x)$ true
+  that it also suggests a postcondition $q(x)$ , but only if $q(x)$ itself makes
+  $p(x)$ true
 - this is a Tactic in KeYmaera but does not exist as a proof rule (as far as i
-know) in [dL](../pages/dL.md)
+  know) in [dL](../pages/dL.md)
 - potential alternatives include:
+
   - **`dl-mono`**
     - `dl-MbL`
     - `dl-MbR`
@@ -28,6 +28,6 @@ know) in [dL](../pages/dL.md)
   - `dl-MEbRA`
   - see `dynamic_logic.pvs`
 
-- ## What Tanner said about existsrMon
+- ## What Tanner said about `existsrMon`
 
 - just use `inst()` or `instt()`, they should both work
