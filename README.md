@@ -58,10 +58,10 @@ See [Hour Log](Mentorship-Hour-Log.md)
 
   `x: nat = 0`
 
-  <!--TODO: Update new dL variables syntax-->
+<!--TODO: Update new dL variables syntax-->
 
-  > [!NOTE]\
-  > As of the new PVS version 8, variables are defined differently.
+> [!NOTE]\
+> As of the new PVS version 8, variables are defined differently.
 
 ### Writing things in PVS and dL
 
