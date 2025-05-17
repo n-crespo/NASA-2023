@@ -34,9 +34,9 @@ See [Hour Log](Mentorship-Hour-Log.md)
 - go through the useful resources page
 - watch the intro video
 - read some documentation and papers about PVS and dL
-  - See [Embedding Differential Logic in PVS](assets/LSFA_23_submit.pdf)
+  - See [Embedding Differential Logic in PVS](./assets/LSFA_23_submit.pdf)
 - ask Tanner for his paper about dL, its super useful
-- either buy a mac or Linux machine or see [How to use PVS on Windows](pages/pvs-on-windows.md)
+- either buy a mac or Linux machine or see [How to use PVS on Windows](./pages/pvs-on-windows.md)
 
 ### Intro to PVS
 
@@ -89,7 +89,7 @@ See [Hour Log](Mentorship-Hour-Log.md)
 - [`(skolem)`](pages/skolem.md)
 - [`(skeep)`](pages/skeep.md)
 - [`(flatten)`](pages/flatten.md)
-- [`(split)`](pages/)
+- [`(split)`](pages/split.md)
 - [`(expand)`](pages/expand.md)
 - [`(iff)`](pages/IFF.md)
 - [`(replaces)`](pages/replaces.md)
@@ -103,7 +103,7 @@ See [Hour Log](Mentorship-Hour-Log.md)
 - [`(ground)`](pages/ground.md)
 - [`(smash)`](pages/smash.md)
 - [`(grind)`](pages/grind.md)
-- [`(metit)`](metit.md)
+- [`(metit)`](pages/metit.md)
 
 #### Utilities
 
@@ -111,8 +111,8 @@ See [Hour Log](Mentorship-Hour-Log.md)
 - [`(lemma)`](pages/lemma.md)
 - [`(quit)`](pages/quit.md)
 - [`(undo)`](pages/undo.md)
-- [`(hide)`](pages/hide.md)
-- [`(postpone)`](postpone.md)
+- [`(hide)`](./pages/hide.md)
+- [`(postpone)`](./pages/postpone.md)
 
 #### dL Commands
 
