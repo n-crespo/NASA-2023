@@ -1,12 +1,10 @@
 # README
 
-See [Hour Log](Mentorship-Hour-Log.md)
-
+<!--toc:start-->
 - [README](#readme)
   - [Using dL in PVS](#using-dl-in-pvs)
     - [First do this](#first-do-this)
     - [Intro to PVS](#intro-to-pvs)
-      - [Variables and Constants](#variables-and-constants)
     - [Writing things in PVS and dL](#writing-things-in-pvs-and-dl)
     - [Proving things in PVS and dL](#proving-things-in-pvs-and-dl)
       - [Miscellaneous](#miscellaneous)
@@ -14,8 +12,10 @@ See [Hour Log](Mentorship-Hour-Log.md)
       - [Utilities](#utilities)
       - [dL Commands](#dl-commands)
     - [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
-    - [Off-Topic Math](#off-topic-math)
   - [KeYmaera](#keymaera)
+<!--toc:end-->
+
+See [Hour Log](Mentorship-Hour-Log.md)
 
 > This README is an overview of all the pages in this repo, which summarize my
 > internship with the Formal Methods team at NASA from June 2023 - present.
@@ -46,8 +46,6 @@ See [Hour Log](Mentorship-Hour-Log.md)
 - above the turnstile : ALL IS TRUE (AND) (antecedent)
 - below the turnstile : one is true ALWAYS (OR) (consequent)
 
-### Variables and Constants
-
 - Constants can be defined as PVS variables like so, and must be referenced with
   a `cnst( )` around them
 
@@ -60,7 +58,7 @@ See [Hour Log](Mentorship-Hour-Log.md)
 
 <!--TODO: Update new dL variables syntax-->
 
-> [!NOTE]\
+> [!NOTE]
 > As of the new PVS version 8, variables are defined differently.
 
 ### Writing things in PVS and dL
