@@ -25,7 +25,7 @@
 | [Feb 22](journals/2024-02-22.md) | 3     | Writing Reversionary Controller Equation                             |
 | [Feb 28](journals/2024-02-28.md) | 3     | Writing Monitor/Reversionary Controller Equation                     |
 | [Apr 10](journals/2024-04-10.md) | 4.5   | Writing Abstract and Catching Back Up                                |
-| [Apr 24](journals/2024-04-24.md) | 4.5   | Preparing for Symposium Presentation                                 |
+| [Apr 24](journals/2024-04-17.md) | 4.5   | Preparing for Symposium Presentation                                 |
 | [May 1](journals/2024-05-01.md)  | 3     | Meeting + Continuing Drone Collision Avoidance Proof Preparation     |
 | [May 2](journals/2024-05-02.md)  | 3     | Writing Methods and Materials Section of Research Manuscript         |
 | [May 6](journals/2024-05-06.md)  | 3     | Expanding on Required Buffer Distance                                |

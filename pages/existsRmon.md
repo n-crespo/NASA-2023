@@ -1,14 +1,14 @@
 # existsrMon
 
-- > Existential monotonicity in succedent: replace `p(x)` with a characteristic
-  > property `q(x)`.
+> Existential monotonicity in succedent: replace `p(x)` with a characteristic
+> property `q(x)`.
 
-  ```text
-  Use:                      Show:
-  G |- \exists x q(x), D    G, q(x) |- p(x), D
-  -------------------------------------------- M∃R
-  G |- \exists x p(x), D
-  ```
+```text
+Use:                      Show:
+G |- \exists x q(x), D    G, q(x) |- p(x), D
+-------------------------------------------- M∃R
+G |- \exists x p(x), D
+```
 
 - If there exists an x that maintains a post condition $p(x)$ , then you can say
   that it also suggests a postcondition $q(x)$ , but only if $q(x)$ itself makes
@@ -28,6 +28,6 @@
   - `dl-MEbRA`
   - see `dynamic_logic.pvs`
 
-- ## What Tanner said about `existsrMon`
+## What Tanner said about `existsrMon`
 
 - just use `inst()` or `instt()`, they should both work
