@@ -3,14 +3,14 @@
 % @date: Tue, 27 Jun 2023 15:23:24 GMT
 %%
 dl_bang: THEORY
-  BEGIN 
+  BEGIN
     IMPORTING dL@top
 
     % ——————————————– %
 %    Change: Velocity
 %    Target: Velocity
     % ——————————————– %
-  
+
     % current position
     x: nat = 0
 
@@ -30,21 +30,21 @@ dl_bang: THEORY
     tv: real
 
     dyn: HP = DIFF((:(x, val(v)), (t, cnst(1)):), val(t) <= cnst(tau))
-    
+
     controller: HP = IFTE(val(v) < cnst(tv), ASSIGN((:(v, cnst(A)):)), ASSIGN((:(v, -cnst(A)):)))
 
     %% this is resetting exactly at tau
     bang_controller_eq: HP =
-    
+
       % if tau time has been reached
       STAR(IFTE(val(t)=cnst(tau),
 	% reset the clock, activate controller
         SEQ(ASSIGN((:(t, cnst(0)):)), SEQ(dyn, controller)),
-        % else 
+        % else
         SEQ(dyn, controller)))
-	
+
   END dl_bang
-  
+
     % [10:32 AM] Slagel, Tanner (LARC-D320)
     % (t:= 0 ; (t' = 1 & t <= tau))* this is a program that lets time run, but resets time at least every
     % tau amount of time.
