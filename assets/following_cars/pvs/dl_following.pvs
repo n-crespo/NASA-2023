@@ -13,7 +13,7 @@ dl_following  % [ parameters ]
     xa: nat = 0
     % position b
     xb: nat = 1
-    
+
     % velocity a
     va: posreal = 2
     % velocity b
@@ -23,9 +23,9 @@ dl_following  % [ parameters ]
       DLIMPLIES(val(xa)>val(xb),
       ALLRUNS(DIFF((:(xa, cnst(va)), (xb, (val(xa)-val(xb))/2):)),
 	         val(xa)>val(xb)))
-    
+
     %-------------------------------------------
-% @formula: following_prop 
+% @formula: following_prop
 % @theory: dl_following
 % @pvsfile: dl_following.pvs
 % @status: ✅ proved
@@ -43,5 +43,5 @@ dl_following  % [ parameters ]
 %     (then (dl-assert))
 %     (then (grind)))))
 % QED following_prop
-      
+
   END dl_following
