@@ -8,23 +8,23 @@ Example2: THEORY
 
   IMPORTING dL@top
 
-  // % velocity
-  // v: dlVar = dlvar(1)
+  % velocity
+  v: dlVar = dlvar(1)
 
-  // % position
-  // x: dlVar = dlvar(2)
+  % position
+  x: dlVar = dlvar(2)
 
-  // % acceleration
-  // a: dlVar = dlvar(3)
+  % acceleration
+  a: dlVar = dlvar(3)
 
-  // % buffer position (constant)
-  // bf: dlVar = dlvar(4)
+  % buffer position (constant)
+  bf: dlVar = dlvar(4)
 
-  // % end position (constant)
-  // E: dlVar = dlvar(5)
+  % end position (constant)
+  E: dlVar = dlvar(5)
 
-  // % initial velocity (temp value, not constant)
-  // vi: dlVar = dlvar(6)
+  % initial velocity (temp value, not constant)
+  vi: dlVar = dlvar(6)
 
   prop_1 : LEMMA
     DLIMPLIES(val(x)<=cnst(bf) AND cnst(bf)>cnst(E) AND val(a)>cnst(0) AND val(v)>cnst(0),
