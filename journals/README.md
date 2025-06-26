@@ -1485,7 +1485,7 @@ know the following things:
   - [ ] send it to tanner for review
 
 > This journal entry is a clarification of the
-> [previous one](2024-02-28.md), written on Feb 28
+> [previous one](#2024-02-28), written on Feb 28
 
 </details>
 
@@ -1496,7 +1496,7 @@ know the following things:
 - $v_y$ is the max and $-v_y$ is the min velocity in the $y$ direction
 - $v_x$ is the constant velocity in the $x$ direction
 
-> The $v_x$ variable is subject to change (see [this journal entry](./2024-05-06.md)
+> The $v_x$ variable is subject to change (see [this journal entry](#2024-05-06)
 > where I make it not constant)
 
 - $D$ and $-D$ are the maximum and minimum acceleration, respectively
@@ -1565,7 +1565,7 @@ can now calculate how far it will have traveled in the x direction with the
 following equation:
 
 > It is important to note that we are assuming constant velocity in the x
-> direction here... (fixed in [this journal entry](./2024-05-06.md))
+> direction here... (fixed in [this journal entry](#2024-05-06))
 
 $$\Delta x =v_x(t)$$
 $$\Delta x = v_x (\frac{2v_y}{D})$$
@@ -1598,7 +1598,7 @@ $$\Delta x = v_x(\frac{T}{v_y} - \frac{v_y}{2D}+\frac{2v_y}{D})$$
 $$\Delta x = v_x(\frac{T}{v_y} - \frac{v_y}{2D}+\frac{4v_y}{2D})$$
 $$\Delta x = v_x(\frac{T}{v_y} + \frac{3v_y}{2D})$$
 
-See [the next journal entry](2024-04-17.md)
+See [the next journal entry](#2024-04-17)
 
 --~~--
 
