@@ -8,7 +8,7 @@
 
 ## How to write stuff with KeYmaera
 
-```KeYmaera
+```KeYmaeraX
 ArchiveEntry "<name of file>"
   Description "<description>".
     Title "<title>".
@@ -16,7 +16,7 @@ ArchiveEntry "<name of file>"
 Definitions // constant variables
   Real x;
     Real y;
-End. 
+End.
 
 ProgramVariables // changing variables
   Real a;
@@ -38,7 +38,7 @@ Tactic "Tactic Description" // describe proof rules to solve lemma
   (here)
 End.
 
-End. 
+End.
 ```
 
 ## `existsRmon`
@@ -57,7 +57,7 @@ End.
 - constant and variables are separate  >> ProgramVariables and Definitions
 - note the use of square and squiggly brackets in the `Problem` section
 
-  ```keymaera
+  ```KeYmaerax
   ArchiveEntry "cooling law"
 
   Definitions
@@ -68,14 +68,14 @@ End.
   ProgramVariables
     Real temp;
   End.
-  
+
   Problem
     ta = 0 & temp > to
     ->
     [{
       {temp'= -k*(temp-to)
     }]temp > to
-  
+
   End.
   End.
   ```
@@ -88,7 +88,7 @@ dedicated proof rules to obtain faster proofs.
 - See also
   - `ODEinv` ODE invariant proving without search
   - `dI` Differential invariant to prove the formula R is an invariant of the
-  differential equation system.  
+  differential equation system.
   - `dC` differential cuts: to first prove another property of the differential
   equation and then assume it during the dynamics.
   - `dW` differential weakening: to prove a property that directly follows from

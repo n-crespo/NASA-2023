@@ -96,7 +96,7 @@ documentation), but was unable to manually prove the solution to be correct
 - reading and taking notes, have lots of questions for him
 - waiting to ask questions
 
-- ## ask tanner to model a diff eq for you to see how it is
+## ask tanner to model a diff eq for you to see how it is
 
 - reading paper about DL embedding Differential Dynamic Logic
 - ask questions tomorrow, listed in notebook
@@ -406,7 +406,7 @@ proves some post condition
 
 ## the proof progress is here (collapsed)
 
-```KeYmaera
+```keymaerax
 iterated('R=="<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)");
 iterated('R=="x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>#<{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0)#");
 orR('R=="x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}>(x=E()&v=0|<{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}><{{x'=v,v'=a&x<=bf()}++{?x=bf();vi:=v;}{x'=v,v'=-vi^2/(2*(E()-bf()))&x>=bf()}}*>(x=E()&v=0))");
