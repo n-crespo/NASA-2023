@@ -1,8 +1,7 @@
 # What is this?
 
 This markdown file is all of my journals in one file. Each entry starts with a
-heading containing the date it was written. To further separate entries, they
-are also separated with a newline and "--~~--".
+heading containing the date it was written.
 
 # 2023-06-08
 
@@ -24,8 +23,6 @@ are also separated with a newline and "--~~--".
     - `iff (something)`: IFF
       - converts to propositional reasoning (a = b -> a IFF b)
 
---~~--
-
 # 2023-06-12
 
 - continuing PVS
@@ -43,8 +40,6 @@ real declaration of the thing itself, kinda confusing but works
 of the proofs with PVS using DL NASALib
 - quite difficult...
 
---~~--
-
 # 2023-06-13
 
 - went through a *bunch* of documentation for PVS and NASA Lib dL
@@ -58,8 +53,6 @@ not very well documented
 - going through DL Examples (exp growth first, trying to understand how to use
 the DL@TOP library)
 
---~~--
-
 # 2023-06-14
 
 - back to looking through nasalib/dL files and documentation
@@ -69,8 +62,6 @@ the DL@TOP library)
 - Ended up using `IFTE`, not `UNION`
 - need to learn how to assign stuff and do basic functions in dL (not the same
 as KeYmaera tutorial)
-
---~~--
 
 # 2023-06-15
 
@@ -91,8 +82,6 @@ documentation), but was unable to manually prove the solution to be correct
   - [list of named differential equations]( https://www.wikiwand.com/en/List_of_named_differential_equations )
 - hard to fully understand most...
 
---~~--
-
 # 2023-06-16
 
 - good toronto progress
@@ -100,8 +89,6 @@ documentation), but was unable to manually prove the solution to be correct
   - !! ASK HIM to send you the paper (done)
   - dyn()
   - functions use when where etc?
-
---~~--
 
 # 2023-06-20
 
@@ -115,22 +102,16 @@ documentation), but was unable to manually prove the solution to be correct
 - ask questions tomorrow, listed in notebook
 - show question 5 (type theory and famous dudes)
 
---~~--
-
 # 2023-06-21
 
 - have lots of questions
 - waiting for tanner to become available
-
---~~--
 
 # 2023-06-22
 
 - modeled Newton's law of cooling in dL
 - typechecking takes so long bruh
 - trying to prove it is proving to be difficult
-
---~~--
 
 # 2023-06-23
 
@@ -161,8 +142,6 @@ documentation), but was unable to manually prove the solution to be correct
           - fresh = new variable
         - bouncing ball example, create example folder
       - differential ghosts evolve over time
-
---~~--
 
 # 2023-06-26
 
@@ -200,8 +179,6 @@ documentation), but was unable to manually prove the solution to be correct
   - you should get stuff that cancels out !!
   - (or rather an equation that equals 0)
 
---~~--
-
 # 2023-06-27
 
 - LEARNED NEW command
@@ -215,8 +192,6 @@ documentation), but was unable to manually prove the solution to be correct
   - `^^`: exponentiation to a real number
   - `^` only accepts nat numbers because their easy to work with, much simpler definition
 
---~~--
-
 # 2023-06-28
 
 - finally proving the dl_cooling property
@@ -229,8 +204,6 @@ documentation), but was unable to manually prove the solution to be correct
 - stuff not working
 - (like pvs commands)
 - tanner leaving tomorrow...
-
---~~--
 
 # 2023-06-29
 
@@ -248,8 +221,6 @@ documentation), but was unable to manually prove the solution to be correct
 - it is indeed...
 - got emacs to work, finally, and got the themes to be normal again
 
---~~--
-
 # 2023-06-30
 
 - waiting for cesar to come so I can fix the diffghost and the ghosts example
@@ -258,8 +229,6 @@ documentation), but was unable to manually prove the solution to be correct
   - KeYmaera can run in the image, not locally
     - run command `java -jar keymaerax.jar`
     - open keymaera with this: <http://127.0.0.1:8090/>
-
---~~--
 
 # 2023-07-03
 
@@ -278,8 +247,6 @@ documentation), but was unable to manually prove the solution to be correct
 - Follow up on ghost proof and show Cesar the error message
 - Bang Bang controller + Tanner's schedule
 
---~~--
-
 # 2023-07-05
 
 - back to work
@@ -293,8 +260,6 @@ documentation), but was unable to manually prove the solution to be correct
 - I found an important bug in the dl_cooling proof:
   - the first $k/2$ term has to have a cnst around ALL OF IT
 
---~~--
-
 # 2023-07-06
 
 - Today I'm going to:
@@ -302,14 +267,10 @@ documentation), but was unable to manually prove the solution to be correct
   - write dl_cooling with KeYmaera
 - ask Cesar about the `grind "^^"` dilemma (1 != 0)
 
---~~--
-
 # 2023-07-07
 
 - [x] finish the bang bang controller
 - very useful: ![when_flatten_split](../assets/when_flatten_split.png)
-
---~~--
 
 # 2023-07-10
 
@@ -322,14 +283,10 @@ documentation), but was unable to manually prove the solution to be correct
 - bang bang is becoming hard to prove, tomorrow add preconditions to lemma and
 try to prove again
 
---~~--
-
 # 2023-07-11
 
 - DONE finish modeling following cars
 - DONE prove a property of the following cars
-
---~~--
 
 # 2023-07-12
 
@@ -339,22 +296,16 @@ try to prove again
 - `composeb`
   - research
 
---~~--
-
 # 2023-07-13
 
 - `diff-inv`
   - does not work in PVS 8 (emacs on my local machine)
   - however, it works in the image
 
---~~--
-
 # 2023-07-17
 
 - now writing loop proof in PVS to see if annotation like features can work in PVS
 - see [Annotations](../pages/Annotations.md)
-
---~~--
 
 # 2023-07-19
 
@@ -362,20 +313,14 @@ try to prove again
 - may need it to prove [dl_cooling]
 - get to work
 
---~~--
-
 # 2023-07-20
 
 - going to model bang bang variations (starting with velocity)
-
---~~--
 
 # 2023-07-24
 
 - working on FINISHING cooling proof, then following proof, THEN consider
 outlying controller cases and prove them
-
---~~--
 
 # 2023-07-25
 
@@ -399,22 +344,16 @@ cannot simplify an obviously true expression because it doesn't recognize that a
 is actually 0
 - will work with tanner on that tomorrow, and also ADD A FOLLOWING BUFFER
 
---~~--
-
 # 2023-07-26
 
 - FINISHED following proof
 - generalize cooling proof?
 - add following buffer?
 
---~~--
-
 # 2023-07-27
 
 - Don't use `posreal`
 - Use `VAR real` or `nat` instead
-
---~~--
 
 # 2023-07-28
 
@@ -430,15 +369,11 @@ is actually 0
   - DONE prove gen cooling
   - LATER write epsilon cooling?
 
---~~--
-
 # 2023-08-22
 
 - finally back to work
 - going to return to following buffer proof and following bang bang proof
 - add to RTA framework examples?
-
---~~--
 
 # 2023-09-06
 
@@ -456,14 +391,12 @@ is actually 0
       - similar problems happen if the first ODE ends exactly at bf with a V of 0
 - got to this point in proof 1a in PVS:
 - ![proof1a_progress](../assets/proof1a_progress.png)
-  - used cnst(bf) > cnst(E) as a loop invariant, other precondition ((val(x) <
-  cnst(bf)) doesn't remain true (isnt invariant throughout the proof), but I'm
+  - used `cnst(bf) > cnst(E)` as a loop invariant, other precondition `((val(x) <
+  cnst(bf))` doesn't remain true (isnt invariant throughout the proof), but I'm
   not sure that matters much
 - need to redo with full loop invariant, then ask tanner about either splitting
 up the HPs or creating a ghost variable
 - see [loop invariant](../pages/loopinvariant.md)
-
---~~--
 
 # 2023-09-13
 
@@ -525,8 +458,6 @@ telework permission ?)
   - E = 0 ... this seems alright I guess if the others are all negative
   - v_1 and a = 1.0
 
---~~--
-
 # 2023-09-20
 
 - Back to work
@@ -547,8 +478,6 @@ telework permission ?)
   - [ ] check status of other Example proofs that are specified in PVS
 - Also I can now telework legally
 
---~~--
-
 # 2023-09-27
 
 - Today I talked about a physics problem with Tanner
@@ -561,8 +490,6 @@ to A or -A, instantaneously. The idea is that the car is approaching a wall at x
 would check if the position and velocity of itself in the future if it chose
 either A, or -A, and decide what to do depending on those outcomes.
 
---~~--
-
 # 2023-10-11
 
 - Today I am working virtually
@@ -572,8 +499,6 @@ either A, or -A, and decide what to do depending on those outcomes.
 - [ ] Translate all proofs from KeYmaera to PVS
 - [ ] Rebuild existentially quantified proof in KeYmaera on my personal machine
 with Wolfram Alpha
-
---~~--
 
 # 2023-10-12
 
@@ -591,8 +516,6 @@ last week, but now I need to reconfigure and get an access key for Wolfram
 Alpha, which will provide a more advanced logical engine than Z3, the default
 on KeYmaera. Wolfram Alpha will also give me counterexamples so I can see
 possible situations where the proof has some fallacy.
-
---~~--
 
 # 2023-10-18
 
@@ -673,8 +596,6 @@ See the images below.
 ![drawing 1](../assets/RTA_Examples/example_2/Example2Whiteboard1.jpg)
 ![whiteboard 2](../assets/RTA_Examples/example_2/Example2Whiteboard2.jpeg)
 
---~~--
-
 # 2023-10-25
 
 ## To-do
@@ -683,8 +604,6 @@ See the images below.
 - [ ] PVS Example 2
   - [ ] Specify
   - [ ] How hard to prove?
-
---~~--
 
 # 2023-11-01
 
@@ -696,8 +615,6 @@ something to look at tomorrow, when I will meet in person with Tanner.
 
 I'm also beginning to work on the PVS specification for Example 1e, and later on
 I will attempt the complication example that Tanner told me about, Example 2.
-
---~~--
 
 # 2023-11-02
 
@@ -964,8 +881,6 @@ with the information we have already provided.
 
 And the proof is solved.
 
---~~--
-
 # 2023-11-08
 
 Today my goal is to transliterate the Example 1e proof to PVS, and also transfer
@@ -979,8 +894,6 @@ variable for the initial position is unnecessary.
 
 Update: I'm almost done with the PVS proof specification, still fighting with
 some parenthesis problems though.
-
---~~--
 
 # 2023-11-16
 
@@ -1044,8 +957,6 @@ cnst(bf))))")(replace -1)(dl-iterated)(replace -1 1 rl)(replace -1)
 Example 2 Drawing:
 ![Example 2](../assets/RTA_Examples/example_2/Example2Whiteboard2.jpeg)
 
---~~--
-
 # 2023-11-29
 
 Today I met with Tanner to discuss a certain competition posting that has gained
@@ -1064,8 +975,6 @@ In the future, I will be focusing on working on the following things:
 - [ ] Specify Example 2 in PVS
 - [x] Read the short RTA Paper
 
---~~--
-
 # 2023-12-06
 
 TO-DO:
@@ -1073,8 +982,6 @@ TO-DO:
 - Hit a wall with Example 1 proof in PVS
 - Understand Example 2
 - Make a plan for writing Example 2
-
---~~--
 
 # 2023-01-04
 
@@ -1085,16 +992,12 @@ TO-DO:
   - [ ] Prove Example 2 in PVS
 - [ ] Review Conference Paper
 
---~~--
-
 # 2024-01-17
 
 Today I met with Tanner for about an hour, spent on hour fixing problems with
 PVS running inside WSL, and spent about another hour reading through the new PVS
 Version 8 `dl` syntax. I also plan to go through Cesar's PowerPoint describing
 how to use the new syntax. As of now, I will begin to model and prove the
-
---~~--
 
 # 2024-01-31
 
@@ -1111,8 +1014,6 @@ way to deal with `dL` variables, which I will cover in the next section.
 
 There is a new way to deal with dL variables:
 [see here](../assets/learning/dlvars_example.pvs)
-
---~~--
 
 # 2024-02-01
 
@@ -1242,23 +1143,17 @@ There are many more things I didn't consider, and two questions about how you wa
 > acceleration would make sense/make some things simpler, but also less realistic.
 > Which should I do?
 
---~~--
-
 # 2024-02-08
 
 ## Meeting with Tanner and Questions about Example 2
 
 - Meeting was canceled due to malfunctioning HVAC system in NASA building
 
---~~--
-
 # 2024-02-15
 
 Today I met with Tanner, and we talked about modeling the drone example. One way
 that the model can be simplified is that the x velocity of the drone will always
 be constant. This way, the only thing to be modeled is an equation that
-
---~~--
 
 # 2024-02-22
 
@@ -1316,8 +1211,6 @@ always known by drone b. Furthermore, the max velocity is always less than $A$
 
 I believe the worst possible case is that both drones curve down towards point B
 and narrowly avoid collision.
-
---~~--
 
 # 2024-02-28
 
@@ -1471,8 +1364,6 @@ know the following things:
 - (after using basic kinematics) how far drone a will travel given its velocity
   and acceleration
 
---~~--
-
 # 2024-04-10
 
 <details>
@@ -1600,8 +1491,6 @@ $$\Delta x = v_x(\frac{T}{v_y} + \frac{3v_y}{2D})$$
 
 See [the next journal entry](#2024-04-17)
 
---~~--
-
 # 2024-04-17
 
 ## Creating more realistic buffer distance pt. 1
@@ -1619,8 +1508,6 @@ know the following things:
 - (after using basic kinematics) how far drone a will travel given its velocity
   and acceleration
 
---~~--
-
 # 2024-05-01
 
 ## Meeting with Tanner
@@ -1631,8 +1518,6 @@ meeting focused on the final research paper I am required to write about my
 mentorship and the few progressions I have made with the drone collision
 avoidance system proof. I am currently working on trying to implement the
 changes to the Example 2 math by reading my previous journal entries.
-
---~~--
 
 # 2024-05-02
 
@@ -1709,8 +1594,6 @@ work must be expanded upon for a full specification to be written and
 subsequently proven.
 
 [`.docx` version of the above text can be found here](../assets/methods-and-materials.docx)
-
---~~--
 
 # 2024-05-06
 
