@@ -1,6 +1,6 @@
 # LETIN
 
-  ```commonlisp
+  ```pvs
   LET
    x = 0
   IN

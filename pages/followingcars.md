@@ -1,6 +1,6 @@
 # Following Cars
 
-```python
+```py
 ArchiveEntry "Following Cars"
 
 Definitions
