@@ -1400,7 +1400,7 @@ its max $y$ velocity while heading towards $y=T$. We can calculate the distance
 drone b will travel in the $y$ direction before stopping at $y=T$ with
 $v_f^2 = v_0^2 + 2a(\Delta y)$ by making the final $y$ velocity 0.
 
-$v_f^2 = v_0^2 + 2a(\Delta y)$
+$$v_f^2 = v_0^2 + 2a(\Delta y)$$
 $$0 ={v_y}^2 + 2 (-D)(T-y)$$
 $$-(v_y^2) = -2D(T-y)$$
 $$-(v_y^2) = -2DT+2Dy$$
