@@ -9,17 +9,17 @@ End.
 
 ProgramVariables
     Real t;
-    
-End. 
+
+End.
 
 Problem
-    a = 0 & 
-    t > 0 & 
+    a = 0 &
+    t > 0 &
     k < 0
     ->
     [{
         {t'= k*(t-a)}
-        
+
     }]t > a
 
 End.

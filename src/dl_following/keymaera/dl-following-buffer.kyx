@@ -1,6 +1,6 @@
 /* Exported from KeYmaera X v5.0.2 */
 
-Theorem "Following Cars with Buffer"
+Theorem "Following with Buffer"
 
 Definitions
     Real va;
@@ -17,7 +17,7 @@ Problem
     /*(xa > 0) &*/
     (xa > xb + b) &
     (va > 0) &
-    (xb > 0) & 
+    (xb > 0) &
     (c > 1)
 ->
     [{{xa' = va, xb' = (xa-xb-b)/c}}
@@ -26,7 +26,7 @@ Problem
 
 End.
 
-Tactic "Following Cars with Buffer: Proof"
+Tactic "Following with Buffer: Proof"
 unfold;
 dG("y'=y/(2*c)", "y^2*(xa-xb-b)>=1", 'R=="[{xa'=va(),xb'=(xa-xb-b)/c}]xa>xb+b");
 existsRmon("y^2*(xa-xb-b)>=1", 'R=="\exists y [{xa'=va(),xb'=(xa-xb-b)/c,y'=1/(2*c)*y+0&true&2*c!=0}]y^2*(xa-xb-b)>=1"); <(

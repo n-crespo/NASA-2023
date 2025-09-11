@@ -593,8 +593,8 @@ $$ 2v_x(t*) + D $$
 
 See the images below.
 
-![drawing 1](../assets/RTA_Examples/example_2/Example2Whiteboard1.jpg)
-![whiteboard 2](../assets/RTA_Examples/example_2/Example2Whiteboard2.jpeg)
+![drawing 1](../src/RTA_Examples/collision-avoidance/Example2Whiteboard1.jpg)
+![whiteboard 2](../src/RTA_Examples/collision-avoidance/Example2Whiteboard2.jpg)
 
 # 2023-10-25
 
@@ -955,7 +955,7 @@ cnst(bf))))")(replace -1)(dl-iterated)(replace -1 1 rl)(replace -1)
 ```
 
 Example 2 Drawing:
-![Example 2](../assets/RTA_Examples/example_2/Example2Whiteboard2.jpeg)
+![whiteboard 2](../src/RTA_Examples/collision-avoidance/Example2Whiteboard2.jpg)
 
 # 2023-11-29
 

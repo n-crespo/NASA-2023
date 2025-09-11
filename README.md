@@ -58,9 +58,6 @@ See [Hour Log](Mentorship-Hour-Log.md)
 
 <!--TODO: Update new dL variables syntax-->
 
-> [!NOTE]
-> As of the new PVS version 8, variables are defined differently.
-
 ### Writing things in PVS and dL
 
 - [`IMPORTING dL@top`](pages/IMPORTING.md)

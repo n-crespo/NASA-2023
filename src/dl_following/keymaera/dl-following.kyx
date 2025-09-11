@@ -1,6 +1,6 @@
 /* Exported from KeYmaera X v5.0.2 */
 
-Theorem "Following Cars"
+Theorem "dl-following"
 
 Definitions
     Real va;
@@ -23,7 +23,7 @@ Problem
 
 End.
 
-Tactic "Following Cars: Proof"
+Tactic "dl-following: Proof"
 unfold;
 dG("y'=y/4", "y^2*(xa-xb)>=1", 'R=="[{xa'=va(),xb'=(xa-xb)/2}]xa>xb");
 existsRmon("y^2*(xa-xb)>=1", 'R=="\exists y [{xa'=va(),xb'=(xa-xb)/2,y'=1/4*y+0}]y^2*(xa-xb)>=1"); <(
