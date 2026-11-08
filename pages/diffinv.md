@@ -1,3 +1,3 @@
 # diffinv
 
-- see Differential Equations, Ghosts and Invariants in the [README](../README.md)
+- see Differential Equations, Ghosts and Invariants in the [Index](../INDEX.md#differential-ghosts-and-invariants)

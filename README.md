@@ -1,189 +1,121 @@
-# README
+# Formally Verifying Drone Safety Systems with Differential Dynamic Logic
 
-<!--toc:start-->
-- [README](#readme)
-  - [Using dL in PVS](#using-dl-in-pvs)
-    - [First do this](#first-do-this)
-    - [Intro to PVS](#intro-to-pvs)
-    - [Writing things in PVS and dL](#writing-things-in-pvs-and-dl)
-    - [Proving things in PVS and dL](#proving-things-in-pvs-and-dl)
-      - [Miscellaneous](#miscellaneous)
-      - [Simplification](#simplification)
-      - [Utilities](#utilities)
-      - [dL Commands](#dl-commands)
-    - [Differential Ghosts and Invariants](#differential-ghosts-and-invariants)
-  - [KeYmaera](#keymaera)
-<!--toc:end-->
+Formal Verification Research Intern · NASA Langley Research Center, Formal Methods team · June 2023 – May 2024\
+Mentor: J. Tanner Slagel · Governor's School for Science and Technology
 
-See [Hour Log](Mentorship-Hour-Log.md)
+📄 **[Read the final research paper (PDF)](Nicolas%20Crespo%20Final%20Research%20Paper.pdf)** ·
+📚 **[Co-authored publications](#publications)**
 
-> This README is an overview of all the pages in this repo, which summarize my
-> internship with the Formal Methods team at NASA from June 2023 - present.
-> Notes have been taken that include my learning process for using PVS, using
-> the Virtual Machine (I had to use an Amazon Linux image because of M2 chip
-> incompatibility), and creating things and proving them with dL. Furthermore,
-> these notes were transferred from Logseq --> pure Markdown (manually), so
-> there may be some formatting errors. The end goal of these notes is to
-> document my research and allow a future intern/user of dL PVS to get
-> acquainted with the technology easier.
+Autonomous unmanned aircraft systems (UAS), like drones used for wildfire
+prevention and disaster response, are increasingly flown by untrusted AI-based
+controllers. Their safety systems need to work under every possible condition,
+not just the ones that come up in testing. During my internship, I designed two
+fallback systems for autonomous aircraft, braking and collision avoidance, and
+modeled them as hybrid programs (software control mixed with continuous physics)
+in Differential Dynamic Logic (dL). I then used the KeYmaera X and PVS theorem
+provers to build formally verified proofs about how they behave. The work
+follows the Runtime Assurance (RTA) pattern, where an untrusted controller runs
+freely while a monitor watches it and hands control to a verifiably safe
+fallback controller once danger is detected.
 
-## Using dL in PVS
+## 1. Dynamic Braking System
 
-### First do this
+![Braking scenario](src/RTA_Examples/braking/Example1_text_drawing.png)
 
-- go through the useful resources page
-- watch the intro video
-- read some documentation and papers about PVS and dL
-  - See [Embedding Differential Logic in PVS](./assets/LSFA_23_submit.pdf)
-- ask Tanner for his paper about dL, its super useful
-- either buy a mac or Linux machine or see [How to use PVS on Windows](./pages/pvs-on-windows.md)
+A drone (or car, as labeled in the image) flies toward a fixed barrier at
+position $E$. Before reaching the boundary $bf$ it can move however it likes.
+Once it reaches $bf$, a reversionary controller takes over and applies a
+deceleration it computes from the drone's speed at that moment, so that it stops
+exactly at the barrier $E$.
 
-### Intro to PVS
+Theorem (proved):
 
-- turnstile: `|---------------------`
-- Propositional Logic: if, and, or, etc
-- LEMMA: thing you need to prove
-- above the turnstile : ALL IS TRUE (AND) (antecedent)
-- below the turnstile : one is true ALWAYS (OR) (consequent)
+$$
+x \le bf \land bf < E \land a > 0 \land v > 0 \;\rightarrow\; \\
+\Big\langle \big( \{x' = v,\ v' = a \ \&\ x \le bf\} \;\cup\;
+(?x = bf;\ v_i := v;\ \{x' = v,\ v' = -\tfrac{v_i^2}{2(E - bf)} \ \&\ x \ge bf\}) \big)^{*} \Big\rangle
+\,(x = E \land v = 0)
+$$
 
-- Constants can be defined as PVS variables like so, and must be referenced with
-  a `cnst( )` around them
+In plain English: from any valid starting state, there exists a way for the
+system to run such that the drone comes to rest exactly at the barrier.
 
-  `x: VAR real`
+### How it was proved
 
-- Variables are defined as natural numbers with UNIQUE arbitrary values that
-  correspond to their index, and must be referenced with a `val( )` around them
+- I unrolled the control loop into the two phases of a successful run:
+  accelerate up to the boundary, then brake.
+- I derived the exact length of each phase from the equations of motion and
+  gave these times to the prover as witnesses:
+  - time to reach the boundary: $t_1 = \frac{\sqrt{v^2 + 2a(bf - x)} - v}{a}$
+  - time to stop: $t_2 = \frac{2(E - bf)}{v_i}$
+- Real-arithmetic quantifier elimination closed the remaining goals.
+- An earlier attempt got stuck when the prover (through Wolfram) produced a
+  counterexample ([screenshot](src/RTA_Examples/braking/counterexample_wolfram.png)).
+  It showed that my model was missing some preconditions on velocity and acceleration. After fixing that, the proof passed.
 
-  `x: nat = 0`
+Relevant files: [complete proof in KeYmaeraX](src/RTA_Examples/braking/automated_braking.kyx) ·
+[stuck attempt](src/RTA_Examples/braking/automatic_braking_stuck.kyx) ·
+[PVS / Plaidypvs version (in progress)](src/RTA_Examples/braking/automated_braking.pvs)
 
-<!--TODO: Update new dL variables syntax-->
+## 2. Productive Collision Avoidance
 
-### Writing things in PVS and dL
+![Whiteboard sketch: two drones approaching each other in a corridor, with drone a veering out](src/RTA_Examples/collision-avoidance/Example2Whiteboard1.jpg)
 
-- [`IMPORTING dL@top`](pages/IMPORTING.md)
-- [`DIFF()`](pages/DIFF.md)
-- [`LEMMA`](pages/lemma.md)
-- [`UNION()`](pages/UNION.md)
-- [`IFTE()`](pages/IFTE.md)
-- [`(BETA)`](pages/beta.md)
-- [`TEST()`](pages/test.md)
-- [`div_safe_re()`](pages/div_safe_re.md)
-- [`SEQ()`](pages/SEQ.md)
-- [`STAR(ag)`](pages/star.md)
-- [`^^`](pages/exponentiation.md)
-- [`ALLRUNS(DIFF())`](pages/ALLRUNS.md)
-- [`SOMERUNS(DIFF())`](pages/SOMERUNS.md)
+Two drones fly toward each other down a corridor. Drone B moves arbitrarily.
+When the monitor on Drone A sees B within a critical distance, Drone A's
+fallback controller steers it out of the corridor, around B, and back onto its
+original path. The avoidance is intentionally productive, meaning Drone A keeps
+working toward its mission goal during the maneuver instead of just stopping or
+retreating. Because every drone always veers the same way, giving all drones in
+an airspace this behavior avoids head-on collisions as long as each drone
+behaves as specified.
 
-### Proving things in PVS and dL
+### My Work
 
-- see [this cheat sheet](assets/plaidypvs_cheatsheet.png)
+- I designed the scenario, the monitor's trigger conditions, and the fallback
+  maneuver.
+- I derived the minimum separation distance at which Drone A must start evading
+  to clear the corridor safely. I worked it out from the kinematic equations,
+  first assuming constant forward velocity and then for the general accelerating
+  case (see the paper, pp. 9–10).
+- Identified the proof techniques the full proof will need: differential
+  invariants and differential ghosts, which reason about the motion without the
+  potentially computationally expensive step of solving the drones' differential
+  equations.
 
-#### Miscellaneous
+## Publications
 
-- [`(inst)`](pages/inst.md)
-- [`(skolem)`](pages/skolem.md)
-- [`(skeep)`](pages/skeep.md)
-- [`(flatten)`](pages/flatten.md)
-- [`(split)`](pages/split.md)
-- [`(expand)`](pages/expand.md)
-- [`(iff)`](pages/IFF.md)
-- [`(replaces)`](pages/replaces.md)
-- [`(skoletin)`](pages/skoletin.md)
+This internship was part of NASA's research on a formal verification framework
+for Runtime Assurance. I co-authored two papers describing that framework:
 
-#### Simplification
+- _A Verification Framework for Runtime Assurance of Autonomous UAS_\
+  A. T. Slagel, L. M. White, A. Dutle, C. A. Muñoz, N. Crespo.
+  _2024 AIAA DATC/IEEE 43rd Digital Avionics Systems Conference (DASC)_, Nov 2024.
+  [doi.org/10.1109/DASC62030.2024.10748654](https://doi.org/10.1109/DASC62030.2024.10748654)
+- _A Formal Verification Framework for Runtime Assurance_\
+  A. T. Slagel, L. M. White, A. Dutle, C. A. Muñoz, N. Crespo.
+  _NASA Formal Methods: 16th International Symposium (NFM 2024)_, Springer, May 2024, pp. 322–328.
+  [doi.org/10.1007/978-3-031-60698-4_19](https://doi.org/10.1007/978-3-031-60698-4_19)
 
-- [`(prop)`](pages/prop.md)
-- [`(bddsimp)`](pages/bddsimp.md)
-- [`(assert)`](pages/assert.md)
-- [`(ground)`](pages/ground.md)
-- [`(smash)`](pages/smash.md)
-- [`(grind)`](pages/grind.md)
-- [`(metit)`](pages/metit.md)
+## Tools & Skills
 
-#### Utilities
+- Theorem provers: [KeYmaera X](https://keymaerax.org/) (Carnegie Mellon) and
+  [PVS](https://pvs.csl.sri.com/) with Plaidypvs, NASA's embedding of dL in PVS
+- Formal methods: Differential Dynamic Logic, hybrid systems, sequent
+  calculus, loop invariants, differential invariants and ghosts
+- Math: ODEs and kinematics, real arithmetic and quantifier elimination
+- Environment: Linux VM setup for PVS (on Apple Silicon), Emacs, VSCode-PVS
 
-- [`(help)`](pages/help.md)
-- [`(lemma)`](pages/lemma.md)
-- [`(quit)`](pages/quit.md)
-- [`(undo)`](pages/undo.md)
-- [`(hide)`](./pages/hide.md)
-- [`(postpone)`](./pages/postpone.md)
+## Other Notes
 
-#### dL Commands
+I also documented everything I learned about using dL in PVS, written for future
+interns picking up the same tools:
 
-- See `dynamic_logic.pvs` in nasalib for definitions and [Glossary Plaidypvs](./assets/Glossary_Plaidypvs.pvs) for examples
-- [`(<command>b)`](pages/box.md)
-- [`(<command>d)`](pages/diamond.md)
-- [`(dl-loop)`](pages/loop.md)
-- [`(dl-solve)`](pages/solve.md)
-- [`(dl-subs)`](pages/sub.md)
-- [`(dl-composeb)`](pages/compose.md)
-- [`(dl-flatten)`](pages/flatten.md)
-- [`(dl-ghost)`](pages/ghosts.md)
-- [`(dl-diffghost)`](pages/diffghost.md)
-- [`(dl-diffinv)`](pages/diffinv.md)
-- [`(dl-inst)`](pages/inst.md)
-- [`(dl-grind)`](pages/dl-grind.md)
-- [`(dl-diffcase)`](pages/diffcase.md)
-- [`DLEXISTSRf`](pages/DLEXISTSRf.md)
+- [Index](INDEX.md): a guide to dL in PVS, linking to every note in [pages/](pages/)
+- [Journals](journals/) and [Mentorship Hour Log](Mentorship-Hour-Log.md): daily entries from throughout the internship
+- [Practice models](src/): bang-bang controller, cooling, and car-following examples
 
-### Differential Ghosts and Invariants
+---
 
-- most differential equations are impossible to solve
-- solving ODE's will often make them more complicated then necessary
-  - discrete ghost `(dl-ghost)`
-    - extra variable introduced to a proof to analyze the model
-    - remember the value of a new variable in an old state for analyzing the
-      change of an expression
-    - discrete variable y which remembers the value of e (fresh)
-    - Fresh Variables = new variable that doesn't affect main function
-- differential ghosts:
-  - evolve over time
-  - extra variable added with a made up differential equation to analyze the
-    system
-  - increase complexity of the system
-  - change the differential equation itself
-  - (auxiliary variables) added to make the proof more conclusive, don't really
-    exist
-- `diff-ghost`:
-
-  - you are trying to prove x is always positive (it approaches 0 as it reaches
-    infinity)
-  - you introduce a new equation: $y' = y/2$
-  - then you can say that $x-y^2 = 1$
-  - why? Because $y^2$ is always positive, so anything that $x$ is must also be
-    positive
-  - $y$ acts as a counterweight, always lifting x just enough to remain positive
-  - my questions:
-    - how do you figure out what y should equal?
-      - GO BACKWARDS
-      - we know that you have to use `diffinv` right after you introduce the
-        ghost, so do that and have an unknown $j(x)$ as the ghost
-      - you should end up with an equation that = 0, so find the ghost
-        expression that can satisfy it
-    - how can you know for sure that $xy^2=1$?
-      - that is just a property of any positive number $(x)$, use some reasoning
-        to find small expressions like that that work for all numbers so you can
-        build ghost variables around them
-    - the new function must exist for as long as or longer than the original
-      function that you are reasoning about
-
-- `(dl-diffinv)`
-  - use this after `diffghost`
-  - when you have a Hybrid Program and something you want to prove is true (the
-    HP would define the movement of the variable in the equation), differentiate
-    the equation (and make sure to use values like x', y', etc) and plug in the
-    values that you know those primes are equal to (from the HP definition)
-  - you should get stuff that cancels out !!
-  - (or rather an equation that equals 0)
-- useful graphic:
-
-  - Below: the differential ghost equation acts as a counterweight to f(x),
-    ensuring that $xy^2 = 1$ will always be true, proving that x must always be
-    positive
-
-    ![counterweight image](assets/counterweight.png)
-
-## KeYmaera
-
-- see [KeYmaera](pages/keymaera.md)
+<sub>This is personal research work from an internship and is not an official
+NASA product.</sub>

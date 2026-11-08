@@ -1,6 +1,6 @@
 # Mentorship Hour Log
 
-[Home Page](README.md)
+[Home Page](INDEX.md)
 
 | Date                             | Hours | Topic                                                                |
 | -------------------------------- | ----- | -------------------------------------------------------------------- |

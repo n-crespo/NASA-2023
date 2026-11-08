@@ -1,6 +1,6 @@
 # ghosts
 
-- see Differential Equations, Ghosts and Invariants in [the README](../README.md)
+- see Differential Equations, Ghosts and Invariants in [the Index](../INDEX.md#differential-ghosts-and-invariants)
 - new thing to add to a proof to make it solvable
 - can be discrete or diff
   - `dl-ghost` vs `dl-diffghost`
