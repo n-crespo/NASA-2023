@@ -1,7 +1,8 @@
-# Formally Verifying Drone Safety Systems with Differential Dynamic Logic
+# Formally Verifying UAS Safety with Differential Dynamic Logic
 
-Formal Verification Research Intern · NASA Langley Research Center, Formal Methods team · June 2023 – May 2024\
-Mentor: J. Tanner Slagel · Governor's School for Science and Technology
+> Formal Verification Research Intern @ NASA Langley Research Center w/ the
+> Formal Methods team. \
+> Mentors: J. Tanner Slagel, Cesar Muñoz
 
 📄 **[Read the final research paper (PDF)](Nicolas%20Crespo%20Final%20Research%20Paper.pdf)** ·
 📚 **[Co-authored publications](#publications)**
@@ -37,10 +38,10 @@ x \le bf \land bf < E \land a > 0 \land v > 0 \;\rightarrow\; \\
 \,(x = E \land v = 0)
 $$
 
-In plain English: from any valid starting state, there exists a way for the
-system to run such that the drone comes to rest exactly at the barrier.
+In other words, from any valid starting state, there exists a way for the system
+to run such that the drone comes to rest exactly at the barrier.
 
-### How it was proved
+### Proof
 
 - I unrolled the control loop into the two phases of a successful run:
   accelerate up to the boundary, then brake.
@@ -49,13 +50,17 @@ system to run such that the drone comes to rest exactly at the barrier.
   - time to reach the boundary: $t_1 = \frac{\sqrt{v^2 + 2a(bf - x)} - v}{a}$
   - time to stop: $t_2 = \frac{2(E - bf)}{v_i}$
 - Real-arithmetic quantifier elimination closed the remaining goals.
-- An earlier attempt got stuck when the prover (through Wolfram) produced a
-  counterexample ([screenshot](src/RTA_Examples/braking/counterexample_wolfram.png)).
-  It showed that my model was missing some preconditions on velocity and acceleration. After fixing that, the proof passed.
+- An earlier attempt got stuck when the prover (through Wolfram) found a
+  counterexample
+  ([screenshot](src/RTA_Examples/braking/counterexample_wolfram.png)). It showed
+  that my proof was missing some preconditions on velocity and acceleration. After
+  fixing that, the proof passed.
 
-Relevant files: [complete proof in KeYmaeraX](src/RTA_Examples/braking/automated_braking.kyx) ·
-[stuck attempt](src/RTA_Examples/braking/automatic_braking_stuck.kyx) ·
-[PVS / Plaidypvs version (in progress)](src/RTA_Examples/braking/automated_braking.pvs)
+Relevant files:
+
+- [complete proof in KeYmaeraX](src/RTA_Examples/braking/automated_braking.kyx)
+- [stuck attempt](src/RTA_Examples/braking/automatic_braking_stuck.kyx)
+- [PVS / Plaidypvs version (in progress)](src/RTA_Examples/braking/automated_braking.pvs)
 
 ## 2. Productive Collision Avoidance
 
@@ -97,7 +102,7 @@ for Runtime Assurance. I co-authored two papers describing that framework:
   _NASA Formal Methods: 16th International Symposium (NFM 2024)_, Springer, May 2024, pp. 322–328.
   [doi.org/10.1007/978-3-031-60698-4_19](https://doi.org/10.1007/978-3-031-60698-4_19)
 
-## Tools & Skills
+## Tools and Setup
 
 - Theorem provers: [KeYmaera X](https://keymaerax.org/) (Carnegie Mellon) and
   [PVS](https://pvs.csl.sri.com/) with Plaidypvs, NASA's embedding of dL in PVS
@@ -114,6 +119,7 @@ interns picking up the same tools:
 - [Index](INDEX.md): a guide to dL in PVS, linking to every note in [pages/](pages/)
 - [Journals](journals/) and [Mentorship Hour Log](Mentorship-Hour-Log.md): daily entries from throughout the internship
 - [Practice models](src/): bang-bang controller, cooling, and car-following examples
+- See the dL library source and more examples in [nasalib](https://github.com/nasa/pvslib/blob/master/dL/README.md)
 
 ---
 
